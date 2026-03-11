@@ -1,0 +1,102 @@
+import { useEffect, useState, useRef, useMemo } from "react";
+import { useLang } from "@/lib/LanguageContext";
+import { translations, t } from "@/lib/translations";
+import logo from "@/assets/logo.svg";
+
+interface HeroProps {
+  onNavigate: (page: "contact" | "vacancies") => void;
+}
+
+export default function Hero({ onNavigate }: HeroProps) {
+  const { lang } = useLang();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const logoScale = Math.max(0, 1 - scrollY / 300);
+  const logoOpacity = Math.max(0, 1 - scrollY / 200);
+
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 20 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        size: 3 + Math.random() * 6,
+        duration: 8 + Math.random() * 12,
+        delay: Math.random() * 10,
+      })),
+    []
+  );
+
+  return (
+    <section className="relative h-screen w-full overflow-hidden bg-navy flex items-center justify-center">
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        src="/happywork.m4v"
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-navy/70" />
+
+      {/* Particles */}
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="particle"
+          style={{
+            left: `${p.left}%`,
+            width: p.size,
+            height: p.size,
+            animationDuration: `${p.duration}s`,
+            animationDelay: `${p.delay}s`,
+          }}
+        />
+      ))}
+
+      {/* Content */}
+      <div className="relative z-10 text-center text-primary-foreground px-6 max-w-3xl">
+        <div
+          style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
+          className="transition-none mb-8"
+        >
+          <img src={logo} alt="Recruitment Intermotion" className="h-20 md:h-28 mx-auto brightness-0 invert" />
+        </div>
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+          {t(translations.hero.tagline, lang)}
+        </h1>
+        <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+          {t(translations.hero.sub, lang)}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            onClick={() => onNavigate("contact")}
+            className="gradient-brand text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            {t(translations.hero.ctaPrimary, lang)}
+          </button>
+          <button
+            onClick={() => onNavigate("vacancies")}
+            className="border-2 border-primary-foreground text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary-foreground/10 hover:-translate-y-1 transition-all"
+          >
+            {t(translations.hero.ctaSecondary, lang)}
+          </button>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/60">
+        <div className="scroll-indicator-line w-px h-10 bg-primary-foreground/40" />
+        <span className="text-xs tracking-widest uppercase">{t(translations.hero.scroll, lang)}</span>
+      </div>
+    </section>
+  );
+}
