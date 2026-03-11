@@ -14,7 +14,6 @@ function StatItem({ value, suffix, label, triggered }: StatItemProps) {
 
   useEffect(() => {
     if (!triggered) return;
-    let start = 0;
     const duration = 2000;
     const startTime = performance.now();
 
@@ -61,16 +60,18 @@ export default function StatsStrip() {
 
   return (
     <section ref={ref} className="bg-navy py-16">
-      <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <StatItem value={15} suffix="+" label={t(translations.stats.years, lang)} triggered={triggered} />
-        <div className="hidden md:block">
-          <div className="h-full w-px bg-primary-foreground/20 mx-auto" />
+      <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+        <div className="flex-1">
+          <StatItem value={15} suffix="+" label={t(translations.stats.years, lang)} triggered={triggered} />
         </div>
-        <StatItem value={3} suffix="" label={t(translations.stats.disciplines, lang)} triggered={triggered} />
-        <div className="hidden md:block">
-          <div className="h-full w-px bg-primary-foreground/20 mx-auto" />
+        <div className="hidden md:block w-px h-16 bg-primary-foreground/20" />
+        <div className="flex-1">
+          <StatItem value={3} suffix="" label={t(translations.stats.disciplines, lang)} triggered={triggered} />
         </div>
-        <StatItem value={100} suffix="%" label={t(translations.stats.approach, lang)} triggered={triggered} />
+        <div className="hidden md:block w-px h-16 bg-primary-foreground/20" />
+        <div className="flex-1">
+          <StatItem value={100} suffix="%" label={t(translations.stats.approach, lang)} triggered={triggered} />
+        </div>
       </div>
     </section>
   );
