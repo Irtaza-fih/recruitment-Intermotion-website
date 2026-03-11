@@ -119,7 +119,7 @@ function ServiceCard({
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{
-          background: `radial-gradient(circle at ${glow.x}% ${glow.y}%, hsl(var(--accent-blue) / 0.08) 0%, transparent 60%)`,
+          background: `radial-gradient(circle at ${glow.x}% ${glow.y}%, rgba(1, 153, 248, 0.08) 0%, transparent 60%)`,
         }}
       />
       <div className="relative z-10">
