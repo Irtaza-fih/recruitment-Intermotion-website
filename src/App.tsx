@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
-import VacanciesPage from "@/pages/VacanciesPage";
+
 import ContactPage from "@/pages/ContactPage";
 
 type PageId = "home" | "about" | "vacancies" | "contact";
@@ -47,7 +47,7 @@ function AppContent() {
       <main>
         {displayedPage === "home" && <HomePage onNavigate={navigate} />}
         {displayedPage === "about" && <AboutPage onNavigate={navigate} />}
-        {displayedPage === "vacancies" && <VacanciesPage onNavigate={navigate} />}
+        
         {displayedPage === "contact" && <ContactPage />}
       </main>
       <Footer onNavigate={navigate} />

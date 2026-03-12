@@ -26,11 +26,11 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
   const solid = !isHome || scrolled;
   const showLogo = !isHome || scrolled;
 
-  const navLinks: { id: PageId; label: string }[] = useMemo(
+  const navLinks: { id: PageId; label: string; external?: string }[] = useMemo(
     () => [
       { id: "home", label: t(translations.nav.home, lang) },
       { id: "about", label: t(translations.nav.about, lang) },
-      { id: "vacancies", label: t(translations.nav.vacancies, lang) },
+      { id: "vacancies", label: t(translations.nav.vacancies, lang), external: "https://careers-page.com/recruitment-intermotion" },
     ],
     [lang]
   );
@@ -62,21 +62,35 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNav(link.id)}
-                className={`text-base font-semibold transition-colors relative pb-1 ${
-                  activePage === link.id
-                    ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
-                    : solid
-                    ? "text-foreground hover:text-accent-blue"
-                    : "text-primary-foreground hover:text-accent-blue"
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.id}
+                  href={link.external}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-base font-semibold transition-colors relative pb-1 ${
+                    solid ? "text-foreground hover:text-accent-blue" : "text-primary-foreground hover:text-accent-blue"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <button
+                  key={link.id}
+                  onClick={() => handleNav(link.id)}
+                  className={`text-base font-semibold transition-colors relative pb-1 ${
+                    activePage === link.id
+                      ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
+                      : solid
+                      ? "text-foreground hover:text-accent-blue"
+                      : "text-primary-foreground hover:text-accent-blue"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              )
+            )}
           </div>
 
           {/* Right side */}
@@ -149,15 +163,27 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 gradient-brand flex flex-col items-center justify-center gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNav(link.id)}
-              className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
-            >
-              {link.label} <span className="text-lg">→</span>
-            </button>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.id}
+                href={link.external}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
+              >
+                {link.label} <span className="text-lg">→</span>
+              </a>
+            ) : (
+              <button
+                key={link.id}
+                onClick={() => handleNav(link.id)}
+                className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
+              >
+                {link.label} <span className="text-lg">→</span>
+              </button>
+            )
+          )}
           <button
             onClick={() => handleNav("contact")}
             className="bg-primary-foreground text-primary px-8 py-3 rounded-full text-lg font-bold hover:shadow-lg transition-all"
