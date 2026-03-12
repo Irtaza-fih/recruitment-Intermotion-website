@@ -1,14 +1,30 @@
 import { useLang } from "@/lib/LanguageContext";
 import { translations } from "@/lib/translations";
 
+import americold from "@/assets/partners/americold.png";
+import visiativ from "@/assets/partners/visiativ.png";
+import remondis from "@/assets/partners/remondis.png";
+import conventCapital from "@/assets/partners/convent-capital.png";
+import kpn from "@/assets/partners/kpn.png";
+import bdo from "@/assets/partners/bdo.png";
+import hays from "@/assets/partners/hays.png";
+import interboorMidsland from "@/assets/partners/interboor-midsland.png";
+import bluePhoenixGroup from "@/assets/partners/blue-phoenix-group.png";
+import jimmyJoy from "@/assets/partners/jimmy-joy.png";
+import subseaConnect from "@/assets/partners/subsea-connect.png";
+
 const partners = [
-  { name: "Textkernel", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/textkernel-logo.png" },
-  { name: "Homerun", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/homerun-logo.png" },
-  { name: "Bullhorn", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/bullhorn-logo.png" },
-  { name: "Carerix", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/carerix-logo.png" },
-  { name: "Recruitee", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/recruitee-logo.png" },
-  { name: "Recruitin", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/recruitin-logo.png" },
-  { name: "Tribepad", logo: "https://recruitmentintermotion.nl/wp-content/uploads/2023/08/tribepad-logo.png" },
+  { name: "Americold", logo: americold },
+  { name: "Visiativ", logo: visiativ },
+  { name: "Remondis", logo: remondis },
+  { name: "Convent Capital", logo: conventCapital },
+  { name: "KPN", logo: kpn },
+  { name: "BDO", logo: bdo },
+  { name: "Hays", logo: hays },
+  { name: "Interboor Midsland", logo: interboorMidsland },
+  { name: "Blue Phoenix Group", logo: bluePhoenixGroup },
+  { name: "Jimmy Joy", logo: jimmyJoy },
+  { name: "Subsea Connect", logo: subseaConnect },
 ];
 
 function renderTitle(html: string) {
@@ -33,27 +49,14 @@ export default function PartnersMarquee() {
           WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
         }}
       >
-        <div className="marquee-track flex items-center gap-12 w-max">
+        <div className="marquee-track flex items-center gap-16 w-max">
           {[...partners, ...partners].map((p, i) => (
-            <div
+            <img
               key={i}
-              className="flex-shrink-0 bg-bg-tint border border-border rounded-xl px-10 py-6 flex items-center justify-center"
-            >
-              <img
-                src={p.logo}
-                alt={p.name}
-                className="h-10 max-w-[140px] object-contain"
-                onError={(e) => {
-                  // Fallback to text if image fails
-                  const target = e.currentTarget;
-                  target.style.display = "none";
-                  const span = document.createElement("span");
-                  span.className = "text-foreground font-bold text-lg";
-                  span.textContent = p.name;
-                  target.parentElement?.appendChild(span);
-                }}
-              />
-            </div>
+              src={p.logo}
+              alt={p.name}
+              className="h-12 max-w-[160px] object-contain flex-shrink-0"
+            />
           ))}
         </div>
       </div>
