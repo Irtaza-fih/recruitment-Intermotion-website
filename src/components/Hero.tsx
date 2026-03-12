@@ -80,12 +80,14 @@ export default function Hero({ onNavigate }: HeroProps) {
           >
             {t(translations.hero.ctaPrimary, lang)}
           </button>
-          <button
-            onClick={() => onNavigate("vacancies")}
+          <a
+            href="https://careers-page.com/recruitment-intermotion"
+            target="_blank"
+            rel="noopener noreferrer"
             className="border-2 border-primary-foreground text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary-foreground/10 hover:-translate-y-1 transition-all"
           >
             {t(translations.hero.ctaSecondary, lang)}
-          </button>
+          </a>
         </div>
       </div>
 

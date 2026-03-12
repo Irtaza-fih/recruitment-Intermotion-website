@@ -12,7 +12,7 @@ function renderTitle(html: string) {
 }
 
 interface AboutPageProps {
-  onNavigate: (page: "contact" | "vacancies") => void;
+  onNavigate: (page: "contact") => void;
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {

@@ -7,7 +7,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import VacancyCTA from "@/components/VacancyCTA";
 
 interface HomePageProps {
-  onNavigate: (page: "contact" | "vacancies") => void;
+  onNavigate: (page: "contact") => void;
 }
 
 export default function HomePage({ onNavigate }: HomePageProps) {
