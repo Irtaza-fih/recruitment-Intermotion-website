@@ -4,7 +4,7 @@ import { translations, t } from "@/lib/translations";
 import logo from "@/assets/logo.svg";
 
 interface HeroProps {
-  onNavigate: (page: "contact" | "vacancies") => void;
+  onNavigate: (page: "contact") => void;
 }
 
 export default function Hero({ onNavigate }: HeroProps) {
