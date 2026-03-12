@@ -163,15 +163,27 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 gradient-brand flex flex-col items-center justify-center gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => handleNav(link.id)}
-              className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
-            >
-              {link.label} <span className="text-lg">→</span>
-            </button>
-          ))}
+          {navLinks.map((link) =>
+            link.external ? (
+              <a
+                key={link.id}
+                href={link.external}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
+              >
+                {link.label} <span className="text-lg">→</span>
+              </a>
+            ) : (
+              <button
+                key={link.id}
+                onClick={() => handleNav(link.id)}
+                className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
+              >
+                {link.label} <span className="text-lg">→</span>
+              </button>
+            )
+          )}
           <button
             onClick={() => handleNav("contact")}
             className="bg-primary-foreground text-primary px-8 py-3 rounded-full text-lg font-bold hover:shadow-lg transition-all"
