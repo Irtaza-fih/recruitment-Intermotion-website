@@ -47,7 +47,7 @@ function AppContent() {
       <main>
         {displayedPage === "home" && <HomePage onNavigate={navigate} />}
         {displayedPage === "about" && <AboutPage onNavigate={navigate} />}
-        {displayedPage === "vacancies" && <VacanciesPage onNavigate={navigate} />}
+        
         {displayedPage === "contact" && <ContactPage />}
       </main>
       <Footer onNavigate={navigate} />
