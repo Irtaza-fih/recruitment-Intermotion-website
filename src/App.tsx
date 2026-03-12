@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
-import VacanciesPage from "@/pages/VacanciesPage";
+
 import ContactPage from "@/pages/ContactPage";
 
 type PageId = "home" | "about" | "vacancies" | "contact";
