@@ -66,7 +66,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
               <button
                 key={link.id}
                 onClick={() => handleNav(link.id)}
-                className={`text-sm font-semibold transition-colors relative pb-1 ${
+                className={`text-base font-semibold transition-colors relative pb-1 ${
                   activePage === link.id
                     ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
                     : solid

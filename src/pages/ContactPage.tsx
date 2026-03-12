@@ -31,34 +31,44 @@ export default function ContactPage() {
   const contactTiles = [
     {
       href: `mailto:${c.email}`,
-      label: c.email,
+      title: c.email,
+      subtitle: lang === "nl" ? "Voor algemene vragen" : "For general enquiries",
       icon: (
-        <svg width="20" height="20" fill="#1F217D" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <svg width="22" height="22" fill="none" stroke="#1F217D" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 7l-10 7L2 7" /></svg>
       ),
     },
     {
       href: `tel:${c.phone.replace(/\s/g, "")}`,
-      label: c.phone,
+      title: c.phone,
+      subtitle: lang === "nl" ? "Ma–Vr, 9:00–18:00 CET" : "Mon–Fri, 9:00–18:00 CET",
       icon: (
-        <svg width="20" height="20" fill="#1F217D" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <svg width="22" height="22" fill="none" stroke="#1F217D" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
       ),
     },
     {
       href: c.linkedin,
-      label: "LinkedIn",
+      title: "LinkedIn",
+      subtitle: lang === "nl" ? "Volg ons op LinkedIn" : "Follow us on LinkedIn",
       icon: (
-        <svg width="20" height="20" fill="#1F217D" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <svg width="22" height="22" fill="#1F217D" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
       ),
       external: true,
     },
     {
       href: c.whatsapp,
-      label: "WhatsApp",
+      title: "WhatsApp",
+      subtitle: lang === "nl" ? "Stuur ons een bericht" : "Send us a message",
       icon: (
-        <svg width="20" height="20" fill="#1F217D" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+        <svg width="22" height="22" fill="#1F217D" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
       ),
       external: true,
     },
+  ];
+
+  const availability = [
+    { day: lang === "nl" ? "Maandag – Vrijdag" : "Monday – Friday", time: "9:00 – 18:00", open: true },
+    { day: lang === "nl" ? "Zaterdag" : "Saturday", time: lang === "nl" ? "Gesloten" : "Closed", open: false },
+    { day: lang === "nl" ? "Zondag" : "Sunday", time: lang === "nl" ? "Gesloten" : "Closed", open: false },
   ];
 
   return (
@@ -72,28 +82,67 @@ export default function ContactPage() {
         <div ref={ref} className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Left: contact info */}
-            <div className="scroll-reveal space-y-6">
-              <div className="space-y-4">
-                {contactTiles.map((tile, i) => (
-                  <a
-                    key={i}
-                    href={tile.href}
-                    target={tile.external ? "_blank" : undefined}
-                    rel={tile.external ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-3 rounded-xl px-4 py-3 transition-colors hover:shadow-sm"
-                    style={{
-                      background: "#F7F9FF",
-                      border: "1.5px solid #E5EAF5",
-                      color: "#061A2F",
-                    }}
-                  >
-                    <span className="flex-shrink-0">{tile.icon}</span>
-                    <span className="text-sm font-medium">{tile.label}</span>
-                  </a>
-                ))}
+            <div className="scroll-reveal space-y-8">
+              {/* Contact Info heading */}
+              <div>
+                <h3 className="text-accent-blue text-xs font-bold uppercase tracking-widest mb-6">
+                  {lang === "nl" ? "Contactgegevens" : "Contact Info"}
+                </h3>
+                <div className="space-y-4">
+                  {contactTiles.map((tile, i) => (
+                    <a
+                      key={i}
+                      href={tile.href}
+                      target={tile.external ? "_blank" : undefined}
+                      rel={tile.external ? "noopener noreferrer" : undefined}
+                      className="flex items-center gap-4 group transition-colors"
+                      style={{ color: "#061A2F" }}
+                    >
+                      <span
+                        className="flex-shrink-0 w-11 h-11 rounded-lg flex items-center justify-center"
+                        style={{ background: "#F7F9FF", border: "1.5px solid #E5EAF5" }}
+                      >
+                        {tile.icon}
+                      </span>
+                      <div>
+                        <div className="font-semibold text-foreground group-hover:text-accent-blue transition-colors">{tile.title}</div>
+                        <div className="text-sm text-muted-foreground">{tile.subtitle}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
 
-              <div className="liquid-gradient rounded-2xl p-8 text-primary-foreground mt-8">
+              {/* Availability */}
+              <div>
+                <h3 className="text-accent-blue text-xs font-bold uppercase tracking-widest mb-6">
+                  {lang === "nl" ? "Bereikbaarheid" : "Availability"}
+                </h3>
+                <div className="space-y-0">
+                  {availability.map((row, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-between py-3"
+                      style={{ borderBottom: "1px solid #E5EAF5" }}
+                    >
+                      <span className="font-semibold text-foreground">{row.day}</span>
+                      <span
+                        className="font-semibold"
+                        style={{ color: row.open ? "#0199F8" : undefined }}
+                      >
+                        {row.time}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  {lang === "nl"
+                    ? "Dringende verzoeken? Mail ons — wij monitoren buiten kantooruren voor bestaande klanten."
+                    : "Urgent requests? Email us — we monitor outside hours for existing clients."}
+                </p>
+              </div>
+
+              <div className="liquid-gradient rounded-2xl p-8 text-primary-foreground">
                 <h3 className="text-xl font-bold mb-2">{t(c.ctaTitle, lang)}</h3>
                 <p className="text-primary-foreground/80">{t(c.ctaText, lang)}</p>
               </div>
