@@ -16,7 +16,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       <Hero onNavigate={onNavigate} />
       <StatsStrip />
       <AboutSection onNavigate={onNavigate} />
-      <ServicesSection />
+      <ServicesSection onNavigate={onNavigate} />
       <PartnersMarquee />
       <TestimonialsCarousel />
       <VacancyCTA onNavigate={onNavigate} />

@@ -26,13 +26,21 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         subtitle={t(translations.aboutPage.subtitle, lang)}
       />
 
-      <section className="py-24 bg-card">
+      <section className="py-36 bg-card">
         <div ref={ref} className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Photo */}
           <div className="scroll-reveal relative">
+            <div
+              className="absolute -top-6 -left-6 w-full h-full rounded-2xl pointer-events-none"
+              style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
+            />
             <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" />
+            </div>
+            {/* 15+ badge */}
+            <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
+              {t(translations.about.badge, lang)}
             </div>
           </div>
 

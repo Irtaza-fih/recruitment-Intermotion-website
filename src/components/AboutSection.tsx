@@ -1,13 +1,13 @@
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import marijnImg from "@/assets/marijn.webp";
 
 interface AboutSectionProps {
   onNavigate: (page: "contact") => void;
 }
 
 function renderTitle(html: string) {
-  // Replace <em>...</em> with gradient-text styled span
   return html.replace(/<em>(.*?)<\/em>/g, '<span class="gradient-text">$1</span>');
 }
 
@@ -16,17 +16,20 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
   const ref = useScrollReveal();
 
   return (
-    <section className="py-24 bg-card">
+    <section className="py-36 bg-card">
       <div ref={ref} className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Left: Photo with decoration */}
         <div className="scroll-reveal relative">
+          {/* Gradient accent shape behind photo */}
+          <div
+            className="absolute -top-6 -left-6 w-full h-full rounded-2xl pointer-events-none"
+            style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
+          />
           <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted aspect-[4/3]">
-            <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-lg">
-              Team Photo
-            </div>
+            <img src={marijnImg} alt="Marijn Schilder" className="w-full h-full object-cover" />
           </div>
-          {/* Floating badge */}
+          {/* 15+ badge */}
           <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
             {t(translations.about.badge, lang)}
           </div>

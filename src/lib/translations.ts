@@ -10,10 +10,6 @@ export const translations = {
   },
   hero: {
     tagline: { nl: "When a job turns into an adventure", en: "When a job turns into an adventure" },
-    sub: {
-      nl: "Gespecialiseerd in Finance, IT en Sales recruitment. Wij verbinden talent met ambitie.",
-      en: "Specialised in Finance, IT and Sales recruitment. We connect talent with ambition.",
-    },
     ctaPrimary: { nl: "Neem contact op", en: "Get in touch" },
     ctaSecondary: { nl: "Bekijk vacatures", en: "View vacancies" },
     scroll: { nl: "scroll", en: "scroll" },
@@ -71,17 +67,19 @@ export const translations = {
       en: "How we add <em>value</em>",
     },
     more: { nl: "Meer informatie", en: "More information" },
+    close: { nl: "Sluiten", en: "Close" },
+    contactCta: { nl: "Neem contact op", en: "Get in touch" },
     items: [
       {
-        tag: { nl: "Werving & Selectie", en: "Search & Selection" },
-        title: { nl: "Werving & Selectie", en: "Search & Selection" },
+        tag: { nl: "Recruitment", en: "Recruitment" },
+        title: { nl: "Recruitment", en: "Recruitment" },
         desc: {
           nl: "Wij vinden de perfecte match voor uw vaste posities. Van intake tot onboarding, wij begeleiden het volledige wervingsproces.",
           en: "We find the perfect match for your permanent positions. From intake to onboarding, we guide the entire recruitment process.",
         },
         modalIntro: {
-          nl: "Ons Werving & Selectie proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor uw organisatie.",
-          en: "Our Search & Selection process is designed to identify and attract the best candidates for your organisation.",
+          nl: "Ons Recruitment proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor uw organisatie.",
+          en: "Our Recruitment process is designed to identify and attract the best candidates for your organisation.",
         },
         modalBody: {
           nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op uw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als uw dedicated partner gedurende het gehele proces.",
@@ -89,8 +87,24 @@ export const translations = {
         },
       },
       {
+        tag: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
+        title: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
+        desc: {
+          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen uw wervingsproces over en optimaliseren het van A tot Z.",
+          en: "Fully integrated recruitment solutions. We take over your recruitment process and optimise it from A to Z.",
+        },
+        modalIntro: {
+          nl: "Inhouse Recruitment is de ultieme oplossing voor organisaties die hun volledige recruitmentproces willen professionaliseren en optimaliseren.",
+          en: "Inhouse Recruitment is the ultimate solution for organisations that want to professionalise and optimise their entire recruitment process.",
+        },
+        modalBody: {
+          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in uw organisatie. We fungeren als uw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
+          en: "In an Inhouse Recruitment collaboration, we fully integrate into your organisation. We act as your internal recruitment department, but with the expertise, tools and network of a specialised agency. From employer branding and job descriptions to sourcing, selection and onboarding — we take over the entire process and ensure measurable results and continuous improvement.",
+        },
+      },
+      {
         tag: { nl: "Interim", en: "Interim" },
-        title: { nl: "Interim Recruitment", en: "Interim Recruitment" },
+        title: { nl: "Interim", en: "Interim" },
         desc: {
           nl: "Flexibele oplossingen voor tijdelijke posities. Snel schakelen met gekwalificeerde interim professionals.",
           en: "Flexible solutions for temporary positions. Quick deployment of qualified interim professionals.",
@@ -102,22 +116,6 @@ export const translations = {
         modalBody: {
           nl: "Ons interim netwerk bestaat uit zorgvuldig geselecteerde professionals met bewezen trackrecords in Finance, IT en Sales. Of het nu gaat om ziektevervanging, projectondersteuning of een tijdelijke capaciteitsuitbreiding — wij leveren binnen korte tijd de juiste interim professional die direct inzetbaar is en waarde toevoegt aan uw team.",
           en: "Our interim network consists of carefully selected professionals with proven track records in Finance, IT and Sales. Whether it concerns illness replacement, project support or temporary capacity expansion — we deliver the right interim professional within a short time who is immediately deployable and adds value to your team.",
-        },
-      },
-      {
-        tag: { nl: "RPO", en: "RPO" },
-        title: { nl: "RPO / Recruitment Process Outsourcing", en: "RPO / Recruitment Process Outsourcing" },
-        desc: {
-          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen uw wervingsproces over en optimaliseren het van A tot Z.",
-          en: "Fully integrated recruitment solutions. We take over your recruitment process and optimise it from A to Z.",
-        },
-        modalIntro: {
-          nl: "RPO is de ultieme oplossing voor organisaties die hun volledige recruitmentproces willen professionaliseren en optimaliseren.",
-          en: "RPO is the ultimate solution for organisations that want to professionalise and optimise their entire recruitment process.",
-        },
-        modalBody: {
-          nl: "Bij een RPO-samenwerking integreren wij ons volledig in uw organisatie. We fungeren als uw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
-          en: "In an RPO collaboration, we fully integrate into your organisation. We act as your internal recruitment department, but with the expertise, tools and network of a specialised agency. From employer branding and job descriptions to sourcing, selection and onboarding — we take over the entire process and ensure measurable results and continuous improvement.",
         },
       },
     ],
@@ -135,27 +133,27 @@ export const translations = {
     },
     items: [
       {
-        initials: "DJ",
-        name: { nl: "Directeur", en: "Director" },
-        role: { nl: "Finance scale-up", en: "Finance scale-up" },
+        initials: "JM",
+        name: { nl: "Joost Meininger", en: "Joost Meininger" },
+        role: { nl: "KPN", en: "KPN" },
         quote: {
           nl: "Recruitment Intermotion heeft ons geholpen een senior finance manager te vinden in een krappe markt. Het proces was snel, persoonlijk en het resultaat overtrof onze verwachtingen.",
           en: "Recruitment Intermotion helped us find a senior finance manager in a tight market. The process was fast, personal and the result exceeded our expectations.",
         },
       },
       {
-        initials: "HR",
-        name: { nl: "HR Manager", en: "HR Manager" },
-        role: { nl: "Tech bedrijf", en: "Tech company" },
+        initials: "JJ",
+        name: { nl: "Jan de Jonge", en: "Jan de Jonge" },
+        role: { nl: "Brood van SOMA", en: "Brood van SOMA" },
         quote: {
           nl: "Marijn denkt écht mee. Geen standaard profielen, maar kandidaten die echt passen bij onze cultuur en ambities. Een verademing in de recruitmentwereld.",
           en: "Marijn really thinks along. No standard profiles, but candidates who truly fit our culture and ambitions. A breath of fresh air in the recruitment world.",
         },
       },
       {
-        initials: "CF",
-        name: { nl: "CFO", en: "CFO" },
-        role: { nl: "Retail organisatie", en: "Retail organisation" },
+        initials: "IL",
+        name: { nl: "Igor La Vos", en: "Igor La Vos" },
+        role: { nl: "Plastica Groep", en: "Plastica Groep" },
         quote: {
           nl: "Snel, persoonlijk en raak. De interim oplossing die Recruitment Intermotion leverde was precies wat we nodig hadden om onze financiële transformatie te ondersteunen.",
           en: "Fast, personal and spot-on. The interim solution Recruitment Intermotion delivered was exactly what we needed to support our financial transformation.",
@@ -246,9 +244,9 @@ export const translations = {
       en: "Do you have a vacancy, are you looking for a new challenge, or would you just like to brainstorm? We'd love to hear from you.",
     },
     email: "info@recruitmentintermotion.nl",
-    phone: "+31 6 12345678",
+    phone: "+31 6 42 63 99 62",
     linkedin: "https://linkedin.com/company/recruitment-intermotion",
-    whatsapp: "https://wa.me/31612345678",
+    whatsapp: "https://wa.me/31642639962",
     ctaTitle: { nl: "Samen bouwen we aan jouw toekomst", en: "Together we build your future" },
     ctaText: {
       nl: "Of je nu op zoek bent naar de juiste kandidaat of de perfecte baan — wij staan voor je klaar.",
