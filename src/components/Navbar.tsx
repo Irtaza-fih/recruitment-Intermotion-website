@@ -62,21 +62,35 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNav(link.id)}
-                className={`text-base font-semibold transition-colors relative pb-1 ${
-                  activePage === link.id
-                    ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
-                    : solid
-                    ? "text-foreground hover:text-accent-blue"
-                    : "text-primary-foreground hover:text-accent-blue"
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.id}
+                  href={link.external}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-base font-semibold transition-colors relative pb-1 ${
+                    solid ? "text-foreground hover:text-accent-blue" : "text-primary-foreground hover:text-accent-blue"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <button
+                  key={link.id}
+                  onClick={() => handleNav(link.id)}
+                  className={`text-base font-semibold transition-colors relative pb-1 ${
+                    activePage === link.id
+                      ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
+                      : solid
+                      ? "text-foreground hover:text-accent-blue"
+                      : "text-primary-foreground hover:text-accent-blue"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              )
+            )}
           </div>
 
           {/* Right side */}
