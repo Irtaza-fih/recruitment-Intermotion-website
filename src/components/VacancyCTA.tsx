@@ -6,7 +6,7 @@ function renderTitle(html: string) {
 }
 
 interface VacancyCTAProps {
-  onNavigate: (page: "vacancies" | "contact") => void;
+  onNavigate: (page: "contact") => void;
 }
 
 export default function VacancyCTA({ onNavigate }: VacancyCTAProps) {
