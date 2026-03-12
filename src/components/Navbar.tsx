@@ -26,11 +26,11 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
   const solid = !isHome || scrolled;
   const showLogo = !isHome || scrolled;
 
-  const navLinks: { id: PageId; label: string }[] = useMemo(
+  const navLinks: { id: PageId; label: string; external?: string }[] = useMemo(
     () => [
       { id: "home", label: t(translations.nav.home, lang) },
       { id: "about", label: t(translations.nav.about, lang) },
-      { id: "vacancies", label: t(translations.nav.vacancies, lang) },
+      { id: "vacancies", label: t(translations.nav.vacancies, lang), external: "https://careers-page.com/recruitment-intermotion" },
     ],
     [lang]
   );
