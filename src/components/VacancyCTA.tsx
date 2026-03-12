@@ -29,12 +29,14 @@ export default function VacancyCTA({ onNavigate }: VacancyCTAProps) {
             {t(translations.vacancyCta.text, lang)}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => onNavigate("vacancies")}
+            <a
+              href="https://careers-page.com/recruitment-intermotion"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary-foreground text-primary px-8 py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
             >
               {t(translations.vacancyCta.ctaPrimary, lang)}
-            </button>
+            </a>
             <button
               onClick={() => onNavigate("contact")}
               className="border-2 border-primary-foreground text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary-foreground/10 transition-all"
