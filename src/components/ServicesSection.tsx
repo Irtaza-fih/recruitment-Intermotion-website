@@ -7,23 +7,18 @@ function renderTitle(html: string) {
   return html.replace(/<em>(.*?)<\/em>/g, '<span class="gradient-text">$1</span>');
 }
 
-const icons = [
-  // Search icon
-  <svg key="0" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" /></svg>,
-  // Clock icon
-  <svg key="1" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>,
-  // Settings icon
-  <svg key="2" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" /></svg>,
-];
+interface ServicesSectionProps {
+  onNavigate?: (page: "contact") => void;
+}
 
-export default function ServicesSection() {
+export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
   const { lang } = useLang();
   const [modalIdx, setModalIdx] = useState<number | null>(null);
   const ref = useScrollReveal();
 
   return (
     <>
-      <section className="py-24 bg-bg-tint">
+      <section className="py-36 bg-bg-tint">
         <div ref={ref} className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="scroll-reveal text-accent-blue text-sm font-bold uppercase tracking-wider mb-3">
@@ -54,27 +49,50 @@ export default function ServicesSection() {
       {/* Modal */}
       {modalIdx !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setModalIdx(null)}>
-          <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-foreground/60" style={{ backdropFilter: "blur(6px)" }} />
           <div
-            className="relative bg-card rounded-2xl shadow-2xl max-w-lg w-full p-8"
+            className="relative bg-card rounded-2xl shadow-2xl max-w-lg w-full p-8 flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={() => setModalIdx(null)}
-              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
-            >
-              ✕
-            </button>
             <div className="text-accent-blue text-sm font-bold mb-2">0{modalIdx + 1}</div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
               {t(translations.services.items[modalIdx].title, lang)}
             </h3>
-            <p className="font-semibold text-foreground mb-3">
-              {t(translations.services.items[modalIdx].modalIntro, lang)}
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
+            {/* Blockquote-styled intro */}
+            <div
+              className="mb-4 rounded-r-lg"
+              style={{
+                borderLeft: "4px solid hsl(205 96% 49%)",
+                background: "hsl(228 100% 98%)",
+                padding: "1rem 1.25rem",
+                borderRadius: "0 8px 8px 0",
+              }}
+            >
+              <p className="font-semibold text-foreground">
+                {t(translations.services.items[modalIdx].modalIntro, lang)}
+              </p>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-6">
               {t(translations.services.items[modalIdx].modalBody, lang)}
             </p>
+            {/* Footer buttons */}
+            <div className="border-t border-border pt-4 flex items-center justify-between">
+              <button
+                onClick={() => setModalIdx(null)}
+                className="px-5 py-2.5 rounded-full text-sm font-semibold border border-border text-foreground hover:bg-muted transition-colors"
+              >
+                {t(translations.services.close, lang)}
+              </button>
+              <button
+                onClick={() => {
+                  setModalIdx(null);
+                  onNavigate?.("contact");
+                }}
+                className="gradient-brand text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
+              >
+                {t(translations.services.contactCta, lang)}
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -112,7 +130,7 @@ function ServiceCard({
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="scroll-reveal relative bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-accent-blue cursor-pointer group overflow-hidden"
+      className="scroll-reveal relative bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue cursor-pointer group overflow-hidden"
       onClick={onMore}
     >
       {/* Glow effect */}
@@ -123,7 +141,11 @@ function ServiceCard({
         }}
       />
       <div className="relative z-10">
-        <div className="text-accent-blue mb-4">{icons[index]}</div>
+        {/* Numbered label with animated bar */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-accent-blue text-2xl font-extrabold">0{index + 1}</span>
+          <div className="h-px bg-accent-blue/30 flex-1 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        </div>
         <span className="inline-block gradient-brand text-primary-foreground text-xs font-bold px-3 py-1 rounded-full mb-4">
           {tag}
         </span>

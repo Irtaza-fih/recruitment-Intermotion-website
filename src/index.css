@@ -72,6 +72,10 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+  /* Bold text in paragraphs should be navy */
+  p strong, p b {
+    color: #1F217D;
+  }
 }
 
 /* Brand gradient utility */

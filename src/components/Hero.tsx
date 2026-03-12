@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import logo from "@/assets/logo.svg";
@@ -44,8 +44,8 @@ export default function Hero({ onNavigate }: HeroProps) {
         src="/happywork.m4v"
       />
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-navy/70" />
+      {/* Dark overlay — max 25% opacity, no blue tint */}
+      <div className="absolute inset-0 bg-black/25" />
 
       {/* Particles */}
       {particles.map((p) => (
@@ -70,12 +70,9 @@ export default function Hero({ onNavigate }: HeroProps) {
         >
           <img src={logo} alt="Recruitment Intermotion" className="h-20 md:h-28 mx-auto brightness-0 invert" />
         </div>
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
           {t(translations.hero.tagline, lang)}
         </h1>
-        <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-          {t(translations.hero.sub, lang)}
-        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => onNavigate("contact")}

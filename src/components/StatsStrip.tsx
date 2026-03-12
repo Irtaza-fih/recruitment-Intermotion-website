@@ -29,7 +29,15 @@ function StatItem({ value, suffix, label, triggered }: StatItemProps) {
 
   return (
     <div className="text-center">
-      <div className="text-4xl md:text-5xl font-extrabold gradient-text mb-2">
+      <div
+        className="text-4xl md:text-5xl font-extrabold mb-2"
+        style={{
+          background: "linear-gradient(180deg, #ffffff 0%, #0199F8 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
         {display}{suffix}
       </div>
       <div className="text-primary-foreground/70 text-sm font-medium">{label}</div>
