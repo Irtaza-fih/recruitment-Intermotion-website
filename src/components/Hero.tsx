@@ -63,16 +63,16 @@ export default function Hero({ onNavigate }: HeroProps) {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 text-center text-primary-foreground px-6 max-w-3xl">
+      <div className="relative z-10 text-center text-primary-foreground px-6 max-w-4xl">
         <div
           style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
-          className="transition-none mb-8"
+          className="transition-none mb-6"
         >
-          <img src={logo} alt="Recruitment Intermotion" className="h-20 md:h-28 mx-auto brightness-0 invert" />
+          <img src={logo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 mx-auto" />
         </div>
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-8 leading-tight">
+        <p className="text-lg md:text-xl font-semibold italic mb-10 text-primary-foreground/90">
           {t(translations.hero.tagline, lang)}
-        </h1>
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => onNavigate("contact")}
