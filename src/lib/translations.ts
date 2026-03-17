@@ -233,8 +233,8 @@ export const translations = {
       en: "The conviction that recruitment should be personal, transparent and results-oriented forms the foundation of everything we do. No bulk, no standard approach — but a tailored strategy for every assignment.",
     },
     bio3: {
-      nl: "Vanuit ons kantoor bedienen wij opdrachtgevers door heel Nederland, met een focus op de Randstad. Ons netwerk strekt zich uit over duizenden professionals in Finance, IT en Sales.",
-      en: "From our office, we serve clients throughout the Netherlands, with a focus on the Randstad. Our network extends across thousands of professionals in Finance, IT and Sales.",
+      nl: "Vanuit ons kantoor bedienen wij opdrachtgevers door heel Nederland, met een focus op de Randstad en Noord-Brabant. Ons netwerk strekt zich uit over duizenden professionals in Finance, IT en Sales.",
+      en: "From our office, we serve clients throughout the Netherlands, with a focus on the Randstad and Noord-Brabant. Our network extends across thousands of professionals in Finance, IT and Sales.",
     },
   },
   contact: {
