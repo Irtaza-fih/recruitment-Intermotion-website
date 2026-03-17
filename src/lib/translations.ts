@@ -110,7 +110,7 @@ export const translations = {
           en: "Flexible solutions for temporary positions. Quick deployment of qualified interim professionals.",
         },
         modalIntro: {
-          nl: "Soms heeft uw organisatie snel een ervaren professional nodig voor een tijdelijke opdracht of project.",
+          nl: "Soms heeft jouw organisatie snel een ervaren professional nodig voor een tijdelijke opdracht of project.",
           en: "Sometimes your organisation quickly needs an experienced professional for a temporary assignment or project.",
         },
         modalBody: {
