@@ -82,7 +82,7 @@ export const translations = {
           en: "Our Recruitment process is designed to identify and attract the best candidates for your organisation.",
         },
         modalBody: {
-          nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op uw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als uw dedicated partner gedurende het gehele proces.",
+          nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op jouw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als jouw dedicated partner gedurende het gehele proces.",
           en: "We employ a proven methodology where we deeply explore your organisational culture, specific job requirements and desired competencies. Through our extensive network and active sourcing strategies, we also reach passive candidates who are not actively looking but are open to the right opportunity. Each selection process is guided by an experienced consultant who acts as your dedicated partner throughout the entire process.",
         },
       },
