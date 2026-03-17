@@ -38,7 +38,7 @@ export const translations = {
       en: "Our team understands that every organisation is unique. That's why we don't offer standard solutions, but a fully customised recruitment approach that aligns with your specific needs and company culture.",
     },
     p4: {
-      nl: "Met ons uitgebreide netwerk en diepgaande sectorkennis zijn wij in staat om snel de juiste kandidaten te identificeren en te presenteren, waardoor u tijd en resources bespaart.",
+      nl: "Met ons uitgebreide netwerk en diepgaande sectorkennis zijn wij in staat om snel de juiste kandidaten te identificeren en te presenteren, waardoor je tijd en resources bespaart.",
       en: "With our extensive network and deep sector knowledge, we are able to quickly identify and present the right candidates, saving you time and resources.",
     },
     p5: {
