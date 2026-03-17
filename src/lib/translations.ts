@@ -167,7 +167,7 @@ export const translations = {
       en: "Looking for a new <em>challenge</em>?",
     },
     text: {
-      nl: "Bekijk onze actuele vacatures en vind jouw volgende carrièrestap.",
+      nl: "Bekijk onze actuele vacatures en vind je volgende carrièrestap.",
       en: "Browse our current vacancies and find your next career move.",
     },
     ctaPrimary: { nl: "Bekijk vacatures", en: "View vacancies" },
