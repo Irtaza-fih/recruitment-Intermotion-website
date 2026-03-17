@@ -54,9 +54,9 @@ export default function VacancyCTA({ onNavigate }: VacancyCTAProps) {
                   {lang === "nl" ? "Op zoek naar talent?" : "Looking for talent?"}
                 </h3>
                 <p className="text-muted-foreground mb-6 text-sm">
-                  {lang === "nl"
-                    ? "Vertel ons over uw vacature — wij nemen binnen 24 uur contact op."
-                    : "Tell us about your vacancy — we'll reach out within 24 hours."}
+                {lang === "nl"
+58:                     ? "Vertel ons over je vacature — wij nemen binnen 24 uur contact op."
+59:                     : "Tell us about your vacancy — we'll reach out within 24 hours."}
                 </p>
               </div>
               <button
