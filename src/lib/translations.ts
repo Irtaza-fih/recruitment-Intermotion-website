@@ -34,7 +34,7 @@ export const translations = {
       en: "Founded by Marijn Schilder, with years of experience at leading companies such as Hays, BDO Advisory and KPN, we bring a unique combination of market knowledge, network and personal approach.",
     },
     p3: {
-      nl: "Ons team begrijpt dat elke organisatie uniek is. Daarom bieden wij geen standaard oplossingen, maar een volledig op maat gemaakte recruitmentaanpak die aansluit bij uw specifieke behoeften en bedrijfscultuur.",
+      nl: "Ons team begrijpt dat elke organisatie uniek is. Daarom bieden wij geen standaard oplossingen, maar een volledig op maat gemaakte recruitmentaanpak die aansluit bij jouw specifieke behoeften en bedrijfscultuur.",
       en: "Our team understands that every organisation is unique. That's why we don't offer standard solutions, but a fully customised recruitment approach that aligns with your specific needs and company culture.",
     },
     p4: {
