@@ -78,7 +78,7 @@ export const translations = {
           en: "We find the perfect match for your permanent positions. From intake to onboarding, we guide the entire recruitment process.",
         },
         modalIntro: {
-          nl: "Ons Recruitment proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor uw organisatie.",
+          nl: "Ons Recruitment proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor jouw organisatie.",
           en: "Our Recruitment process is designed to identify and attract the best candidates for your organisation.",
         },
         modalBody: {
