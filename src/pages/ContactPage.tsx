@@ -174,6 +174,22 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Inquiry Type */}
+              <div>
+                <label className="block text-sm font-semibold text-foreground mb-1.5">
+                  {lang === "nl" ? "Waar bent u naar op zoek? *" : "What are you looking for? *"}
+                </label>
+                <select
+                  value={form.inquiryType}
+                  onChange={(e) => update("inquiryType", e.target.value)}
+                  className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue"
+                >
+                  <option value="">-- {lang === "nl" ? "selecteer" : "select"} --</option>
+                  <option value="job">{lang === "nl" ? "Een baan vinden" : "Find a Job"}</option>
+                  <option value="talent">{lang === "nl" ? "Talent vinden" : "Find a Talent"}</option>
+                </select>
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <InputField label={t(f.firstName, lang)} value={form.firstName} onChange={(v) => update("firstName", v)} />
                 <InputField label={t(f.lastName, lang)} value={form.lastName} onChange={(v) => update("lastName", v)} />
