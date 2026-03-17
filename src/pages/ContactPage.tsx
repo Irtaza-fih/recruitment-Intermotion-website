@@ -123,34 +123,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Availability */}
-              <div>
-                <h3 className="text-accent-blue text-xs font-bold uppercase tracking-widest mb-6">
-                  {lang === "nl" ? "Bereikbaarheid" : "Availability"}
-                </h3>
-                <div className="space-y-0">
-                  {availability.map((row, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center justify-between py-3"
-                      style={{ borderBottom: "1px solid #E5EAF5" }}
-                    >
-                      <span className="font-semibold text-foreground">{row.day}</span>
-                      <span
-                        className="font-semibold"
-                        style={{ color: row.open ? "#0199F8" : undefined }}
-                      >
-                        {row.time}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  {lang === "nl"
-                    ? "Dringende verzoeken? Mail ons — wij monitoren buiten kantooruren voor bestaande klanten."
-                    : "Urgent requests? Email us — we monitor outside hours for existing clients."}
-                </p>
-              </div>
 
               <div className="liquid-gradient rounded-2xl p-8 text-primary-foreground">
                 <h3 className="text-xl font-bold mb-2">{t(c.ctaTitle, lang)}</h3>
