@@ -166,7 +166,7 @@ function ClientForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void 
     <div className="space-y-4 pt-2">
       <p className="text-sm text-muted-foreground">
         {lang === "nl"
-          ? "Vertel ons over uw vacature — wij nemen binnen 24 uur contact op voor een vrijblijvend gesprek."
+          ? "Vertel ons over je vacature — wij nemen binnen 24 uur contact op voor een vrijblijvend gesprek."
           : "Tell us about your vacancy — we'll reach out within 24 hours for a no-obligation conversation."}
       </p>
       <Field label={`${lang === "nl" ? "Bedrijfsnaam" : "Company name"} *`} value={form.companyName} onChange={(v) => u("companyName", v)} />
