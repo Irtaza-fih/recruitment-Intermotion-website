@@ -64,6 +64,15 @@ export default function ContactPage() {
       ),
       external: true,
     },
+    {
+      href: "https://calendly.com/recruitment-intermotion/automation",
+      title: "Calendly",
+      subtitle: lang === "nl" ? "Plan een gesprek" : "Schedule a meeting",
+      icon: (
+        <svg width="22" height="22" fill="none" stroke="#1F217D" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" /></svg>
+      ),
+      external: true,
+    },
   ];
 
   const availability = [

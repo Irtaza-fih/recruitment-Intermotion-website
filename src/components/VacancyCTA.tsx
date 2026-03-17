@@ -173,7 +173,7 @@ function ClientForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void 
       <Field label={`${lang === "nl" ? "Contactpersoon" : "Contact name"} *`} value={form.contactName} onChange={(v) => u("contactName", v)} />
       <Field label={`${lang === "nl" ? "E-mail" : "Email"} *`} value={form.email} onChange={(v) => u("email", v)} type="email" />
       <Field label={lang === "nl" ? "Telefoon" : "Phone"} value={form.phone} onChange={(v) => u("phone", v)} type="tel" />
-      <Field label={`${lang === "nl" ? "Functie waarvoor u werft" : "Role hiring for"} *`} value={form.roleHiring} onChange={(v) => u("roleHiring", v)} />
+      <Field label={`${lang === "nl" ? "Functie waarvoor je werft" : "Role hiring for"} *`} value={form.roleHiring} onChange={(v) => u("roleHiring", v)} />
       <div>
         <label className="block text-sm font-semibold text-foreground mb-1.5">
           {lang === "nl" ? "Aantal posities" : "Number of hires"}
