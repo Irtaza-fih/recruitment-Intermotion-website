@@ -90,7 +90,7 @@ export const translations = {
         tag: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
         title: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
         desc: {
-          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen uw wervingsproces over en optimaliseren het van A tot Z.",
+          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen je wervingsproces over en optimaliseren het van A tot Z.",
           en: "Fully integrated recruitment solutions. We take over your recruitment process and optimise it from A to Z.",
         },
         modalIntro: {
