@@ -114,7 +114,7 @@ export const translations = {
           en: "Sometimes your organisation quickly needs an experienced professional for a temporary assignment or project.",
         },
         modalBody: {
-          nl: "Ons interim netwerk bestaat uit zorgvuldig geselecteerde professionals met bewezen trackrecords in Finance, IT en Sales. Of het nu gaat om ziektevervanging, projectondersteuning of een tijdelijke capaciteitsuitbreiding — wij leveren binnen korte tijd de juiste interim professional die direct inzetbaar is en waarde toevoegt aan uw team.",
+          nl: "Ons interim netwerk bestaat uit zorgvuldig geselecteerde professionals met bewezen trackrecords in Finance, IT en Sales. Of het nu gaat om ziektevervanging, projectondersteuning of een tijdelijke capaciteitsuitbreiding — wij leveren binnen korte tijd de juiste interim professional die direct inzetbaar is en waarde toevoegt aan jouw team.",
           en: "Our interim network consists of carefully selected professionals with proven track records in Finance, IT and Sales. Whether it concerns illness replacement, project support or temporary capacity expansion — we deliver the right interim professional within a short time who is immediately deployable and adds value to your team.",
         },
       },
