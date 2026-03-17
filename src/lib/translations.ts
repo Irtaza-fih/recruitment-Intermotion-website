@@ -98,7 +98,7 @@ export const translations = {
           en: "Inhouse Recruitment is the ultimate solution for organisations that want to professionalise and optimise their entire recruitment process.",
         },
         modalBody: {
-          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in uw organisatie. We fungeren als uw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
+          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in jouw organisatie. We fungeren als jouw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
           en: "In an Inhouse Recruitment collaboration, we fully integrate into your organisation. We act as your internal recruitment department, but with the expertise, tools and network of a specialised agency. From employer branding and job descriptions to sourcing, selection and onboarding — we take over the entire process and ensure measurable results and continuous improvement.",
         },
       },
