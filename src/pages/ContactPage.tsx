@@ -177,7 +177,7 @@ export default function ContactPage() {
               {/* Inquiry Type */}
               <div>
                 <label className="block text-sm font-semibold text-foreground mb-1.5">
-                  {lang === "nl" ? "Waar bent u naar op zoek? *" : "What are you looking for? *"}
+                  {lang === "nl" ? "Waar ben je naar op zoek? *" : "What are you looking for? *"}
                 </label>
                 <select
                   value={form.inquiryType}
