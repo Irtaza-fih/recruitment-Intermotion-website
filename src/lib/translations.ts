@@ -46,7 +46,7 @@ export const translations = {
       en: "We strive for long-term partnerships with our clients and candidates, based on trust, transparency and mutual success.",
     },
     quote: {
-      nl: '"Welkom bij Recruitment Intermotion — waar uw volgende carrièrestap begint."',
+      nl: '"Welkom bij Recruitment Intermotion — waar jouw volgende carrièrestap begint."',
       en: '"Welcome to Recruitment Intermotion — where your next career move begins."',
     },
     ctaTitle: {
