@@ -54,7 +54,7 @@ export const translations = {
       en: "Ready to find the right match?",
     },
     ctaText: {
-      nl: "Laat ons samen werken aan uw succes. Neem vandaag nog contact op.",
+      nl: "Laat ons samen werken aan jouw succes. Neem vandaag nog contact op.",
       en: "Let us work together on your success. Get in touch today.",
     },
     ctaButton: { nl: "Start het gesprek", en: "Start the conversation" },
