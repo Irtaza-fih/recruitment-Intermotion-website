@@ -159,6 +159,33 @@ export const translations = {
           en: "Fast, personal and spot-on. The interim solution Recruitment Intermotion delivered was exactly what we needed to support our financial transformation.",
         },
       },
+      {
+        initials: "SR",
+        name: { nl: "Stijn Rohof", en: "Stijn Rohof" },
+        role: { nl: "KPN", en: "KPN" },
+        quote: {
+          nl: "Marijn werkt met een grondige intake en zorgt daarmee voor een gerichte search met passende kandidaten. Het resultaat was uitstekend: meerdere nieuwe collega's én een nette afhandeling voor kandidaten zonder match.",
+          en: "Marijn works with a thorough intake and thereby ensures a targeted search with suitable candidates. The result was excellent: multiple new colleagues and a proper handling for candidates without a match.",
+        },
+      },
+      {
+        initials: "CW",
+        name: { nl: "Chantal van der Walle", en: "Chantal van der Walle" },
+        role: { nl: "KPN", en: "KPN" },
+        quote: {
+          nl: "Marijn is een empathische recruiter die je als kandidaat echt het gevoel geeft dat hij volledig voor jou gaat. Zijn betrokkenheid en persoonlijke aanpak maken hem een absolute topper!",
+          en: "Marijn is an empathetic recruiter who truly makes you feel as a candidate that he is fully committed to you. His involvement and personal approach make him an absolute star!",
+        },
+      },
+      {
+        initials: "MW",
+        name: { nl: "Mattijs Wever", en: "Mattijs Wever" },
+        role: { nl: "Idverde", en: "Idverde" },
+        quote: {
+          nl: "Marijn onderscheidt zich door zijn professionaliteit en zijn scherpe oog voor een goede match — ook daar waar dit op het eerste gezicht niet voor de hand lag. Een absolute aanrader voor wie op zoek is naar een recruiter die écht de juiste fit weet te vinden.",
+          en: "Marijn distinguishes himself through his professionalism and his keen eye for a good match — even where this was not obvious at first glance. An absolute recommendation for anyone looking for a recruiter who truly knows how to find the right fit.",
+        },
+      },
     ],
   },
   vacancyCta: {
