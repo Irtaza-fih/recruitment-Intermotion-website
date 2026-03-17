@@ -240,7 +240,7 @@ export const translations = {
   contact: {
     title: { nl: "Laten we kennismaken", en: "Let's get acquainted" },
     subtitle: {
-      nl: "Heeft u een vacature, zoekt u een nieuwe uitdaging, of wilt u gewoon eens sparren? Wij horen graag van u.",
+      nl: "Heb je een vacature, zoek je een nieuwe uitdaging, of wil je gewoon eens sparren? Wij horen graag van je.",
       en: "Do you have a vacancy, are you looking for a new challenge, or would you just like to brainstorm? We'd love to hear from you.",
     },
     email: "info@recruitmentintermotion.nl",
