@@ -247,7 +247,7 @@ export const translations = {
     phone: "+31 6 42 63 99 62",
     linkedin: "https://linkedin.com/company/recruitment-intermotion",
     whatsapp: "https://wa.me/31642639962",
-    ctaTitle: { nl: "Samen bouwen we aan jouw toekomst", en: "Together we build your future" },
+    ctaTitle: { nl: "Samen bouwen we aan je toekomst", en: "Together we build your future" },
     ctaText: {
       nl: "Of je nu op zoek bent naar de juiste kandidaat of de perfecte baan — wij staan voor je klaar.",
       en: "Whether you're looking for the right candidate or the perfect job — we're here for you.",
