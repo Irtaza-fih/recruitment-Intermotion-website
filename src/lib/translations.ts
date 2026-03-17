@@ -74,7 +74,7 @@ export const translations = {
         tag: { nl: "Recruitment", en: "Recruitment" },
         title: { nl: "Recruitment", en: "Recruitment" },
         desc: {
-          nl: "Wij vinden de perfecte match voor uw vaste posities. Van intake tot onboarding, wij begeleiden het volledige wervingsproces.",
+          nl: "Wij vinden de perfecte match voor je vaste posities. Van intake tot onboarding, wij begeleiden het volledige wervingsproces.",
           en: "We find the perfect match for your permanent positions. From intake to onboarding, we guide the entire recruitment process.",
         },
         modalIntro: {
