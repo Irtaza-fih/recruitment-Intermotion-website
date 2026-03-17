@@ -12,6 +12,7 @@ export default function ContactPage() {
 
   const [form, setForm] = useState({
     salutation: "dhr",
+    inquiryType: "",
     firstName: "",
     lastName: "",
     phone: "",
