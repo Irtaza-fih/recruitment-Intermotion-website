@@ -54,8 +54,8 @@ export default function VacancyCTA({ onNavigate }: VacancyCTAProps) {
                   {lang === "nl" ? "Op zoek naar talent?" : "Looking for talent?"}
                 </h3>
                 <p className="text-muted-foreground mb-6 text-sm">
-                  {lang === "nl"
-                    ? "Vertel ons over uw vacature — wij nemen binnen 24 uur contact op."
+                {lang === "nl"
+                    ? "Vertel ons over je vacature — wij nemen binnen 24 uur contact op."
                     : "Tell us about your vacancy — we'll reach out within 24 hours."}
                 </p>
               </div>
@@ -166,14 +166,14 @@ function ClientForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void 
     <div className="space-y-4 pt-2">
       <p className="text-sm text-muted-foreground">
         {lang === "nl"
-          ? "Vertel ons over uw vacature — wij nemen binnen 24 uur contact op voor een vrijblijvend gesprek."
+          ? "Vertel ons over je vacature — wij nemen binnen 24 uur contact op voor een vrijblijvend gesprek."
           : "Tell us about your vacancy — we'll reach out within 24 hours for a no-obligation conversation."}
       </p>
       <Field label={`${lang === "nl" ? "Bedrijfsnaam" : "Company name"} *`} value={form.companyName} onChange={(v) => u("companyName", v)} />
       <Field label={`${lang === "nl" ? "Contactpersoon" : "Contact name"} *`} value={form.contactName} onChange={(v) => u("contactName", v)} />
       <Field label={`${lang === "nl" ? "E-mail" : "Email"} *`} value={form.email} onChange={(v) => u("email", v)} type="email" />
       <Field label={lang === "nl" ? "Telefoon" : "Phone"} value={form.phone} onChange={(v) => u("phone", v)} type="tel" />
-      <Field label={`${lang === "nl" ? "Functie waarvoor u werft" : "Role hiring for"} *`} value={form.roleHiring} onChange={(v) => u("roleHiring", v)} />
+      <Field label={`${lang === "nl" ? "Functie waarvoor je werft" : "Role hiring for"} *`} value={form.roleHiring} onChange={(v) => u("roleHiring", v)} />
       <div>
         <label className="block text-sm font-semibold text-foreground mb-1.5">
           {lang === "nl" ? "Aantal posities" : "Number of hires"}

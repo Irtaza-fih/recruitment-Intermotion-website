@@ -34,11 +34,11 @@ export const translations = {
       en: "Founded by Marijn Schilder, with years of experience at leading companies such as Hays, BDO Advisory and KPN, we bring a unique combination of market knowledge, network and personal approach.",
     },
     p3: {
-      nl: "Ons team begrijpt dat elke organisatie uniek is. Daarom bieden wij geen standaard oplossingen, maar een volledig op maat gemaakte recruitmentaanpak die aansluit bij uw specifieke behoeften en bedrijfscultuur.",
+      nl: "Ons team begrijpt dat elke organisatie uniek is. Daarom bieden wij geen standaard oplossingen, maar een volledig op maat gemaakte recruitmentaanpak die aansluit bij jouw specifieke behoeften en bedrijfscultuur.",
       en: "Our team understands that every organisation is unique. That's why we don't offer standard solutions, but a fully customised recruitment approach that aligns with your specific needs and company culture.",
     },
     p4: {
-      nl: "Met ons uitgebreide netwerk en diepgaande sectorkennis zijn wij in staat om snel de juiste kandidaten te identificeren en te presenteren, waardoor u tijd en resources bespaart.",
+      nl: "Met ons uitgebreide netwerk en diepgaande sectorkennis zijn wij in staat om snel de juiste kandidaten te identificeren en te presenteren, waardoor je tijd en resources bespaart.",
       en: "With our extensive network and deep sector knowledge, we are able to quickly identify and present the right candidates, saving you time and resources.",
     },
     p5: {
@@ -46,7 +46,7 @@ export const translations = {
       en: "We strive for long-term partnerships with our clients and candidates, based on trust, transparency and mutual success.",
     },
     quote: {
-      nl: '"Welkom bij Recruitment Intermotion — waar uw volgende carrièrestap begint."',
+      nl: '"Welkom bij Recruitment Intermotion — waar jouw volgende carrièrestap begint."',
       en: '"Welcome to Recruitment Intermotion — where your next career move begins."',
     },
     ctaTitle: {
@@ -54,7 +54,7 @@ export const translations = {
       en: "Ready to find the right match?",
     },
     ctaText: {
-      nl: "Laat ons samen werken aan uw succes. Neem vandaag nog contact op.",
+      nl: "Laat ons samen werken aan jouw succes. Neem vandaag nog contact op.",
       en: "Let us work together on your success. Get in touch today.",
     },
     ctaButton: { nl: "Start het gesprek", en: "Start the conversation" },
@@ -74,15 +74,15 @@ export const translations = {
         tag: { nl: "Recruitment", en: "Recruitment" },
         title: { nl: "Recruitment", en: "Recruitment" },
         desc: {
-          nl: "Wij vinden de perfecte match voor uw vaste posities. Van intake tot onboarding, wij begeleiden het volledige wervingsproces.",
+          nl: "Wij vinden de perfecte match voor je vaste posities. Van intake tot onboarding, wij begeleiden het volledige wervingsproces.",
           en: "We find the perfect match for your permanent positions. From intake to onboarding, we guide the entire recruitment process.",
         },
         modalIntro: {
-          nl: "Ons Recruitment proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor uw organisatie.",
+          nl: "Ons Recruitment proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor jouw organisatie.",
           en: "Our Recruitment process is designed to identify and attract the best candidates for your organisation.",
         },
         modalBody: {
-          nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op uw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als uw dedicated partner gedurende het gehele proces.",
+          nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op jouw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als jouw dedicated partner gedurende het gehele proces.",
           en: "We employ a proven methodology where we deeply explore your organisational culture, specific job requirements and desired competencies. Through our extensive network and active sourcing strategies, we also reach passive candidates who are not actively looking but are open to the right opportunity. Each selection process is guided by an experienced consultant who acts as your dedicated partner throughout the entire process.",
         },
       },
@@ -90,7 +90,7 @@ export const translations = {
         tag: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
         title: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
         desc: {
-          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen uw wervingsproces over en optimaliseren het van A tot Z.",
+          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen je wervingsproces over en optimaliseren het van A tot Z.",
           en: "Fully integrated recruitment solutions. We take over your recruitment process and optimise it from A to Z.",
         },
         modalIntro: {
@@ -98,7 +98,7 @@ export const translations = {
           en: "Inhouse Recruitment is the ultimate solution for organisations that want to professionalise and optimise their entire recruitment process.",
         },
         modalBody: {
-          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in uw organisatie. We fungeren als uw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
+          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in jouw organisatie. We fungeren als jouw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
           en: "In an Inhouse Recruitment collaboration, we fully integrate into your organisation. We act as your internal recruitment department, but with the expertise, tools and network of a specialised agency. From employer branding and job descriptions to sourcing, selection and onboarding — we take over the entire process and ensure measurable results and continuous improvement.",
         },
       },
@@ -110,11 +110,11 @@ export const translations = {
           en: "Flexible solutions for temporary positions. Quick deployment of qualified interim professionals.",
         },
         modalIntro: {
-          nl: "Soms heeft uw organisatie snel een ervaren professional nodig voor een tijdelijke opdracht of project.",
+          nl: "Soms heeft jouw organisatie snel een ervaren professional nodig voor een tijdelijke opdracht of project.",
           en: "Sometimes your organisation quickly needs an experienced professional for a temporary assignment or project.",
         },
         modalBody: {
-          nl: "Ons interim netwerk bestaat uit zorgvuldig geselecteerde professionals met bewezen trackrecords in Finance, IT en Sales. Of het nu gaat om ziektevervanging, projectondersteuning of een tijdelijke capaciteitsuitbreiding — wij leveren binnen korte tijd de juiste interim professional die direct inzetbaar is en waarde toevoegt aan uw team.",
+          nl: "Ons interim netwerk bestaat uit zorgvuldig geselecteerde professionals met bewezen trackrecords in Finance, IT en Sales. Of het nu gaat om ziektevervanging, projectondersteuning of een tijdelijke capaciteitsuitbreiding — wij leveren binnen korte tijd de juiste interim professional die direct inzetbaar is en waarde toevoegt aan jouw team.",
           en: "Our interim network consists of carefully selected professionals with proven track records in Finance, IT and Sales. Whether it concerns illness replacement, project support or temporary capacity expansion — we deliver the right interim professional within a short time who is immediately deployable and adds value to your team.",
         },
       },
@@ -167,7 +167,7 @@ export const translations = {
       en: "Looking for a new <em>challenge</em>?",
     },
     text: {
-      nl: "Bekijk onze actuele vacatures en vind jouw volgende carrièrestap.",
+      nl: "Bekijk onze actuele vacatures en vind je volgende carrièrestap.",
       en: "Browse our current vacancies and find your next career move.",
     },
     ctaPrimary: { nl: "Bekijk vacatures", en: "View vacancies" },
@@ -233,21 +233,21 @@ export const translations = {
       en: "The conviction that recruitment should be personal, transparent and results-oriented forms the foundation of everything we do. No bulk, no standard approach — but a tailored strategy for every assignment.",
     },
     bio3: {
-      nl: "Vanuit ons kantoor bedienen wij opdrachtgevers door heel Nederland, met een focus op de Randstad. Ons netwerk strekt zich uit over duizenden professionals in Finance, IT en Sales.",
-      en: "From our office, we serve clients throughout the Netherlands, with a focus on the Randstad. Our network extends across thousands of professionals in Finance, IT and Sales.",
+      nl: "Vanuit ons kantoor bedienen wij opdrachtgevers door heel Nederland, met een focus op de Randstad en Noord-Brabant. Ons netwerk strekt zich uit over duizenden professionals in Finance, IT en Sales.",
+      en: "From our office, we serve clients throughout the Netherlands, with a focus on the Randstad and Noord-Brabant. Our network extends across thousands of professionals in Finance, IT and Sales.",
     },
   },
   contact: {
     title: { nl: "Laten we kennismaken", en: "Let's get acquainted" },
     subtitle: {
-      nl: "Heeft u een vacature, zoekt u een nieuwe uitdaging, of wilt u gewoon eens sparren? Wij horen graag van u.",
+      nl: "Heb je een vacature, zoek je een nieuwe uitdaging, of wil je gewoon eens sparren? Wij horen graag van je.",
       en: "Do you have a vacancy, are you looking for a new challenge, or would you just like to brainstorm? We'd love to hear from you.",
     },
     email: "info@recruitmentintermotion.nl",
     phone: "+31 6 42 63 99 62",
     linkedin: "https://linkedin.com/company/recruitment-intermotion",
     whatsapp: "https://wa.me/31642639962",
-    ctaTitle: { nl: "Samen bouwen we aan jouw toekomst", en: "Together we build your future" },
+    ctaTitle: { nl: "Samen bouwen we aan je toekomst", en: "Together we build your future" },
     ctaText: {
       nl: "Of je nu op zoek bent naar de juiste kandidaat of de perfecte baan — wij staan voor je klaar.",
       en: "Whether you're looking for the right candidate or the perfect job — we're here for you.",
