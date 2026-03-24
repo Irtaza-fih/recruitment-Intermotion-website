@@ -26,24 +26,40 @@ export const translations = {
       en: "We believe in the power of the <em>right match</em>",
     },
     p1: {
-      nl: "Recruitment Intermotion is een gespecialiseerd recruitmentbureau dat zich richt op het verbinden van toptalent met vooraanstaande organisaties in de sectoren Finance, IT en Sales.",
-      en: "Recruitment Intermotion is a specialised recruitment agency focused on connecting top talent with leading organisations in the Finance, IT and Sales sectors.",
+      nl: "Bij Recruitment Intermotion verbinden wij <accent>ambitieuze bedrijven</accent> met de professionals die hen helpen vooruit te bewegen — <accent>succesvol</accent> en <accent>duurzaam</accent>.",
+      en: "At Recruitment Intermotion we connect <accent>ambitious companies</accent> with the professionals who help them move forward — <accent>successfully</accent> and <accent>sustainably</accent>.",
     },
     p2: {
-      nl: "Opgericht door Marijn Schilder, met jarenlange ervaring bij toonaangevende bedrijven zoals Hays, BDO Advisory en KPN, brengen wij een unieke combinatie van marktkennis, netwerk en persoonlijke benadering.",
-      en: "Founded by Marijn Schilder, with years of experience at leading companies such as Hays, BDO Advisory and KPN, we bring a unique combination of market knowledge, network and personal approach.",
+      nl: "We werven voor zowel <accent>vaste functies</accent> als <accent>interim rollen</accent> in uiteenlopende disciplines: <accent>Finance, IT & Sales</accent>.",
+      en: "We recruit for both <accent>permanent positions</accent> and <accent>interim roles</accent> across various disciplines: <accent>Finance, IT & Sales</accent>.",
     },
     p3: {
-      nl: "Ons team begrijpt dat elke organisatie uniek is. Daarom bieden wij geen standaard oplossingen, maar een volledig op maat gemaakte recruitmentaanpak die aansluit bij jouw specifieke behoeften en bedrijfscultuur.",
-      en: "Our team understands that every organisation is unique. That's why we don't offer standard solutions, but a fully customised recruitment approach that aligns with your specific needs and company culture.",
+      nl: "Daarnaast bieden we zowel <accent>fractional</accent> als <accent>interim recruitment</accent> aan: wij fungeren als jullie flexibele talentpartner die de chaos van een start-up, het momentum van een scale-up, de complexiteit van familiebedrijven én corporate structuren begrijpt.",
+      en: "We also offer both <accent>fractional</accent> and <accent>interim recruitment</accent>: we act as your flexible talent partner who understands the chaos of a start-up, the momentum of a scale-up, the complexity of family businesses and corporate structures.",
     },
     p4: {
-      nl: "Met ons uitgebreide netwerk en diepgaande sectorkennis zijn wij in staat om snel de juiste kandidaten te identificeren en te presenteren, waardoor je tijd en resources bespaart.",
-      en: "With our extensive network and deep sector knowledge, we are able to quickly identify and present the right candidates, saving you time and resources.",
+      nl: "Met meer dan <accent>15 jaar ervaring</accent> en een scherp inzicht in de behoeften van organisaties en kandidaten, begrijpen wij als geen ander de complexiteit van het vinden, <accent>boeien</accent> én <accent>binden</accent> van professionals.",
+      en: "With over <accent>15 years of experience</accent> and a keen insight into the needs of organisations and candidates, we understand like no other the complexity of finding, <accent>engaging</accent> and <accent>retaining</accent> professionals.",
     },
     p5: {
-      nl: "Wij streven naar langdurige partnerships met onze opdrachtgevers en kandidaten, gebaseerd op vertrouwen, transparantie en wederzijds succes.",
-      en: "We strive for long-term partnerships with our clients and candidates, based on trust, transparency and mutual success.",
+      nl: "Wij geloven niet in een one-size-fits-all-benadering. Wij geloven in <accent>maatwerk</accent>, ondersteund door <accent>automatisering</accent> en gedreven door <accent>creativiteit</accent>. Wij weten als geen ander dat echte resultaten niet voortkomen uit standaardmethodes, maar uit een <accent>innovatieve</accent> én <accent>persoonlijke aanpak</accent>.",
+      en: "We don't believe in a one-size-fits-all approach. We believe in <accent>bespoke solutions</accent>, supported by <accent>automation</accent> and driven by <accent>creativity</accent>. We know like no other that real results don't come from standard methods, but from an <accent>innovative</accent> and <accent>personal approach</accent>.",
+    },
+    p6: {
+      nl: "Oprechte interesse in de mens vormt het fundament van onze aanpak. Een gesprek betekent voor ons een avontuur vol onverwachte wendingen, verrassende zijsprongen en het stellen van <accent>scherpe vragen</accent>. Humor en het durven opzoeken van de 'randen' mogen daarbij zeker niet ontbreken.",
+      en: "Genuine interest in people forms the foundation of our approach. A conversation means to us an adventure full of unexpected turns, surprising detours and asking <accent>sharp questions</accent>. Humour and daring to explore the edges are certainly part of that.",
+    },
+    p7: {
+      nl: "Samen bouwen we aan een <accent>succesvolle toekomst</accent> voor jouw organisatie met de juiste mensen op de juiste plek.",
+      en: "Together we build a <accent>successful future</accent> for your organisation with the right people in the right place.",
+    },
+    p8: {
+      nl: "Welkom bij Recruitment Intermotion, waar <accent>potentieel</accent> wordt ontdekt en <accent>ambities</accent> worden gerealiseerd.",
+      en: "Welcome to Recruitment Intermotion, where <accent>potential</accent> is discovered and <accent>ambitions</accent> are realised.",
+    },
+    p9: {
+      nl: "En ja... wij doen het <accent>nét even anders</accent>!",
+      en: "And yes... we do it <accent>just a little differently</accent>!",
     },
     quote: {
       nl: '"Welkom bij Recruitment Intermotion — waar jouw volgende carrièrestap begint."',
@@ -82,8 +98,8 @@ export const translations = {
           en: "Our Recruitment process is designed to identify and attract the best candidates for your organisation.",
         },
         modalBody: {
-          nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op jouw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als jouw dedicated partner gedurende het gehele proces.",
-          en: "We employ a proven methodology where we deeply explore your organisational culture, specific job requirements and desired competencies. Through our extensive network and active sourcing strategies, we also reach passive candidates who are not actively looking but are open to the right opportunity. Each selection process is guided by an experienced consultant who acts as your dedicated partner throughout the entire process.",
+          nl: "Wij hanteren een bewezen methodiek waarbij we diep ingaan op jouw organisatiecultuur, de specifieke functie-eisen en de gewenste competenties. Door ons uitgebreide netwerk en actieve sourcing-strategieën bereiken we ook passieve kandidaten die niet actief op zoek zijn maar wel openstaan voor de juiste kans. Elk selectietraject wordt begeleid door een ervaren consultant die fungeert als jouw dedicated partner gedurende het gehele proces.\n\nDaarnaast zetten wij actieve outreach in om kandidaten te benaderen — niet alleen via vacaturebanken, maar juist door proactieve, gerichte sourcing en directe benadering via LinkedIn en andere kanalen. Zo bereiken we talent dat via traditionele kanalen onzichtbaar blijft.\n\nWij werken volgens de nieuwste ontwikkelingen op het gebied van automatisering en AI, denk aan slimme sourcing-tools en AI-ondersteunde matching. Maar wij geloven dat recruitment uiteindelijk draait om persoonlijk contact. Technologie ondersteunt het proces; de menselijke connectie maakt het verschil.",
+          en: "We employ a proven methodology where we deeply explore your organisational culture, specific job requirements and desired competencies. Through our extensive network and active sourcing strategies, we also reach passive candidates who are not actively looking but are open to the right opportunity. Each selection process is guided by an experienced consultant who acts as your dedicated partner throughout the entire process.\n\nAdditionally, we use active outreach to approach candidates — not just through job board postings, but through proactive, targeted sourcing and direct approach via LinkedIn and other channels. This way we reach talent that remains invisible through traditional channels.\n\nWe work according to the latest developments in automation and AI, such as smart sourcing tools and AI-assisted matching. But we believe that recruitment ultimately comes down to personal contact. Technology supports the process; the human connection makes the difference.",
         },
       },
       {
@@ -98,8 +114,8 @@ export const translations = {
           en: "Inhouse Recruitment is the ultimate solution for organisations that want to professionalise and optimise their entire recruitment process.",
         },
         modalBody: {
-          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in jouw organisatie. We fungeren als jouw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.",
-          en: "In an Inhouse Recruitment collaboration, we fully integrate into your organisation. We act as your internal recruitment department, but with the expertise, tools and network of a specialised agency. From employer branding and job descriptions to sourcing, selection and onboarding — we take over the entire process and ensure measurable results and continuous improvement.",
+          nl: "Bij een Inhouse Recruitment samenwerking integreren wij ons volledig in jouw organisatie. We fungeren als jouw interne recruitmentafdeling, maar dan met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van employer branding en vacatureteksten tot sourcing, selectie en onboarding — wij nemen het volledige proces uit handen en zorgen voor meetbare resultaten en continue verbetering.\n\nDaarnaast bieden wij ook fractional recruitment aan: een recruiter die uiterst flexibel inzetbaar is, vanaf slechts 8 uur per week. Dit maakt professionele recruitment ondersteuning toegankelijk voor organisaties die wel behoefte hebben aan wervingskracht, maar zich niet willen vastleggen op een fulltime of langdurig traject.",
+          en: "In an Inhouse Recruitment collaboration, we fully integrate into your organisation. We act as your internal recruitment department, but with the expertise, tools and network of a specialised agency. From employer branding and job descriptions to sourcing, selection and onboarding — we take over the entire process and ensure measurable results and continuous improvement.\n\nWe also offer fractional recruitment: a recruiter who is highly flexible in terms of deployment and can be engaged from as little as 8 hours per week. This makes professional recruitment support accessible for organisations that need recruitment capacity without committing to a full-time or long-term engagement.",
         },
       },
       {
