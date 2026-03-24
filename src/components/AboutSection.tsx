@@ -37,8 +37,8 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
             style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
           />
           <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted aspect-[4/3]">
-            <img src={marijnImg} alt="Marijn Schilder" className="w-full h-full object-cover" />
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" />
           </div>
           {/* 15+ badge */}
           <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
