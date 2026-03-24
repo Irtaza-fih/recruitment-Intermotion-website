@@ -30,19 +30,33 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
     <section className="py-36 bg-card">
       <div ref={ref} className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Left: Photo with decoration */}
-        <div className="scroll-reveal relative">
-          {/* Gradient accent shape behind photo */}
-          <div
-            className="absolute -top-6 -left-6 w-full h-full rounded-2xl pointer-events-none"
-            style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
-          />
-          <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" />
+        <div className="space-y-12">
+          <div className="scroll-reveal relative">
+            {/* Gradient accent shape behind photo */}
+            <div
+              className="absolute -top-6 -left-6 w-full h-full rounded-2xl pointer-events-none"
+              style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
+            />
+            <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" />
+            </div>
+            {/* 15+ badge */}
+            <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
+              {t(translations.about.badge, lang)}
+            </div>
           </div>
-          {/* 15+ badge */}
-          <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
-            {t(translations.about.badge, lang)}
+
+          {/* CTA Box - moved under photo */}
+          <div className="scroll-reveal liquid-gradient rounded-2xl p-8 text-primary-foreground">
+            <h3 className="text-xl font-bold mb-2">{t(translations.about.ctaTitle, lang)}</h3>
+            <p className="text-primary-foreground/80 mb-4">{t(translations.about.ctaText, lang)}</p>
+            <button
+              onClick={() => onNavigate("contact")}
+              className="bg-primary-foreground text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
+            >
+              {t(translations.about.ctaButton, lang)}
+            </button>
           </div>
         </div>
 
@@ -71,18 +85,6 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
           <blockquote className="scroll-reveal border-l-4 border-accent-blue pl-5 my-8 italic text-foreground text-lg">
             {t(translations.about.quote, lang)}
           </blockquote>
-
-          {/* CTA Box */}
-          <div className="scroll-reveal liquid-gradient rounded-2xl p-8 text-primary-foreground">
-            <h3 className="text-xl font-bold mb-2">{t(translations.about.ctaTitle, lang)}</h3>
-            <p className="text-primary-foreground/80 mb-4">{t(translations.about.ctaText, lang)}</p>
-            <button
-              onClick={() => onNavigate("contact")}
-              className="bg-primary-foreground text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
-            >
-              {t(translations.about.ctaButton, lang)}
-            </button>
-          </div>
         </div>
       </div>
     </section>
