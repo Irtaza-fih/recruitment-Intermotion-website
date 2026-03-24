@@ -11,6 +11,17 @@ function renderTitle(html: string) {
   return html.replace(/<em>(.*?)<\/em>/g, '<span class="gradient-text">$1</span>');
 }
 
+function renderAccent(text: string) {
+  const parts = text.split(/(<accent>.*?<\/accent>)/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^<accent>(.*?)<\/accent>$/);
+    if (match) {
+      return <span key={i} className="text-accent-blue font-bold">{match[1]}</span>;
+    }
+    return <span key={i}>{part}</span>;
+  });
+}
+
 export default function AboutSection({ onNavigate }: AboutSectionProps) {
   const { lang } = useLang();
   const ref = useScrollReveal();
@@ -45,11 +56,15 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
             dangerouslySetInnerHTML={{ __html: renderTitle(t(translations.about.title, lang)) }}
           />
           <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p className="scroll-reveal">{t(translations.about.p1, lang)}</p>
-            <p className="scroll-reveal">{t(translations.about.p2, lang)}</p>
-            <p className="scroll-reveal">{t(translations.about.p3, lang)}</p>
-            <p className="scroll-reveal">{t(translations.about.p4, lang)}</p>
-            <p className="scroll-reveal">{t(translations.about.p5, lang)}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p1, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p2, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p3, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p4, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p5, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p6, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p7, lang))}</p>
+            <p className="scroll-reveal">{renderAccent(t(translations.about.p8, lang))}</p>
+            <p className="scroll-reveal font-bold">{renderAccent(t(translations.about.p9, lang))}</p>
           </div>
 
           {/* Blockquote */}
