@@ -72,9 +72,11 @@ export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
                 {t(translations.services.items[modalIdx].modalIntro, lang)}
               </p>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              {t(translations.services.items[modalIdx].modalBody, lang)}
-            </p>
+            <div className="text-muted-foreground leading-relaxed mb-6 space-y-4">
+              {t(translations.services.items[modalIdx].modalBody, lang).split('\n\n').map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
             {/* Footer buttons */}
             <div className="border-t border-border pt-4 flex items-center justify-between">
               <button
