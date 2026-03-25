@@ -73,9 +73,20 @@ export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
               </p>
             </div>
             <div className="text-muted-foreground leading-relaxed mb-6 space-y-4">
-              {t(translations.services.items[modalIdx].modalBody, lang).split('\n\n').map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
+              {t(translations.services.items[modalIdx].modalBody, lang).split('\n\n').map((paragraph, i) => {
+                const parts = paragraph.split(/(<accent>.*?<\/accent>)/g);
+                return (
+                  <p key={i}>
+                    {parts.map((part, j) => {
+                      const match = part.match(/^<accent>(.*?)<\/accent>$/);
+                      if (match) {
+                        return <span key={j} className="text-accent-blue font-bold">{match[1]}</span>;
+                      }
+                      return <span key={j}>{part}</span>;
+                    })}
+                  </p>
+                );
+              })}
             </div>
             {/* Footer buttons */}
             <div className="border-t border-border pt-4 flex items-center justify-between">
