@@ -33,7 +33,7 @@ export default function ContactPage() {
     {
       href: `mailto:${c.email}`,
       title: c.email,
-      subtitle: lang === "nl" ? "Voor algemene vragen" : "For general enquiries",
+      subtitle: lang === "nl" ? "Voor alle vragen" : "For all enquiries",
       icon: (
         <svg width="22" height="22" fill="none" stroke="#1F217D" strokeWidth="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 7l-10 7L2 7" /></svg>
       ),
@@ -41,7 +41,7 @@ export default function ContactPage() {
     {
       href: `tel:${c.phone.replace(/\s/g, "")}`,
       title: c.phone,
-      subtitle: lang === "nl" ? "Ma–Vr, 9:00–18:00 CET" : "Mon–Fri, 9:00–18:00 CET",
+      subtitle: lang === "nl" ? "Ma–Vr, 8:00–19:00 CET" : "Mon–Fri, 8:00–19:00 CET",
       icon: (
         <svg width="22" height="22" fill="none" stroke="#1F217D" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" /></svg>
       ),
@@ -65,7 +65,7 @@ export default function ContactPage() {
       external: true,
     },
     {
-      href: "https://calendly.com/recruitment-intermotion/automation",
+      href: "https://calendly.com/recruitment-intermotion/recruitment-call",
       title: "Calendly",
       subtitle: lang === "nl" ? "Plan een gesprek" : "Schedule a meeting",
       icon: (
@@ -166,7 +166,7 @@ export default function ContactPage() {
                   className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue"
                 >
                   <option value="">-- {lang === "nl" ? "selecteer" : "select"} --</option>
-                  <option value="job">{lang === "nl" ? "Een baan vinden" : "Find a Job"}</option>
+                  <option value="job">{lang === "nl" ? "Een nieuwe uitdaging" : "A new challenge"}</option>
                   <option value="talent">{lang === "nl" ? "Talent vinden" : "Find a Talent"}</option>
                 </select>
               </div>
