@@ -69,8 +69,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             </div>
 
             <div className="scroll-reveal liquid-gradient rounded-2xl p-8 text-primary-foreground mt-8">
-              <h3 className="text-xl font-bold mb-2">{t(translations.about.ctaTitle, lang)}</h3>
-              <p className="text-primary-foreground/80 mb-4">{t(translations.about.ctaText, lang)}</p>
+              <h3 className="text-xl font-bold mb-4">{t(translations.about.ctaTitle, lang)}</h3>
               <button
                 onClick={() => onNavigate("contact")}
                 className="bg-primary-foreground text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
