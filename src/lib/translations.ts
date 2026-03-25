@@ -22,58 +22,54 @@ export const translations = {
   about: {
     eyebrow: { nl: "Over Recruitment Intermotion", en: "About Recruitment Intermotion" },
     title: {
-      nl: "Wij geloven in de kracht van de <em>juiste match</em>",
-      en: "We believe in the power of the <em>right match</em>",
+      nl: "De juiste mensen op de juiste plek, <em>nét even anders</em>",
+      en: "The right people in the right place, <em>just a little differently</em>",
     },
     p1: {
-      nl: "Bij Recruitment Intermotion verbinden wij <accent>ambitieuze bedrijven</accent> met de professionals die hen helpen vooruit te bewegen — <accent>succesvol</accent> en <accent>duurzaam</accent>.",
-      en: "At Recruitment Intermotion we connect <accent>ambitious companies</accent> with the professionals who help them move forward — <accent>successfully</accent> and <accent>sustainably</accent>.",
+      nl: "Bij Recruitment Intermotion verbinden wij ambitieuze bedrijven met de professionals die hen helpen vooruit te bewegen — succesvol en duurzaam.",
+      en: "At Recruitment Intermotion we connect ambitious companies with the professionals who help them move forward — successfully and sustainably.",
     },
     p2: {
-      nl: "We werven voor zowel <accent>vaste functies</accent> als <accent>interim rollen</accent> in uiteenlopende disciplines: <accent>Finance, IT & Sales</accent>.",
-      en: "We recruit for both <accent>permanent positions</accent> and <accent>interim roles</accent> across various disciplines: <accent>Finance, IT & Sales</accent>.",
+      nl: "We werven voor zowel vaste functies als interim rollen in uiteenlopende disciplines: <accent>Finance, IT & Sales</accent>.",
+      en: "We recruit for both permanent positions and interim roles across various disciplines: <accent>Finance, IT & Sales</accent>.",
     },
     p3: {
-      nl: "Daarnaast bieden we zowel <accent>fractional</accent> als <accent>interim recruitment</accent> aan: wij fungeren als jullie flexibele talentpartner die de chaos van een start-up, het momentum van een scale-up, de complexiteit van familiebedrijven én corporate structuren begrijpt.",
-      en: "We also offer both <accent>fractional</accent> and <accent>interim recruitment</accent>: we act as your flexible talent partner who understands the chaos of a start-up, the momentum of a scale-up, the complexity of family businesses and corporate structures.",
+      nl: "Daarnaast bieden we zowel fractional als interim recruitment aan: wij fungeren als jullie flexibele talentpartner die de chaos van een start-up, het momentum van een scale-up, de complexiteit van familiebedrijven én corporate structuren begrijpt.",
+      en: "We also offer both fractional and interim recruitment: we act as your flexible talent partner who understands the chaos of a start-up, the momentum of a scale-up, the complexity of family businesses and corporate structures.",
     },
     p4: {
-      nl: "Met meer dan <accent>15 jaar ervaring</accent> en een scherp inzicht in de behoeften van organisaties en kandidaten, begrijpen wij als geen ander de complexiteit van het vinden, <accent>boeien</accent> én <accent>binden</accent> van professionals.",
-      en: "With over <accent>15 years of experience</accent> and a keen insight into the needs of organisations and candidates, we understand like no other the complexity of finding, <accent>engaging</accent> and <accent>retaining</accent> professionals.",
+      nl: "Met meer dan 15 jaar ervaring en een scherp inzicht in de behoeften van organisaties en kandidaten, begrijpen wij als geen ander de complexiteit van het <accent>vinden, boeien én binden</accent> van professionals.",
+      en: "With over 15 years of experience and a keen insight into the needs of organisations and candidates, we understand like no other the complexity of <accent>finding, engaging and retaining</accent> professionals.",
     },
     p5: {
-      nl: "Wij geloven niet in een one-size-fits-all-benadering. Wij geloven in <accent>maatwerk</accent>, ondersteund door <accent>automatisering</accent> en gedreven door <accent>creativiteit</accent>. Wij weten als geen ander dat echte resultaten niet voortkomen uit standaardmethodes, maar uit een <accent>innovatieve</accent> én <accent>persoonlijke aanpak</accent>.",
-      en: "We don't believe in a one-size-fits-all approach. We believe in <accent>bespoke solutions</accent>, supported by <accent>automation</accent> and driven by <accent>creativity</accent>. We know like no other that real results don't come from standard methods, but from an <accent>innovative</accent> and <accent>personal approach</accent>.",
+      nl: "Wij geloven niet in een one-size-fits-all-benadering. Wij geloven in maatwerk, <accent>ondersteund door automatisering</accent> en gedreven door <accent>creativiteit</accent>. Wij weten als geen ander dat echte resultaten niet voortkomen uit standaardmethodes, maar uit <accent>een innovatieve én persoonlijke aanpak</accent>.",
+      en: "We don't believe in a one-size-fits-all approach. We believe in bespoke solutions, <accent>supported by automation</accent> and driven by <accent>creativity</accent>. We know like no other that real results don't come from standard methods, but from <accent>an innovative and personal approach</accent>.",
     },
     p6: {
-      nl: "Oprechte interesse in de mens vormt het fundament van onze aanpak. Een gesprek betekent voor ons een avontuur vol onverwachte wendingen, verrassende zijsprongen en het stellen van <accent>scherpe vragen</accent>. Humor en het durven opzoeken van de 'randen' mogen daarbij zeker niet ontbreken.",
-      en: "Genuine interest in people forms the foundation of our approach. A conversation means to us an adventure full of unexpected turns, surprising detours and asking <accent>sharp questions</accent>. Humour and daring to explore the edges are certainly part of that.",
+      nl: "Oprechte interesse in de mens vormt het fundament van onze aanpak. Een gesprek betekent voor ons een avontuur vol onverwachte wendingen, verrassende zijsprongen en het stellen van scherpe vragen. Humor en het durven opzoeken van de 'randen' mogen daarbij zeker niet ontbreken.",
+      en: "Genuine interest in people forms the foundation of our approach. A conversation means to us an adventure full of unexpected turns, surprising detours and asking sharp questions. Humour and daring to explore the edges are certainly part of that.",
     },
     p7: {
-      nl: "Samen bouwen we aan een <accent>succesvolle toekomst</accent> voor jouw organisatie met de juiste mensen op de juiste plek.",
-      en: "Together we build a <accent>successful future</accent> for your organisation with the right people in the right place.",
+      nl: "Samen bouwen we aan een succesvolle toekomst voor jouw organisatie met de juiste mensen op de juiste plek.",
+      en: "Together we build a successful future for your organisation with the right people in the right place.",
     },
     p8: {
-      nl: "Welkom bij Recruitment Intermotion, waar <accent>potentieel</accent> wordt ontdekt en <accent>ambities</accent> worden gerealiseerd.",
-      en: "Welcome to Recruitment Intermotion, where <accent>potential</accent> is discovered and <accent>ambitions</accent> are realised.",
-    },
-    p9: {
-      nl: "En ja... wij doen het <accent>nét even anders</accent>!",
-      en: "And yes... we do it <accent>just a little differently</accent>!",
+      nl: "En ja... <accent>wij doen het nét even anders</accent>!",
+      en: "And yes... <accent>we do it just a little differently</accent>!",
     },
     quote: {
-      nl: '"Welkom bij Recruitment Intermotion — waar jouw volgende carrièrestap begint."',
-      en: '"Welcome to Recruitment Intermotion — where your next career move begins."',
+      nl: '"Welkom bij Recruitment Intermotion, waar potentieel wordt ontdekt en ambities worden gerealiseerd."',
+      en: '"Welcome to Recruitment Intermotion, where potential is discovered and ambitions are realised."',
     },
     ctaTitle: {
-      nl: "Klaar om de juiste match te vinden?",
-      en: "Ready to find the right match?",
+      nl: "Klaar voor de juiste match?",
+      en: "Ready for the right match?",
     },
     ctaText: {
-      nl: "Laat ons samen werken aan jouw succes. Neem vandaag nog contact op.",
-      en: "Let us work together on your success. Get in touch today.",
+      nl: "",
+      en: "",
     },
-    ctaButton: { nl: "Start het gesprek", en: "Start the conversation" },
+    ctaButton: { nl: "Ga het gesprek aan", en: "Start the conversation" },
     badge: { nl: "15+ Jaar Ervaring", en: "15+ Years Experience" },
   },
   services: {
