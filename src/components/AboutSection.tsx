@@ -49,8 +49,7 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
 
           {/* CTA Box - moved under photo */}
           <div className="scroll-reveal liquid-gradient rounded-2xl p-8 text-primary-foreground">
-            <h3 className="text-xl font-bold mb-2">{t(translations.about.ctaTitle, lang)}</h3>
-            <p className="text-primary-foreground/80 mb-4">{t(translations.about.ctaText, lang)}</p>
+            <h3 className="text-xl font-bold mb-4">{t(translations.about.ctaTitle, lang)}</h3>
             <button
               onClick={() => onNavigate("contact")}
               className="bg-primary-foreground text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
@@ -77,8 +76,7 @@ export default function AboutSection({ onNavigate }: AboutSectionProps) {
             <p className="scroll-reveal">{renderAccent(t(translations.about.p5, lang))}</p>
             <p className="scroll-reveal">{renderAccent(t(translations.about.p6, lang))}</p>
             <p className="scroll-reveal">{renderAccent(t(translations.about.p7, lang))}</p>
-            <p className="scroll-reveal">{renderAccent(t(translations.about.p8, lang))}</p>
-            <p className="scroll-reveal font-bold">{renderAccent(t(translations.about.p9, lang))}</p>
+            <p className="scroll-reveal font-bold">{renderAccent(t(translations.about.p8, lang))}</p>
           </div>
 
           {/* Blockquote */}
