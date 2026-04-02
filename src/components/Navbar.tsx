@@ -1,20 +1,23 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
+import { useLocation } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
+import { useAppNavigate } from "@/hooks/useAppNavigate";
 import logo from "@/assets/logo.svg";
 
-type PageId = "home" | "about" | "vacancies" | "contact";
-
-interface NavbarProps {
-  activePage: PageId;
-  onNavigate: (page: PageId) => void;
-  isHome: boolean;
-}
-
-export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) {
+export default function Navbar() {
   const { lang, setLang } = useLang();
+  const location = useLocation();
+  const navigate = useAppNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const isHome = location.pathname === "/";
+
+  // Close mobile drawer on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -26,21 +29,25 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
   const solid = !isHome || scrolled;
   const showLogo = !isHome || scrolled;
 
-  const navLinks: { id: PageId; label: string; external?: string }[] = useMemo(
+  const navLinks = useMemo(
     () => [
-      { id: "home", label: t(translations.nav.home, lang) },
-      { id: "about", label: t(translations.nav.about, lang) },
-      { id: "vacancies", label: t(translations.nav.vacancies, lang), external: "https://careers-page.com/recruitment-intermotion" },
+      { path: "/", label: t(translations.nav.home, lang) },
+      { path: "/over-ons", label: t(translations.nav.about, lang) },
+      { path: null, label: t(translations.nav.vacancies, lang), external: "https://careers-page.com/recruitment-intermotion" },
     ],
     [lang]
   );
 
   const handleNav = useCallback(
-    (page: PageId) => {
-      onNavigate(page);
+    (path: string) => {
+      if (path === location.pathname) {
+        setMobileOpen(false);
+        return;
+      }
       setMobileOpen(false);
+      navigate(path);
     },
-    [onNavigate]
+    [navigate, location.pathname]
   );
 
   return (
@@ -55,7 +62,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
           <div
             className={`transition-all duration-300 ${showLogo ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
           >
-            <button onClick={() => handleNav("home")} className="flex items-center">
+            <button onClick={() => handleNav("/")} className="flex items-center">
               <img src={logo} alt="Recruitment Intermotion" className="h-10" />
             </button>
           </div>
@@ -65,7 +72,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
             {navLinks.map((link) =>
               link.external ? (
                 <a
-                  key={link.id}
+                  key={link.label}
                   href={link.external}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -77,10 +84,10 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
                 </a>
               ) : (
                 <button
-                  key={link.id}
-                  onClick={() => handleNav(link.id)}
+                  key={link.path}
+                  onClick={() => handleNav(link.path!)}
                   className={`text-base font-semibold transition-colors relative pb-1 ${
-                    activePage === link.id
+                    location.pathname === link.path
                       ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
                       : solid
                       ? "text-foreground hover:text-accent-blue"
@@ -115,7 +122,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
               </button>
             </div>
 
-            {/* Social icons — tight pair */}
+            {/* Social icons */}
             <div className="flex items-center gap-[0.1rem]">
               <a
                 href="https://linkedin.com/company/recruitment-intermotion"
@@ -137,7 +144,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
 
             {/* CTA */}
             <button
-              onClick={() => handleNav("contact")}
+              onClick={() => handleNav("/contact")}
               className="gradient-brand text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
             >
               {t(translations.nav.cta, lang)}
@@ -166,7 +173,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
           {navLinks.map((link) =>
             link.external ? (
               <a
-                key={link.id}
+                key={link.label}
                 href={link.external}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -176,8 +183,8 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
               </a>
             ) : (
               <button
-                key={link.id}
-                onClick={() => handleNav(link.id)}
+                key={link.path}
+                onClick={() => handleNav(link.path!)}
                 className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
               >
                 {link.label} <span className="text-lg">→</span>
@@ -185,7 +192,7 @@ export default function Navbar({ activePage, onNavigate, isHome }: NavbarProps) 
             )
           )}
           <button
-            onClick={() => handleNav("contact")}
+            onClick={() => handleNav("/contact")}
             className="bg-primary-foreground text-primary px-8 py-3 rounded-full text-lg font-bold hover:shadow-lg transition-all"
           >
             {t(translations.nav.cta, lang)}

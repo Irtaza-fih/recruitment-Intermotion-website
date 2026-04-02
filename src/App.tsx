@@ -1,15 +1,21 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/lib/LanguageContext";
+import { subscribeTransition } from "@/hooks/useAppNavigate";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
-
 import ContactPage from "@/pages/ContactPage";
+import NotFound from "@/pages/NotFound";
 
-type PageId = "home" | "about" | "vacancies" | "contact";
+function PageTransitionOverlay() {
+  const [phase, setPhase] = useState<"idle" | "in" | "out">("idle");
 
-function PageTransitionOverlay({ phase }: { phase: "idle" | "in" | "out" }) {
+  useEffect(() => {
+    return subscribeTransition(setPhase);
+  }, []);
+
   if (phase === "idle") return null;
   return (
     <div
@@ -21,44 +27,29 @@ function PageTransitionOverlay({ phase }: { phase: "idle" | "in" | "out" }) {
 }
 
 function AppContent() {
-  const [activePage, setActivePage] = useState<PageId>("home");
-  const [transitionPhase, setTransitionPhase] = useState<"idle" | "in" | "out">("idle");
-  const [displayedPage, setDisplayedPage] = useState<PageId>("home");
-
-  const navigate = useCallback(
-    (page: PageId) => {
-      if (page === activePage || transitionPhase !== "idle") return;
-      setTransitionPhase("in");
-      setTimeout(() => {
-        setActivePage(page);
-        setDisplayedPage(page);
-        window.scrollTo(0, 0);
-        setTransitionPhase("out");
-        setTimeout(() => setTransitionPhase("idle"), 580);
-      }, 580);
-    },
-    [activePage, transitionPhase]
-  );
-
   return (
     <div className="min-h-screen">
-      <Navbar activePage={activePage} onNavigate={navigate} isHome={displayedPage === "home"} />
-      <PageTransitionOverlay phase={transitionPhase} />
+      <Navbar />
+      <PageTransitionOverlay />
       <main>
-        {displayedPage === "home" && <HomePage onNavigate={navigate} />}
-        {displayedPage === "about" && <AboutPage onNavigate={navigate} />}
-        
-        {displayedPage === "contact" && <ContactPage />}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/over-ons" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
-      <Footer onNavigate={navigate} />
+      <Footer />
     </div>
   );
 }
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <AppContent />
-    </LanguageProvider>
+    <BrowserRouter>
+      <LanguageProvider>
+        <AppContent />
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }

@@ -1,20 +1,25 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useAppNavigate } from "@/hooks/useAppNavigate";
 
 function renderTitle(html: string) {
   return html.replace(/<em>(.*?)<\/em>/g, '<span class="gradient-text">$1</span>');
 }
 
-interface ServicesSectionProps {
-  onNavigate?: (page: "contact") => void;
-}
-
-export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
+export default function ServicesSection() {
   const { lang } = useLang();
+  const navigate = useAppNavigate();
+  const location = useLocation();
   const [modalIdx, setModalIdx] = useState<number | null>(null);
   const ref = useScrollReveal();
+
+  // Close modal on route change
+  useEffect(() => {
+    setModalIdx(null);
+  }, [location.pathname]);
 
   return (
     <>
@@ -58,7 +63,6 @@ export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
             <h3 className="text-2xl font-bold text-foreground mb-4">
               {t(translations.services.items[modalIdx].title, lang)}
             </h3>
-            {/* Blockquote-styled intro */}
             <div
               className="mb-4 rounded-r-lg"
               style={{
@@ -88,7 +92,6 @@ export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
                 );
               })}
             </div>
-            {/* Footer buttons */}
             <div className="border-t border-border pt-4 flex items-center justify-between">
               <button
                 onClick={() => setModalIdx(null)}
@@ -99,7 +102,7 @@ export default function ServicesSection({ onNavigate }: ServicesSectionProps) {
               <button
                 onClick={() => {
                   setModalIdx(null);
-                  onNavigate?.("contact");
+                  navigate("/contact");
                 }}
                 className="gradient-brand text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
@@ -146,7 +149,6 @@ function ServiceCard({
       className="scroll-reveal relative bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue cursor-pointer group overflow-hidden"
       onClick={onMore}
     >
-      {/* Glow effect */}
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{
@@ -154,7 +156,6 @@ function ServiceCard({
         }}
       />
       <div className="relative z-10">
-        {/* Numbered label with animated bar */}
         <div className="flex items-center gap-3 mb-6">
           <span className="text-accent-blue text-2xl font-extrabold">0{index + 1}</span>
           <div className="h-px bg-accent-blue/30 flex-1 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />

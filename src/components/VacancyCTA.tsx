@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
-import { translations, t } from "@/lib/translations";
 import {
   Dialog,
   DialogContent,
@@ -8,13 +8,15 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-interface VacancyCTAProps {
-  onNavigate: (page: "contact") => void;
-}
-
-export default function VacancyCTA({ onNavigate }: VacancyCTAProps) {
+export default function VacancyCTA() {
   const { lang } = useLang();
+  const location = useLocation();
   const [openDialog, setOpenDialog] = useState<"candidate" | "client" | null>(null);
+
+  // Close dialogs on route change
+  useEffect(() => {
+    setOpenDialog(null);
+  }, [location.pathname]);
 
   return (
     <>
