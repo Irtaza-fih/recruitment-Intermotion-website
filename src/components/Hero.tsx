@@ -63,7 +63,7 @@ export default function Hero() {
           style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
           className="transition-none mb-6"
         >
-          <img src={logo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 mx-auto" width={256} height={256} fetchPriority="high" />
+          <img src={logo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 mx-auto" width={256} height={256} />
         </div>
         <p className="text-lg md:text-xl font-semibold italic mb-10 text-primary-foreground/90">
           {t(translations.hero.tagline, lang)}

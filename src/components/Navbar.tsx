@@ -63,7 +63,7 @@ export default function Navbar() {
             className={`transition-all duration-300 ${showLogo ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
           >
             <button onClick={() => handleNav("/")} className="flex items-center">
-              <img src={logo} alt="Recruitment Intermotion" className="h-10" fetchPriority="high" />
+              <img src={logo} alt="Recruitment Intermotion" className="h-10" />
             </button>
           </div>
 
