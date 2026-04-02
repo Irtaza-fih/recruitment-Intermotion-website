@@ -18,20 +18,32 @@ export default function AboutPage() {
   const navigate = useAppNavigate();
   const ref = useScrollReveal();
 
+  const title = lang === "nl" ? "Over Ons – Recruitment Intermotion" : "About Us – Recruitment Intermotion";
+  const description = lang === "nl"
+    ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion. Passie voor mensen, scherp inzicht in organisaties, meer dan 15 jaar recruitmentervaring."
+    : "Meet Marijn Schilder, founder of Recruitment Intermotion. Passion for people, sharp insight into organisations, over 15 years of recruitment experience.";
+
   return (
     <>
       <Helmet>
-        <title>{lang === "nl" ? "Over Ons – Recruitment Intermotion" : "About Us – Recruitment Intermotion"}</title>
-        <meta
-          name="description"
-          content={
-            lang === "nl"
-              ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion. Passie voor mensen, scherp inzicht in organisaties, meer dan 15 jaar recruitmentervaring."
-              : "Meet Marijn Schilder, founder of Recruitment Intermotion. Passion for people, sharp insight into organisations, over 15 years of recruitment experience."
-          }
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="keywords" content="Marijn Schilder, recruitment bureau over ons, Recruitment Intermotion, Finance IT Sales werving" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/over-ons" />
+        <link rel="alternate" hrefLang="nl" href="https://recruitmentintermotion.nl/over-ons" />
+        <link rel="alternate" hrefLang="en" href="https://recruitmentintermotion.nl/over-ons?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://recruitmentintermotion.nl/over-ons" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={lang === "nl" ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion. Meer dan 15 jaar recruitmentervaring in Finance, IT en Sales." : "Meet Marijn Schilder, founder of Recruitment Intermotion. Over 15 years of recruitment experience in Finance, IT and Sales."} />
+        <meta property="og:image" content="https://recruitmentintermotion.nl/og-image.jpg" />
+        <meta property="og:url" content="https://recruitmentintermotion.nl/over-ons" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="nl_NL" />
+        <meta property="og:site_name" content="Recruitment Intermotion" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={lang === "nl" ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion." : "Meet Marijn Schilder, founder of Recruitment Intermotion."} />
+        <meta name="twitter:image" content="https://recruitmentintermotion.nl/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [
@@ -102,7 +114,7 @@ export default function AboutPage() {
             />
             <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" />
+              <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" loading="lazy" width={600} height={750} />
             </div>
             <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
               {t(translations.about.badge, lang)}

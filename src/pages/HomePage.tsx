@@ -10,24 +10,36 @@ import VacancyCTA from "@/components/VacancyCTA";
 
 export default function HomePage() {
   const { lang } = useLang();
+
+  const title = lang === "nl"
+    ? "Recruitment Intermotion – Finance, IT & Sales Werving Nederland"
+    : "Recruitment Intermotion – Finance, IT & Sales Recruitment Netherlands";
+
+  const description = lang === "nl"
+    ? "Wij verbinden ambitieuze bedrijven met de juiste professionals in Finance, IT en Sales. Meer dan 15 jaar ervaring. Actief in de Randstad en Noord-Brabant."
+    : "We connect ambitious companies with the right professionals in Finance, IT and Sales. Over 15 years of experience. Active in the Randstad and Noord-Brabant.";
+
   return (
     <>
       <Helmet>
-        <title>
-          {lang === "nl"
-            ? "Recruitment Intermotion – Finance, IT & Sales Werving Nederland"
-            : "Recruitment Intermotion – Finance, IT & Sales Recruitment Netherlands"}
-        </title>
-        <meta
-          name="description"
-          content={
-            lang === "nl"
-              ? "Wij verbinden ambitieuze bedrijven met de juiste professionals in Finance, IT en Sales. Meer dan 15 jaar ervaring. Actief in de Randstad en Noord-Brabant."
-              : "We connect ambitious companies with the right professionals in Finance, IT and Sales. Over 15 years of experience. Active in the Randstad and Noord-Brabant."
-          }
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="keywords" content="recruitment bureau Nederland, werving en selectie Finance, IT recruitment, Sales recruitment, interim recruitment, RPO, Randstad, Noord-Brabant" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/" />
+        <link rel="alternate" hrefLang="nl" href="https://recruitmentintermotion.nl/" />
+        <link rel="alternate" hrefLang="en" href="https://recruitmentintermotion.nl/?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://recruitmentintermotion.nl/" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://recruitmentintermotion.nl/og-image.jpg" />
+        <meta property="og:url" content="https://recruitmentintermotion.nl/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="nl_NL" />
+        <meta property="og:site_name" content="Recruitment Intermotion" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={lang === "nl" ? "Wij verbinden ambitieuze bedrijven met de juiste professionals in Finance, IT en Sales." : "We connect ambitious companies with the right professionals in Finance, IT and Sales."} />
+        <meta name="twitter:image" content="https://recruitmentintermotion.nl/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@graph": [

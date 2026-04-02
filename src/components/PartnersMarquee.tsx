@@ -55,6 +55,9 @@ export default function PartnersMarquee() {
               key={i}
               src={p.logo}
               alt={p.name}
+              loading="lazy"
+              width={220}
+              height={80}
               className="h-20 max-w-[220px] object-contain flex-shrink-0"
             />
           ))}
