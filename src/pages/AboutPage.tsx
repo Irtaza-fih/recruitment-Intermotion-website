@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import PageHeroBanner from "@/components/PageHeroBanner";
@@ -19,6 +20,19 @@ export default function AboutPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{lang === "nl" ? "Over Ons – Recruitment Intermotion" : "About Us – Recruitment Intermotion"}</title>
+        <meta
+          name="description"
+          content={
+            lang === "nl"
+              ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion. Passie voor mensen, scherp inzicht in organisaties, meer dan 15 jaar recruitmentervaring."
+              : "Meet Marijn Schilder, founder of Recruitment Intermotion. Passion for people, sharp insight into organisations, over 15 years of recruitment experience."
+          }
+        />
+        <meta name="keywords" content="Marijn Schilder, recruitment bureau over ons, Recruitment Intermotion, Finance IT Sales werving" />
+        <link rel="canonical" href="https://recruitmentintermotion.nl/over-ons" />
+      </Helmet>
       <PageHeroBanner
         title={t(translations.aboutPage.title, lang)}
         subtitle={t(translations.aboutPage.subtitle, lang)}

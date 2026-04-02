@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { subscribeTransition } from "@/hooks/useAppNavigate";
 import Navbar from "@/components/Navbar";
@@ -46,10 +47,12 @@ function AppContent() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <LanguageProvider>
-        <AppContent />
-      </LanguageProvider>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <LanguageProvider>
+          <AppContent />
+        </LanguageProvider>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
