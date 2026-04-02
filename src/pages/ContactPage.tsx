@@ -84,6 +84,19 @@ export default function ContactPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{lang === "nl" ? "Contact – Recruitment Intermotion" : "Contact – Recruitment Intermotion"}</title>
+        <meta
+          name="description"
+          content={
+            lang === "nl"
+              ? "Neem contact op met Recruitment Intermotion. Vrijblijvend sparren over jouw recruitmentvraagstuk? Marijn Schilder staat voor je klaar."
+              : "Get in touch with Recruitment Intermotion. Want to explore your recruitment challenge? Marijn Schilder is here for you."
+          }
+        />
+        <meta name="keywords" content="contact recruitment bureau, Recruitment Intermotion contact, recruiter Nederland" />
+        <link rel="canonical" href="https://recruitmentintermotion.nl/contact" />
+      </Helmet>
       <PageHeroBanner
         title={t(c.title, lang)}
         subtitle={t(c.subtitle, lang)}
