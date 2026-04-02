@@ -96,9 +96,9 @@ export default function ContactPage() {
         />
         <meta name="keywords" content="contact recruitment bureau, Recruitment Intermotion contact, recruiter Nederland" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/contact" />
-        <link rel="alternate" hreflang="nl" href="https://recruitmentintermotion.nl/contact" />
-        <link rel="alternate" hreflang="en" href="https://recruitmentintermotion.nl/contact?lang=en" />
-        <link rel="alternate" hreflang="x-default" href="https://recruitmentintermotion.nl/contact" />
+        <link rel="alternate" hrefLang="nl" href="https://recruitmentintermotion.nl/contact" />
+        <link rel="alternate" hrefLang="en" href="https://recruitmentintermotion.nl/contact?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://recruitmentintermotion.nl/contact" />
         <meta property="og:title" content={lang === "nl" ? "Contact – Recruitment Intermotion" : "Contact – Recruitment Intermotion"} />
         <meta property="og:description" content={lang === "nl" ? "Neem contact op met Recruitment Intermotion. Vrijblijvend sparren over jouw recruitmentvraagstuk? Marijn Schilder staat voor je klaar." : "Get in touch with Recruitment Intermotion. Want to explore your recruitment challenge? Marijn Schilder is here for you."} />
         <meta property="og:image" content="https://recruitmentintermotion.nl/og-image.jpg" />

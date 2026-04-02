@@ -26,9 +26,9 @@ export default function HomePage() {
         <meta name="description" content={description} />
         <meta name="keywords" content="recruitment bureau Nederland, werving en selectie Finance, IT recruitment, Sales recruitment, interim recruitment, RPO, Randstad, Noord-Brabant" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/" />
-        <link rel="alternate" hreflang="nl" href="https://recruitmentintermotion.nl/" />
-        <link rel="alternate" hreflang="en" href="https://recruitmentintermotion.nl/?lang=en" />
-        <link rel="alternate" hreflang="x-default" href="https://recruitmentintermotion.nl/" />
+        <link rel="alternate" hrefLang="nl" href="https://recruitmentintermotion.nl/" />
+        <link rel="alternate" hrefLang="en" href="https://recruitmentintermotion.nl/?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://recruitmentintermotion.nl/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content="https://recruitmentintermotion.nl/og-image.jpg" />

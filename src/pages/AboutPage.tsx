@@ -30,9 +30,9 @@ export default function AboutPage() {
         <meta name="description" content={description} />
         <meta name="keywords" content="Marijn Schilder, recruitment bureau over ons, Recruitment Intermotion, Finance IT Sales werving" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/over-ons" />
-        <link rel="alternate" hreflang="nl" href="https://recruitmentintermotion.nl/over-ons" />
-        <link rel="alternate" hreflang="en" href="https://recruitmentintermotion.nl/over-ons?lang=en" />
-        <link rel="alternate" hreflang="x-default" href="https://recruitmentintermotion.nl/over-ons" />
+        <link rel="alternate" hrefLang="nl" href="https://recruitmentintermotion.nl/over-ons" />
+        <link rel="alternate" hrefLang="en" href="https://recruitmentintermotion.nl/over-ons?lang=en" />
+        <link rel="alternate" hrefLang="x-default" href="https://recruitmentintermotion.nl/over-ons" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={lang === "nl" ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion. Meer dan 15 jaar recruitmentervaring in Finance, IT en Sales." : "Meet Marijn Schilder, founder of Recruitment Intermotion. Over 15 years of recruitment experience in Finance, IT and Sales."} />
         <meta property="og:image" content="https://recruitmentintermotion.nl/og-image.jpg" />
