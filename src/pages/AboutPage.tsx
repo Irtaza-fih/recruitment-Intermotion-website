@@ -32,6 +32,60 @@ export default function AboutPage() {
         />
         <meta name="keywords" content="Marijn Schilder, recruitment bureau over ons, Recruitment Intermotion, Finance IT Sales werving" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/over-ons" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "name": "Recruitment Intermotion",
+              "url": "https://recruitmentintermotion.nl",
+              "logo": "https://recruitmentintermotion.nl/logo.svg",
+              "foundingDate": "2022",
+              "founder": { "@type": "Person", "name": "Marijn Schilder" },
+              "description": "Recruitment bureau gespecialiseerd in Finance, IT en Sales. Actief in de Randstad en Noord-Brabant.",
+              "areaServed": "NL",
+              "serviceType": ["Werving & Selectie", "Interim Recruitment", "RPO"],
+              "email": "marijn@recruitmentintermotion.nl",
+              "telephone": "+31642639962"
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Recruitment Intermotion",
+              "url": "https://recruitmentintermotion.nl",
+              "telephone": "+31642639962",
+              "email": "marijn@recruitmentintermotion.nl",
+              "founder": { "@type": "Person", "name": "Marijn Schilder" },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Nieuwstraat 2",
+                "postalCode": "4921 CX",
+                "addressLocality": "Made",
+                "addressRegion": "Noord-Brabant",
+                "addressCountry": "NL"
+              },
+              "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
+              "priceRange": "$$"
+            }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Marijn Schilder",
+          "jobTitle": "Founder",
+          "worksFor": { "@type": "Organization", "name": "Recruitment Intermotion" },
+          "url": "https://recruitmentintermotion.nl/over-ons",
+          "email": "marijn@recruitmentintermotion.nl",
+          "telephone": "+31642639962",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Nieuwstraat 2",
+            "postalCode": "4921 CX",
+            "addressLocality": "Made",
+            "addressRegion": "Noord-Brabant",
+            "addressCountry": "NL"
+          }
+        })}</script>
       </Helmet>
       <PageHeroBanner
         title={t(translations.aboutPage.title, lang)}
