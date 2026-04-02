@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Merriweather", "serif"],
+        sans: ["Syne", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
