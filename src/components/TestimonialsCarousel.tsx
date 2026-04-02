@@ -31,14 +31,16 @@ export default function TestimonialsCarousel() {
           {/* Arrows */}
           <button
             onClick={() => setCurrent((c) => (c - 1 + items.length) % items.length)}
-            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-colors"
+            aria-label="Vorige"
+            className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center z-10 transition-colors"
             style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)", color: "white" }}
           >
             ←
           </button>
           <button
             onClick={() => setCurrent((c) => (c + 1) % items.length)}
-            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center z-10 transition-colors"
+            aria-label="Volgende"
+            className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full flex items-center justify-center z-10 transition-colors"
             style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.15)", color: "white" }}
           >
             →
@@ -71,7 +73,7 @@ export default function TestimonialsCarousel() {
               {t(items[current].quote, lang)}
             </p>
             <div className="font-bold" style={{ color: "white" }}>{t(items[current].name, lang)}</div>
-            <div className="text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>{t(items[current].role, lang)}</div>
+            <div className="text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>{t(items[current].role, lang)}</div>
           </div>
 
           {/* Dots */}
@@ -80,11 +82,16 @@ export default function TestimonialsCarousel() {
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`h-2.5 rounded-full transition-all ${
-                  i === current ? "gradient-brand w-6" : "w-2.5"
-                }`}
-                style={i !== current ? { background: "rgba(255,255,255,0.25)" } : undefined}
-              />
+                aria-label={`Testimonial ${i + 1}`}
+                className={`min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-all`}
+              >
+                <span
+                  className={`h-2.5 rounded-full transition-all block ${
+                    i === current ? "gradient-brand w-6" : "w-2.5"
+                  }`}
+                  style={i !== current ? { background: "rgba(255,255,255,0.25)" } : undefined}
+                />
+              </button>
             ))}
           </div>
         </div>
