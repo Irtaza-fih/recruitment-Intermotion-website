@@ -1,14 +1,12 @@
 import { useEffect, useState, useMemo } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
+import { useAppNavigate } from "@/hooks/useAppNavigate";
 import logo from "@/assets/logo.svg";
 
-interface HeroProps {
-  onNavigate: (page: "contact") => void;
-}
-
-export default function Hero({ onNavigate }: HeroProps) {
+export default function Hero() {
   const { lang } = useLang();
+  const navigate = useAppNavigate();
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -34,7 +32,6 @@ export default function Hero({ onNavigate }: HeroProps) {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-navy flex items-center justify-center">
-      {/* Video background */}
       <video
         autoPlay
         muted
@@ -43,11 +40,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         src="/happywork.m4v"
       />
-
-      {/* Dark overlay — max 25% opacity, no blue tint */}
       <div className="absolute inset-0 bg-black/25" />
-
-      {/* Particles */}
       {particles.map((p) => (
         <div
           key={p.id}
@@ -61,8 +54,6 @@ export default function Hero({ onNavigate }: HeroProps) {
           }}
         />
       ))}
-
-      {/* Content */}
       <div className="relative z-10 text-center text-primary-foreground px-6 max-w-4xl">
         <div
           style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
@@ -75,7 +66,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => onNavigate("contact")}
+            onClick={() => navigate("/contact")}
             className="gradient-brand text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:shadow-xl hover:-translate-y-1 transition-all"
           >
             {t(translations.hero.ctaPrimary, lang)}
@@ -90,8 +81,6 @@ export default function Hero({ onNavigate }: HeroProps) {
           </a>
         </div>
       </div>
-
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/60">
         <div className="scroll-indicator-line w-px h-10 bg-primary-foreground/40" />
         <span className="text-xs tracking-widest uppercase">{t(translations.hero.scroll, lang)}</span>

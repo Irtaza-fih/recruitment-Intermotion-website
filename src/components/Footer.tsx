@@ -1,21 +1,17 @@
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
+import { useAppNavigate } from "@/hooks/useAppNavigate";
 import logo from "@/assets/logo.svg";
 
-type PageId = "home" | "about" | "vacancies" | "contact";
-
-interface FooterProps {
-  onNavigate: (page: PageId) => void;
-}
-
-export default function Footer({ onNavigate }: FooterProps) {
+export default function Footer() {
   const { lang } = useLang();
+  const navigate = useAppNavigate();
   const year = new Date().getFullYear();
 
   return (
     <footer style={{ background: "#ffffff", borderTop: "1px solid #E5EAF5" }} className="py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <button onClick={() => onNavigate("home")}>
+        <button onClick={() => navigate("/")}>
           <img src={logo} alt="Recruitment Intermotion" className="h-8" />
         </button>
         <p className="text-xs" style={{ color: "#444444" }}>

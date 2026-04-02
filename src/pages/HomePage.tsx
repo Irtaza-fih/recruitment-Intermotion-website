@@ -6,20 +6,16 @@ import PartnersMarquee from "@/components/PartnersMarquee";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import VacancyCTA from "@/components/VacancyCTA";
 
-interface HomePageProps {
-  onNavigate: (page: "contact") => void;
-}
-
-export default function HomePage({ onNavigate }: HomePageProps) {
+export default function HomePage() {
   return (
     <>
-      <Hero onNavigate={onNavigate} />
+      <Hero />
       <StatsStrip />
-      <AboutSection onNavigate={onNavigate} />
-      <ServicesSection onNavigate={onNavigate} />
+      <AboutSection />
+      <ServicesSection />
       <PartnersMarquee />
       <TestimonialsCarousel />
-      <VacancyCTA onNavigate={onNavigate} />
+      <VacancyCTA />
     </>
   );
 }
