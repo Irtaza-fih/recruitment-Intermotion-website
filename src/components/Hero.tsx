@@ -37,6 +37,8 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="none"
+        poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%231F217D' width='1920' height='1080'/%3E%3C/svg%3E"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         src="/happywork.m4v"
       />
@@ -59,7 +61,7 @@ export default function Hero() {
           style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
           className="transition-none mb-6"
         >
-          <img src={logo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 mx-auto" />
+          <img src={logo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 mx-auto" width={256} height={256} />
         </div>
         <p className="text-lg md:text-xl font-semibold italic mb-10 text-primary-foreground/90">
           {t(translations.hero.tagline, lang)}
