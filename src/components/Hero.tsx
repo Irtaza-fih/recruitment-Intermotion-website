@@ -41,7 +41,9 @@ export default function Hero() {
         poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Crect fill='%231F217D' width='1920' height='1080'/%3E%3C/svg%3E"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         src="/happywork.m4v"
-      />
+      >
+        <track kind="captions" srcLang="nl" label="Geen dialoog" default />
+      </video>
       <div className="absolute inset-0 bg-black/25" />
       {particles.map((p) => (
         <div
