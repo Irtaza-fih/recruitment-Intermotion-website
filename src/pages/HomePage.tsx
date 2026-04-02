@@ -28,6 +28,53 @@ export default function HomePage() {
         />
         <meta name="keywords" content="recruitment bureau Nederland, werving en selectie Finance, IT recruitment, Sales recruitment, interim recruitment, RPO, Randstad, Noord-Brabant" />
         <link rel="canonical" href="https://recruitmentintermotion.nl/" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "name": "Recruitment Intermotion",
+              "url": "https://recruitmentintermotion.nl",
+              "logo": "https://recruitmentintermotion.nl/logo.svg",
+              "foundingDate": "2022",
+              "founder": { "@type": "Person", "name": "Marijn Schilder" },
+              "description": "Recruitment bureau gespecialiseerd in Finance, IT en Sales. Actief in de Randstad en Noord-Brabant.",
+              "areaServed": "NL",
+              "serviceType": ["Werving & Selectie", "Interim Recruitment", "RPO"],
+              "email": "marijn@recruitmentintermotion.nl",
+              "telephone": "+31642639962"
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Recruitment Intermotion",
+              "url": "https://recruitmentintermotion.nl",
+              "telephone": "+31642639962",
+              "email": "marijn@recruitmentintermotion.nl",
+              "founder": { "@type": "Person", "name": "Marijn Schilder" },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Nieuwstraat 2",
+                "postalCode": "4921 CX",
+                "addressLocality": "Made",
+                "addressRegion": "Noord-Brabant",
+                "addressCountry": "NL"
+              },
+              "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
+              "priceRange": "$$"
+            }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Wat doet Recruitment Intermotion?", "acceptedAnswer": { "@type": "Answer", "text": "Recruitment Intermotion is een recruitment bureau gespecialiseerd in Finance, IT en Sales, actief in de Randstad en Noord-Brabant. Wij verbinden ambitieuze bedrijven met de juiste professionals voor vaste en interim functies." } },
+            { "@type": "Question", "name": "Wat is fractional recruitment?", "acceptedAnswer": { "@type": "Answer", "text": "Fractional recruitment betekent een flexibele recruiter die inzetbaar is vanaf 8 uur per week, zonder verplichting tot een fulltime of langdurige samenwerking. Ideaal voor organisaties die recruitmentondersteuning nodig hebben zonder een vaste aanstelling." } },
+            { "@type": "Question", "name": "In welke regio's is Recruitment Intermotion actief?", "acceptedAnswer": { "@type": "Answer", "text": "Wij bedienen opdrachtgevers door heel Nederland, met een focus op de Randstad en Noord-Brabant." } },
+            { "@type": "Question", "name": "Voor welke disciplines werft Recruitment Intermotion?", "acceptedAnswer": { "@type": "Answer", "text": "Wij werven voor Finance, IT en Sales — zowel voor vaste functies als interim opdrachten." } },
+            { "@type": "Question", "name": "Hoe kan ik contact opnemen met Recruitment Intermotion?", "acceptedAnswer": { "@type": "Answer", "text": "U kunt contact opnemen via e-mail: marijn@recruitmentintermotion.nl, telefonisch via +31642639962, of via het contactformulier op onze website." } }
+          ]
+        })}</script>
       </Helmet>
       <Hero />
       <StatsStrip />
