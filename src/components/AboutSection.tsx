@@ -35,7 +35,7 @@ export default function AboutSection() {
               style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
             />
             <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ background: "linear-gradient(180deg, #1F217D 0%, #0199F8 100%)" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ background: "transparent" }}>
               <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" loading="lazy" width={600} height={750} />
             </div>
             <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
