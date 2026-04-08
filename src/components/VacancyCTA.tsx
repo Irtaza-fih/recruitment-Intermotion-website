@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import {
   Dialog,
   DialogContent,
@@ -95,15 +97,30 @@ export default function VacancyCTA() {
 
 /* ── Candidate Form ── */
 function CandidateForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void }) {
+  const { toast } = useToast();
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     fullName: "", email: "", phone: "", jobTitle: "", experience: "", desiredRole: "", linkedinUrl: "", cv: null as File | null,
   });
   const u = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.fullName || !form.email) return;
-    console.log("Candidate form:", form);
-    onClose();
+    setSubmitting(true);
+    try {
+      const { fullName, email, phone, jobTitle, experience, desiredRole, linkedinUrl } = form;
+      const { error } = await supabase.functions.invoke("submit-form", {
+        body: { form_type: "candidate", data: { fullName, email, phone, jobTitle, experience, desiredRole, linkedinUrl } },
+      });
+      if (error) throw error;
+      toast({ title: lang === "nl" ? "Sollicitatie verstuurd!" : "Application submitted!" });
+      onClose();
+    } catch (e) {
+      console.error(e);
+      toast({ title: lang === "nl" ? "Er ging iets mis" : "Something went wrong", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -143,9 +160,10 @@ function CandidateForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => vo
       </div>
       <button
         onClick={handleSubmit}
-        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2"
+        disabled={submitting}
+        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2 disabled:opacity-50"
       >
-        {lang === "nl" ? "Verstuur sollicitatie" : "Submit application"}
+        {submitting ? "..." : (lang === "nl" ? "Verstuur sollicitatie" : "Submit application")}
       </button>
     </div>
   );
@@ -153,15 +171,29 @@ function CandidateForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => vo
 
 /* ── Client Form ── */
 function ClientForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void }) {
+  const { toast } = useToast();
+  const [submitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
     companyName: "", contactName: "", email: "", phone: "", roleHiring: "", numberOfHires: "", timeline: "", budget: "",
   });
   const u = (k: string, v: string) => setForm((p) => ({ ...p, [k]: v }));
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!form.companyName || !form.contactName || !form.email || !form.roleHiring) return;
-    console.log("Client form:", form);
-    onClose();
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke("submit-form", {
+        body: { form_type: "client", data: form },
+      });
+      if (error) throw error;
+      toast({ title: lang === "nl" ? "Aanvraag verstuurd!" : "Request submitted!" });
+      onClose();
+    } catch (e) {
+      console.error(e);
+      toast({ title: lang === "nl" ? "Er ging iets mis" : "Something went wrong", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -211,9 +243,10 @@ function ClientForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void 
       <Field label={lang === "nl" ? "Budget / salarisbereik" : "Budget / salary range"} value={form.budget} onChange={(v) => u("budget", v)} />
       <button
         onClick={handleSubmit}
-        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2"
+        disabled={submitting}
+        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2 disabled:opacity-50"
       >
-        {lang === "nl" ? "Verstuur aanvraag" : "Submit request"}
+        {submitting ? "..." : (lang === "nl" ? "Verstuur aanvraag" : "Submit request")}
       </button>
     </div>
   );

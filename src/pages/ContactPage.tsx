@@ -3,13 +3,17 @@ import { Helmet } from "react-helmet-async";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import PageHeroBanner from "@/components/PageHeroBanner";
 
 export default function ContactPage() {
   const { lang } = useLang();
+  const { toast } = useToast();
   const ref = useScrollReveal();
   const f = translations.contact.form;
   const c = translations.contact;
+  const [submitting, setSubmitting] = useState(false);
 
   const [form, setForm] = useState({
     salutation: "dhr",
@@ -26,8 +30,22 @@ export default function ContactPage() {
   const update = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", form);
+  const handleSubmit = async () => {
+    if (!form.firstName || !form.email) return;
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke("submit-form", {
+        body: { form_type: "contact", data: form },
+      });
+      if (error) throw error;
+      toast({ title: lang === "nl" ? "Bericht verstuurd!" : "Message sent!" });
+      setForm({ salutation: "dhr", inquiryType: "", firstName: "", lastName: "", phone: "", email: "", company: "", linkedin: "", message: "" });
+    } catch (e) {
+      console.error(e);
+      toast({ title: lang === "nl" ? "Er ging iets mis" : "Something went wrong", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactTiles = [
@@ -222,9 +240,10 @@ export default function ContactPage() {
 
               <button
                 onClick={handleSubmit}
-                className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                disabled={submitting}
+                className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50"
               >
-                {t(f.submit, lang)}
+                {submitting ? "..." : t(f.submit, lang)}
               </button>
             </div>
           </div>
