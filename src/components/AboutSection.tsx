@@ -2,7 +2,7 @@ import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
-import marijnImg from "@/assets/marijn.webp";
+import marijnImg from "@/assets/marijn-updated.png";
 
 function renderTitle(html: string) {
   return html.replace(/<em>(.*?)<\/em>/g, '<span class="gradient-text">$1</span>');
