@@ -26,6 +26,7 @@ const partners = [
   { name: "Blue Phoenix Group", logo: bluePhoenixGroup },
   { name: "Jimmy Joy", logo: jimmyJoy },
   { name: "Subsea Connect", logo: subseaConnect },
+  { name: "UNS", logo: uns },
 ];
 
 function renderTitle(html: string) {
