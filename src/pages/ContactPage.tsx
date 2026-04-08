@@ -138,75 +138,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: form */}
-            <div className="scroll-reveal bg-bg-tint border border-border rounded-2xl p-8 space-y-5">
-              {/* Salutation */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">{t(f.salutation, lang)}</label>
-                <div className="flex gap-4">
-                  {[
-                    { val: "dhr", label: t(f.mr, lang) },
-                    { val: "mevr", label: t(f.mrs, lang) },
-                    { val: "anders", label: t(f.other, lang) },
-                  ].map((opt) => (
-                    <label key={opt.val} className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="salutation"
-                        checked={form.salutation === opt.val}
-                        onChange={() => update("salutation", opt.val)}
-                        className="accent-accent-blue"
-                      />
-                      <span className="text-sm text-foreground">{opt.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Inquiry Type */}
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-1.5">
-                  {lang === "nl" ? "Waar ben je naar op zoek? *" : "What are you looking for? *"}
-                </label>
-                <select
-                  value={form.inquiryType}
-                  onChange={(e) => update("inquiryType", e.target.value)}
-                  className="w-full rounded-lg border border-border bg-card px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue"
-                >
-                  <option value="">-- {lang === "nl" ? "selecteer" : "select"} --</option>
-                  <option value="job">{lang === "nl" ? "Een nieuwe uitdaging" : "A new challenge"}</option>
-                  <option value="talent">{lang === "nl" ? "Talent vinden" : "Find a Talent"}</option>
-                </select>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <InputField label={t(f.firstName, lang)} value={form.firstName} onChange={(v) => update("firstName", v)} />
-                <InputField label={t(f.lastName, lang)} value={form.lastName} onChange={(v) => update("lastName", v)} />
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <InputField label={t(f.phone, lang)} value={form.phone} onChange={(v) => update("phone", v)} type="tel" />
-                <InputField label={t(f.email, lang)} value={form.email} onChange={(v) => update("email", v)} type="email" />
-              </div>
-              <InputField label={t(f.company, lang)} value={form.company} onChange={(v) => update("company", v)} />
-              <InputField label={t(f.linkedinProfile, lang)} value={form.linkedin} onChange={(v) => update("linkedin", v)} />
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-1.5">{t(f.message, lang)}</label>
-                <textarea
-                  value={form.message}
-                  onChange={(e) => update("message", e.target.value)}
-                  rows={5}
-                  className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue resize-none"
-                />
-              </div>
-
-              <button
-                onClick={handleSubmit}
-                disabled={submitting}
-                className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50"
-              >
-                {submitting ? "..." : t(f.submit, lang)}
-              </button>
+            {/* Right: CTA tiles */}
+            <div className="scroll-reveal flex flex-col gap-6">
+              <VacancyCTA variant="inline" />
             </div>
           </div>
         </div>
@@ -214,10 +148,6 @@ export default function ContactPage() {
     </>
   );
 }
-
-function InputField({
-  label,
-  value,
   onChange,
   type = "text",
 }: {
