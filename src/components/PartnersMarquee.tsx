@@ -12,6 +12,7 @@ import interboorMidsland from "@/assets/partners/interboor-midsland.png";
 import bluePhoenixGroup from "@/assets/partners/blue-phoenix-group.png";
 import jimmyJoy from "@/assets/partners/jimmy-joy.png";
 import subseaConnect from "@/assets/partners/subsea-connect.png";
+import uns from "@/assets/partners/uns.png";
 
 const partners = [
   { name: "Americold", logo: americold },
@@ -25,6 +26,7 @@ const partners = [
   { name: "Blue Phoenix Group", logo: bluePhoenixGroup },
   { name: "Jimmy Joy", logo: jimmyJoy },
   { name: "Subsea Connect", logo: subseaConnect },
+  { name: "UNS", logo: uns },
 ];
 
 function renderTitle(html: string) {
