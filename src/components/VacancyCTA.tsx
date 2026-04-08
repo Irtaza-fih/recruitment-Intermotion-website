@@ -243,9 +243,10 @@ function ClientForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => void 
       <Field label={lang === "nl" ? "Budget / salarisbereik" : "Budget / salary range"} value={form.budget} onChange={(v) => u("budget", v)} />
       <button
         onClick={handleSubmit}
-        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2"
+        disabled={submitting}
+        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2 disabled:opacity-50"
       >
-        {lang === "nl" ? "Verstuur aanvraag" : "Submit request"}
+        {submitting ? "..." : (lang === "nl" ? "Verstuur aanvraag" : "Submit request")}
       </button>
     </div>
   );

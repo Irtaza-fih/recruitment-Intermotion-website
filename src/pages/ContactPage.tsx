@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 import PageHeroBanner from "@/components/PageHeroBanner";
 
 export default function ContactPage() {
