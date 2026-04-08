@@ -160,9 +160,10 @@ function CandidateForm({ lang, onClose }: { lang: "nl" | "en"; onClose: () => vo
       </div>
       <button
         onClick={handleSubmit}
-        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2"
+        disabled={submitting}
+        className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mt-2 disabled:opacity-50"
       >
-        {lang === "nl" ? "Verstuur sollicitatie" : "Submit application"}
+        {submitting ? "..." : (lang === "nl" ? "Verstuur sollicitatie" : "Submit application")}
       </button>
     </div>
   );
