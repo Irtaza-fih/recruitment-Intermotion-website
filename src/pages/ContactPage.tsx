@@ -9,9 +9,11 @@ import PageHeroBanner from "@/components/PageHeroBanner";
 
 export default function ContactPage() {
   const { lang } = useLang();
+  const { toast } = useToast();
   const ref = useScrollReveal();
   const f = translations.contact.form;
   const c = translations.contact;
+  const [submitting, setSubmitting] = useState(false);
 
   const [form, setForm] = useState({
     salutation: "dhr",
@@ -28,8 +30,22 @@ export default function ContactPage() {
   const update = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }));
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", form);
+  const handleSubmit = async () => {
+    if (!form.firstName || !form.email) return;
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke("submit-form", {
+        body: { form_type: "contact", data: form },
+      });
+      if (error) throw error;
+      toast({ title: lang === "nl" ? "Bericht verstuurd!" : "Message sent!" });
+      setForm({ salutation: "dhr", inquiryType: "", firstName: "", lastName: "", phone: "", email: "", company: "", linkedin: "", message: "" });
+    } catch (e) {
+      console.error(e);
+      toast({ title: lang === "nl" ? "Er ging iets mis" : "Something went wrong", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactTiles = [
