@@ -104,6 +104,7 @@ export default function VacancyCTA({ variant = "default" }: { variant?: "default
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {tiles}
+          </div>
         </div>
       </section>
 
