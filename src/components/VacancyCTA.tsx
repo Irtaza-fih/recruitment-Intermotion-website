@@ -10,7 +10,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-export default function VacancyCTA() {
+export default function VacancyCTA({ variant = "default" }: { variant?: "default" | "inline" }) {
   const { lang } = useLang();
   const location = useLocation();
   const [openDialog, setOpenDialog] = useState<"candidate" | "client" | null>(null);
@@ -19,6 +19,84 @@ export default function VacancyCTA() {
   useEffect(() => {
     setOpenDialog(null);
   }, [location.pathname]);
+
+  const tiles = (
+    <>
+      {/* Candidate Tile */}
+      <div className="gradient-brand rounded-3xl p-10 md:p-12 text-center text-primary-foreground flex flex-col justify-between">
+        <div>
+          <div className="w-14 h-14 rounded-2xl bg-primary-foreground/15 flex items-center justify-center mx-auto mb-5">
+            <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3 className="text-xl md:text-2xl font-extrabold mb-2">
+            {lang === "nl" ? "Op zoek naar een baan?" : "Looking for a job?"}
+          </h3>
+          <p className="text-primary-foreground/80 mb-6 text-sm">
+            {lang === "nl"
+              ? "Upload je CV en wij matchen je met de perfecte rol."
+              : "Upload your CV and we'll match you with the perfect role."}
+          </p>
+        </div>
+        <button
+          onClick={() => setOpenDialog("candidate")}
+          className="bg-primary-foreground text-primary px-8 py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mx-auto"
+        >
+          {lang === "nl" ? "Solliciteer nu" : "Apply now"}
+        </button>
+      </div>
+
+      {/* Client Tile */}
+      <div className="bg-card border border-border rounded-3xl p-10 md:p-12 text-center flex flex-col justify-between">
+        <div>
+          <div className="w-14 h-14 rounded-2xl bg-accent-blue/10 flex items-center justify-center mx-auto mb-5">
+            <svg width="28" height="28" fill="none" stroke="hsl(var(--accent-blue))" strokeWidth="1.5" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+          </div>
+          <h3 className="text-xl md:text-2xl font-extrabold mb-2 text-foreground">
+            {lang === "nl" ? "Op zoek naar talent?" : "Looking for talent?"}
+          </h3>
+          <p className="text-muted-foreground mb-6 text-sm">
+          {lang === "nl"
+              ? "Vertel ons over je vacature — wij nemen binnen 24 uur contact op."
+              : "Tell us about your vacancy — we'll reach out within 24 hours."}
+          </p>
+        </div>
+        <button
+          onClick={() => setOpenDialog("client")}
+          className="gradient-brand text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all mx-auto"
+        >
+          {lang === "nl" ? "Verstuur aanvraag" : "Submit request"}
+        </button>
+      </div>
+    </>
+  );
+
+  if (variant === "inline") {
+    return (
+      <>
+        <div className="flex flex-col gap-6">
+          {tiles}
+        </div>
+
+        <Dialog open={openDialog === "candidate"} onOpenChange={(o) => !o && setOpenDialog(null)}>
+          <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>{lang === "nl" ? "Solliciteer nu" : "Apply now"}</DialogTitle>
+            </DialogHeader>
+            <CandidateForm lang={lang} onClose={() => setOpenDialog(null)} />
+          </DialogContent>
+        </Dialog>
+
+        <Dialog open={openDialog === "client"} onOpenChange={(o) => !o && setOpenDialog(null)}>
+          <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <DialogTitle>{lang === "nl" ? "Talent aanvragen" : "Request talent"}</DialogTitle>
+            </DialogHeader>
+            <ClientForm lang={lang} onClose={() => setOpenDialog(null)} />
+          </DialogContent>
+        </Dialog>
+      </>
+    );
+  }
 
   return (
     <>
