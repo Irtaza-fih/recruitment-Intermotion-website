@@ -240,9 +240,10 @@ export default function ContactPage() {
 
               <button
                 onClick={handleSubmit}
-                className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                disabled={submitting}
+                className="w-full gradient-brand text-primary-foreground py-3.5 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all disabled:opacity-50"
               >
-                {t(f.submit, lang)}
+                {submitting ? "..." : t(f.submit, lang)}
               </button>
             </div>
           </div>
