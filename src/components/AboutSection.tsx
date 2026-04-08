@@ -2,7 +2,7 @@ import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
-import marijnImg from "@/assets/marijn-updated.png";
+import marijnImg from "@/assets/marijn.webp";
 
 function renderTitle(html: string) {
   return html.replace(/<em>(.*?)<\/em>/g, '<span class="gradient-text">$1</span>');
@@ -35,7 +35,7 @@ export default function AboutSection() {
               style={{ background: "linear-gradient(135deg, #1F217D, #0199F8)", opacity: 0.08 }}
             />
             <div className="absolute -top-4 -left-4 w-full h-full gradient-brand rounded-2xl" />
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ background: "transparent" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img src={marijnImg} alt="Marijn Schilder" className="w-full h-auto" loading="lazy" width={600} height={750} />
             </div>
             <div className="absolute -bottom-4 -right-4 gradient-brand text-primary-foreground px-5 py-3 rounded-xl shadow-lg text-sm font-bold">
