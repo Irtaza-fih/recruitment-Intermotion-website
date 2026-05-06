@@ -45,8 +45,11 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Forward to n8n webhook
-    const webhookUrl = Deno.env.get("N8N_WEBHOOK_URL");
+    // Forward to webhook (feedback uses dedicated URL)
+    const webhookUrl =
+      form_type === "feedback"
+        ? Deno.env.get("FEEDBACK_WEBHOOK_URL")
+        : Deno.env.get("N8N_WEBHOOK_URL");
     if (webhookUrl) {
       try {
         const webhookResponse = await fetch(webhookUrl, {
