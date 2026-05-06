@@ -1,29 +1,24 @@
+## Goal
+Send all Client Feedback form submissions to a dedicated webhook URL (separate from the existing n8n webhook used by other forms).
 
+## Steps
 
-## Accessibility Fixes Plan
+1. **Request the new secret**
+   - Use the secrets tool to ask for `FEEDBACK_WEBHOOK_URL`. You'll paste the URL securely; it'll be available to backend functions only.
 
-Six groups of changes across four files. No visual changes.
+2. **Update the `submit-form` edge function**
+   - When `form_type === "feedback"`, forward the payload to `FEEDBACK_WEBHOOK_URL` instead of the existing `N8N_WEBHOOK_URL`.
+   - All other form types (`candidate`, `client`, `contact`) continue using `N8N_WEBHOOK_URL` unchanged.
+   - Keep saving submissions to the `form_submissions` table as today.
+   - Keep the existing payload shape: `{ form_type, data, submitted_at }` so all fields from the feedback form are delivered.
 
-### Files to Edit
+3. **No frontend changes**
+   - `ClientFeedbackPage.tsx` already calls the `submit-form` edge function with the full form data, so the entire form is captured automatically.
 
-**1. `src/components/TestimonialsCarousel.tsx`**
-- Arrow buttons (lines 32, 39): add `aria-label="Vorige"` / `aria-label="Volgende"`, increase size from `w-10 h-10` to `w-11 h-11` (44px)
-- Dot buttons (line 80): add `aria-label={`Testimonial ${i + 1}`}`, add `min-w-[44px] min-h-[44px]` wrapper or use padding to meet 44px touch target while keeping visual dot size
-- Role text (line 74): change `rgba(255,255,255,0.45)` to `rgba(255,255,255,0.7)` for WCAG AA contrast
+4. **Verify**
+   - Deploy the function and submit a test entry from `/client-feedback`; confirm the webhook receives it (via edge function logs).
 
-**2. `src/components/Navbar.tsx`**
-- Language NL button (line 107): add `aria-label="Nederlands"`, add `min-w-[44px] min-h-[44px]`
-- Language EN button (line 115): add `aria-label="English"`, add `min-w-[44px] min-h-[44px]`
-- LinkedIn link (line 127): add `aria-label="LinkedIn"`, add `min-w-[44px] min-h-[44px]`
-- WhatsApp link (line 135): add `aria-label="WhatsApp"`, add `min-w-[44px] min-h-[44px]`
-- Hamburger button (line 155): add `aria-label={mobileOpen ? "Menu sluiten" : "Menu openen"}`
-
-**3. `src/components/Footer.tsx`**
-- Logo img (line 15): add `width={120} height={47}`
-- LinkedIn link (line 21): add `aria-label="LinkedIn profiel Marijn Schilder"`, ensure 44px tap target
-- WhatsApp link (line 30): add `aria-label="WhatsApp contact opnemen"`, ensure 44px tap target
-
-**4. `src/components/Hero.tsx`**
-- Video element (line 35): add `<track kind="captions" srclang="nl" label="Geen dialoog" default />` as child
-- Nav logo img already has width/height — confirm and keep
-
+## Technical notes
+- File touched: `supabase/functions/submit-form/index.ts` (single conditional branch on `form_type`).
+- New secret: `FEEDBACK_WEBHOOK_URL`.
+- Fallback: if `FEEDBACK_WEBHOOK_URL` is unset, log a warning and skip forwarding (DB insert still succeeds).
