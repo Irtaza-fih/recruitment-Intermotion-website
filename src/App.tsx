@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { subscribeTransition } from "@/hooks/useAppNavigate";
@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
+import ClientFeedbackPage from "@/pages/ClientFeedbackPage";
 import NotFound from "@/pages/NotFound";
 
 function PageTransitionOverlay() {
