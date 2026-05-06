@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { subscribeTransition } from "@/hooks/useAppNavigate";
@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
 import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
+import ClientFeedbackPage from "@/pages/ClientFeedbackPage";
 import NotFound from "@/pages/NotFound";
 
 function PageTransitionOverlay() {
@@ -28,19 +29,23 @@ function PageTransitionOverlay() {
 }
 
 function AppContent() {
+  const location = useLocation();
+  const isStandalone = location.pathname === "/client-feedback";
+
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {!isStandalone && <Navbar />}
       <PageTransitionOverlay />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/over-ons" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/client-feedback" element={<ClientFeedbackPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      {!isStandalone && <Footer />}
     </div>
   );
 }

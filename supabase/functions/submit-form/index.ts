@@ -21,7 +21,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    if (!["candidate", "client", "contact"].includes(form_type)) {
+    if (!["candidate", "client", "contact", "feedback"].includes(form_type)) {
       return new Response(
         JSON.stringify({ error: "Invalid form_type" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
