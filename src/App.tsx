@@ -29,19 +29,23 @@ function PageTransitionOverlay() {
 }
 
 function AppContent() {
+  const location = useLocation();
+  const isStandalone = location.pathname === "/client-feedback";
+
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {!isStandalone && <Navbar />}
       <PageTransitionOverlay />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/over-ons" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/client-feedback" element={<ClientFeedbackPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      {!isStandalone && <Footer />}
     </div>
   );
 }
