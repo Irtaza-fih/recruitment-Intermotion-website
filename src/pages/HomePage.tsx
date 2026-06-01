@@ -91,16 +91,14 @@ export default function HomePage() {
         })}</script>
       </Helmet>
       <Hero />
-      <LazySection>
-        <Suspense fallback={null}>
-          <StatsStrip />
-          <AboutSection />
-          <ServicesSection />
-          <PartnersMarquee />
-          <TestimonialsCarousel />
-          <VacancyCTA />
-        </Suspense>
-      </LazySection>
+      <Suspense fallback={null}>
+        <StatsStrip />
+        <AboutSection />
+        <ServicesSection />
+        <PartnersMarquee />
+        <TestimonialsCarousel />
+        <VacancyCTA />
+      </Suspense>
     </>
   );
 }
