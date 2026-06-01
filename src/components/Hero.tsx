@@ -56,7 +56,7 @@ export default function Hero() {
         <track kind="captions" srcLang="nl" label="Geen dialoog" default />
       </video>
       <div className="absolute inset-0 bg-black/25" />
-      {particles.map((p) => (
+      {animationsReady && particles.map((p) => (
         <div
           key={p.id}
           className="particle"
