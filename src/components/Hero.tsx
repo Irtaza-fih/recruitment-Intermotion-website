@@ -2,8 +2,9 @@ import { useEffect, useState, useMemo } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { heroLogoDataUrl } from "@/assets/heroLogoData";
 
-const heroLogo = "/logo-lcp.webp";
+const heroLogo = heroLogoDataUrl;
 
 export default function Hero() {
   const { lang } = useLang();
