@@ -1,12 +1,37 @@
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLang } from "@/lib/LanguageContext";
 import Hero from "@/components/Hero";
-import StatsStrip from "@/components/StatsStrip";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import PartnersMarquee from "@/components/PartnersMarquee";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import VacancyCTA from "@/components/VacancyCTA";
+
+const StatsStrip = lazy(() => import("@/components/StatsStrip"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const PartnersMarquee = lazy(() => import("@/components/PartnersMarquee"));
+const TestimonialsCarousel = lazy(() => import("@/components/TestimonialsCarousel"));
+const VacancyCTA = lazy(() => import("@/components/VacancyCTA"));
+
+function LazySection({ children }: { children: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || visible) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return <div ref={ref}>{visible ? children : null}</div>;
+}
 
 export default function HomePage() {
   const { lang } = useLang();
@@ -89,12 +114,16 @@ export default function HomePage() {
         })}</script>
       </Helmet>
       <Hero />
-      <StatsStrip />
-      <AboutSection />
-      <ServicesSection />
-      <PartnersMarquee />
-      <TestimonialsCarousel />
-      <VacancyCTA />
+      <LazySection>
+        <Suspense fallback={null}>
+          <StatsStrip />
+          <AboutSection />
+          <ServicesSection />
+          <PartnersMarquee />
+          <TestimonialsCarousel />
+          <VacancyCTA />
+        </Suspense>
+      </LazySection>
     </>
   );
 }

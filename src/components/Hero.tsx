@@ -2,7 +2,8 @@ import { useEffect, useState, useMemo } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
-import logo from "@/assets/logo.svg";
+
+const heroLogo = "/logo-lcp.webp";
 
 export default function Hero() {
   const { lang } = useLang();
@@ -63,7 +64,7 @@ export default function Hero() {
           style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
           className="transition-none mb-6"
         >
-          <img src={logo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 mx-auto" width={256} height={256} fetchPriority="high" />
+          <img src={heroLogo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 w-auto mx-auto" width={768} height={269} fetchPriority="high" decoding="sync" />
         </div>
         <p className="text-lg md:text-xl font-semibold italic mb-10 text-primary-foreground/90">
           {t(translations.hero.tagline, lang)}
