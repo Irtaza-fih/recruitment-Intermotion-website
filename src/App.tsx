@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { subscribeTransition } from "@/hooks/useAppNavigate";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
-import AboutPage from "@/pages/AboutPage";
-import ContactPage from "@/pages/ContactPage";
-import ClientFeedbackPage from "@/pages/ClientFeedbackPage";
-import NotFound from "@/pages/NotFound";
+
+const Footer = lazy(() => import("@/components/Footer"));
+const AboutPage = lazy(() => import("@/pages/AboutPage"));
+const ContactPage = lazy(() => import("@/pages/ContactPage"));
+const ClientFeedbackPage = lazy(() => import("@/pages/ClientFeedbackPage"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 function PageTransitionOverlay() {
   const [phase, setPhase] = useState<"idle" | "in" | "out">("idle");
@@ -37,15 +38,21 @@ function AppContent() {
       {!isStandalone && <Navbar />}
       <PageTransitionOverlay />
       <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/over-ons" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/client-feedback" element={<ClientFeedbackPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/over-ons" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/client-feedback" element={<ClientFeedbackPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
-      {!isStandalone && <Footer />}
+      {!isStandalone && (
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
+      )}
     </div>
   );
 }
