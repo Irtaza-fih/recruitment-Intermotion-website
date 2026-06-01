@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLang } from "@/lib/LanguageContext";
 import Hero from "@/components/Hero";
@@ -9,6 +9,29 @@ const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const PartnersMarquee = lazy(() => import("@/components/PartnersMarquee"));
 const TestimonialsCarousel = lazy(() => import("@/components/TestimonialsCarousel"));
 const VacancyCTA = lazy(() => import("@/components/VacancyCTA"));
+
+function LazySection({ children }: { children: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || visible) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return <div ref={ref}>{visible ? children : null}</div>;
+}
 
 export default function HomePage() {
   const { lang } = useLang();
@@ -91,14 +114,16 @@ export default function HomePage() {
         })}</script>
       </Helmet>
       <Hero />
-      <Suspense fallback={null}>
-        <StatsStrip />
-        <AboutSection />
-        <ServicesSection />
-        <PartnersMarquee />
-        <TestimonialsCarousel />
-        <VacancyCTA />
-      </Suspense>
+      <LazySection>
+        <Suspense fallback={null}>
+          <StatsStrip />
+          <AboutSection />
+          <ServicesSection />
+          <PartnersMarquee />
+          <TestimonialsCarousel />
+          <VacancyCTA />
+        </Suspense>
+      </LazySection>
     </>
   );
 }
