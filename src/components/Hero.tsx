@@ -10,11 +10,20 @@ export default function Hero() {
   const { lang } = useLang();
   const navigate = useAppNavigate();
   const [scrollY, setScrollY] = useState(0);
+  const [animationsReady, setAnimationsReady] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    // Delay decorative animations until after LCP / first paint
+    const idle = (window as any).requestIdleCallback
+      ? (window as any).requestIdleCallback(() => setAnimationsReady(true), { timeout: 1500 })
+      : window.setTimeout(() => setAnimationsReady(true), 800);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if ((window as any).cancelIdleCallback) (window as any).cancelIdleCallback(idle);
+      else clearTimeout(idle as number);
+    };
   }, []);
 
   const logoScale = Math.max(0, 1 - scrollY / 300);
