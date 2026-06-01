@@ -1,19 +1,19 @@
 import { useLang } from "@/lib/LanguageContext";
 import { translations } from "@/lib/translations";
 
-import americold from "@/assets/partners/americold.png";
-import visiativ from "@/assets/partners/visiativ.png";
-import remondis from "@/assets/partners/remondis.png";
-import conventCapital from "@/assets/partners/convent-capital.png";
-import kpn from "@/assets/partners/kpn.png";
-import bdo from "@/assets/partners/bdo.png";
-import hays from "@/assets/partners/hays.png";
-import interboorMidsland from "@/assets/partners/interboor-midsland.png";
-import bluePhoenixGroup from "@/assets/partners/blue-phoenix-group.png";
-import jimmyJoy from "@/assets/partners/jimmy-joy.png";
-import subseaConnect from "@/assets/partners/subsea-connect.png";
-import uns from "@/assets/partners/uns.png";
-import brightlyn from "@/assets/partners/brightlyn.png";
+import americold from "@/assets/partners/americold.webp";
+import visiativ from "@/assets/partners/visiativ.webp";
+import remondis from "@/assets/partners/remondis.webp";
+import conventCapital from "@/assets/partners/convent-capital.webp";
+import kpn from "@/assets/partners/kpn.webp";
+import bdo from "@/assets/partners/bdo.webp";
+import hays from "@/assets/partners/hays.webp";
+import interboorMidsland from "@/assets/partners/interboor-midsland.webp";
+import bluePhoenixGroup from "@/assets/partners/blue-phoenix-group.webp";
+import jimmyJoy from "@/assets/partners/jimmy-joy.webp";
+import subseaConnect from "@/assets/partners/subsea-connect.webp";
+import uns from "@/assets/partners/uns.webp";
+import brightlyn from "@/assets/partners/brightlyn.webp";
 
 const partners = [
   { name: "Americold", logo: americold },

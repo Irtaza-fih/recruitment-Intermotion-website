@@ -12,7 +12,7 @@ export default function Footer() {
     <footer style={{ background: "#ffffff", borderTop: "1px solid #E5EAF5" }} className="py-12">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <button onClick={() => navigate("/")}>
-          <img src={logo} alt="Recruitment Intermotion" className="h-8" width={120} height={47} />
+          <img src={logo} alt="Recruitment Intermotion" className="h-8" width={120} height={47} loading="lazy" decoding="async" />
         </button>
         <p className="text-xs" style={{ color: "#444444" }}>
           © {year} Recruitment Intermotion. {t(translations.footer.rights, lang)}
