@@ -11,6 +11,7 @@ const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const VacanciesPage = lazy(() => import("@/pages/VacanciesPage"));
 const FinancePage = lazy(() => import("@/pages/FinancePage"));
+const SalesPage = lazy(() => import("@/pages/SalesPage"));
 const ClientFeedbackPage = lazy(() => import("@/pages/ClientFeedbackPage"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
