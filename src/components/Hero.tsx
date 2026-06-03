@@ -72,10 +72,13 @@ export default function Hero() {
       <div className="relative z-10 text-center text-primary-foreground px-6 max-w-4xl">
         <div
           style={{ transform: `scale(${logoScale})`, opacity: logoOpacity }}
-          className="transition-none mb-6"
+          className="transition-none mb-4"
         >
           <img src={heroLogo} alt="Recruitment Intermotion" className="h-40 md:h-56 lg:h-64 w-auto mx-auto" width={768} height={269} fetchPriority="high" loading="eager" decoding="sync" />
         </div>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-4 leading-tight">
+          Recruitmentbureau voor Finance, IT en Sales in Nederland
+        </h1>
         <p className="text-lg md:text-xl font-semibold italic mb-10 text-primary-foreground/90">
           {t(translations.hero.tagline, lang)}
         </p>
