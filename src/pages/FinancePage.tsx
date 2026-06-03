@@ -120,6 +120,47 @@ export default function FinancePage() {
           </div>
         </div>
       </section>
+
+      {/* Related services */}
+      <section className="py-20 bg-bg-tint">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+            Ook interessant
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <button
+              onClick={() => navigate("/interim")}
+              className="text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
+            >
+              <span className="inline-block gradient-brand text-primary-foreground text-xs font-bold px-3 py-1 rounded-full mb-4">
+                Interim
+              </span>
+              <h3 className="text-xl font-bold text-foreground mb-3">Interim Finance Specialist</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Snel een gekwalificeerde interim finance professional inzetten? Wij leveren flexibele oplossingen op maat.
+              </p>
+              <span className="text-accent-blue text-sm font-semibold group-hover:underline">
+                Bekijk Interim →
+              </span>
+            </button>
+            <button
+              onClick={() => navigate("/sales-recruitment")}
+              className="text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
+            >
+              <span className="inline-block gradient-brand text-primary-foreground text-xs font-bold px-3 py-1 rounded-full mb-4">
+                Sales
+              </span>
+              <h3 className="text-xl font-bold text-foreground mb-3">Sales Recruitment</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Wij vinden de sales professionals die uw organisatie verder brengen — van accountmanager tot Sales Director.
+              </p>
+              <span className="text-accent-blue text-sm font-semibold group-hover:underline">
+                Bekijk Sales →
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

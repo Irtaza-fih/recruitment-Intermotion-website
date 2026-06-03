@@ -120,6 +120,47 @@ export default function SalesPage() {
           </div>
         </div>
       </section>
+
+      {/* Related services */}
+      <section className="py-20 bg-bg-tint">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+            Ook interessant
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <button
+              onClick={() => navigate("/finance-recruitment")}
+              className="text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
+            >
+              <span className="inline-block gradient-brand text-primary-foreground text-xs font-bold px-3 py-1 rounded-full mb-4">
+                Finance
+              </span>
+              <h3 className="text-xl font-bold text-foreground mb-3">Finance Recruitment</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Van financial controller tot CFO — wij werven de beste finance professionals voor vaste en interim functies.
+              </p>
+              <span className="text-accent-blue text-sm font-semibold group-hover:underline">
+                Bekijk Finance →
+              </span>
+            </button>
+            <button
+              onClick={() => navigate("/it-recruitment")}
+              className="text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
+            >
+              <span className="inline-block gradient-brand text-primary-foreground text-xs font-bold px-3 py-1 rounded-full mb-4">
+                IT
+              </span>
+              <h3 className="text-xl font-bold text-foreground mb-3">IT Recruitment</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Van software developer tot IT Manager — wij verbinden bedrijven met de beste IT professionals.
+              </p>
+              <span className="text-accent-blue text-sm font-semibold group-hover:underline">
+                Bekijk IT →
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
