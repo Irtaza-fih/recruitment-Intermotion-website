@@ -1,5 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useRef, useCallback, useState } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -12,107 +11,36 @@ function renderTitle(html: string) {
 export default function ServicesSection() {
   const { lang } = useLang();
   const navigate = useAppNavigate();
-  const location = useLocation();
-  const [modalIdx, setModalIdx] = useState<number | null>(null);
   const ref = useScrollReveal();
 
-  // Close modal on route change
-  useEffect(() => {
-    setModalIdx(null);
-  }, [location.pathname]);
-
   return (
-    <>
-      <section className="py-36 bg-bg-tint">
-        <div ref={ref} className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="scroll-reveal text-accent-blue text-sm font-bold uppercase tracking-wider mb-3">
-              {t(translations.services.eyebrow, lang)}
-            </div>
-            <h2
-              className="scroll-reveal text-3xl md:text-4xl font-extrabold text-foreground"
-              dangerouslySetInnerHTML={{ __html: renderTitle(t(translations.services.title, lang)) }}
+    <section className="py-36 bg-bg-tint">
+      <div ref={ref} className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <div className="scroll-reveal text-accent-blue text-sm font-bold uppercase tracking-wider mb-3">
+            {t(translations.services.eyebrow, lang)}
+          </div>
+          <h2
+            className="scroll-reveal text-3xl md:text-4xl font-extrabold text-foreground"
+            dangerouslySetInnerHTML={{ __html: renderTitle(t(translations.services.title, lang)) }}
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {translations.services.items.map((item, i) => (
+            <ServiceCard
+              key={i}
+              index={i}
+              tag={t(item.tag, lang)}
+              title={t(item.title, lang)}
+              desc={t(item.desc, lang)}
+              moreLabel={t(translations.services.more, lang)}
+              onClick={() => navigate(item.path)}
             />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {translations.services.items.map((item, i) => (
-              <ServiceCard
-                key={i}
-                index={i}
-                tag={t(item.tag, lang)}
-                title={t(item.title, lang)}
-                desc={t(item.desc, lang)}
-                moreLabel={t(translations.services.more, lang)}
-                onMore={() => setModalIdx(i)}
-              />
-            ))}
-          </div>
+          ))}
         </div>
-      </section>
-
-      {/* Modal */}
-      {modalIdx !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setModalIdx(null)}>
-          <div className="absolute inset-0 bg-foreground/60" style={{ backdropFilter: "blur(6px)" }} />
-          <div
-            className="relative bg-card rounded-2xl shadow-2xl max-w-lg w-full p-8 flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="text-accent-blue text-sm font-bold mb-2">0{modalIdx + 1}</div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              {t(translations.services.items[modalIdx].title, lang)}
-            </h3>
-            <div
-              className="mb-4 rounded-r-lg"
-              style={{
-                borderLeft: "4px solid hsl(205 96% 49%)",
-                background: "hsl(228 100% 98%)",
-                padding: "1rem 1.25rem",
-                borderRadius: "0 8px 8px 0",
-              }}
-            >
-              <p className="font-semibold text-foreground">
-                {t(translations.services.items[modalIdx].modalIntro, lang)}
-              </p>
-            </div>
-            <div className="text-muted-foreground leading-relaxed mb-6 space-y-4">
-              {t(translations.services.items[modalIdx].modalBody, lang).split('\n\n').map((paragraph, i) => {
-                const parts = paragraph.split(/(<accent>.*?<\/accent>)/g);
-                return (
-                  <p key={i}>
-                    {parts.map((part, j) => {
-                      const match = part.match(/^<accent>(.*?)<\/accent>$/);
-                      if (match) {
-                        return <span key={j} className="text-accent-blue font-bold">{match[1]}</span>;
-                      }
-                      return <span key={j}>{part}</span>;
-                    })}
-                  </p>
-                );
-              })}
-            </div>
-            <div className="border-t border-border pt-4 flex items-center justify-between">
-              <button
-                onClick={() => setModalIdx(null)}
-                className="px-5 py-2.5 rounded-full text-sm font-semibold border border-border text-foreground hover:bg-muted transition-colors"
-              >
-                {t(translations.services.close, lang)}
-              </button>
-              <button
-                onClick={() => {
-                  setModalIdx(null);
-                  navigate("/contact");
-                }}
-                className="gradient-brand text-primary-foreground px-5 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
-              >
-                {t(translations.services.contactCta, lang)}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </section>
   );
 }
 
@@ -122,14 +50,14 @@ function ServiceCard({
   title,
   desc,
   moreLabel,
-  onMore,
+  onClick,
 }: {
   index: number;
   tag: string;
   title: string;
   desc: string;
   moreLabel: string;
-  onMore: () => void;
+  onClick: () => void;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [glow, setGlow] = useState({ x: 50, y: 50 });
@@ -147,7 +75,7 @@ function ServiceCard({
       ref={cardRef}
       onMouseMove={handleMouseMove}
       className="scroll-reveal relative bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue cursor-pointer group overflow-hidden"
-      onClick={onMore}
+      onClick={onClick}
     >
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"

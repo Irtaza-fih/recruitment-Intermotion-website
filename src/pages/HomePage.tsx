@@ -14,12 +14,12 @@ export default function HomePage() {
   const { lang } = useLang();
 
   const title = lang === "nl"
-    ? "Recruitment Intermotion – Finance, IT & Sales Werving Nederland"
-    : "Recruitment Intermotion – Finance, IT & Sales Recruitment Netherlands";
+    ? "Recruitmentbureau Finance, IT & Sales Nederland | Recruitment Intermotion"
+    : "Recruitment Bureau Finance, IT & Sales Netherlands | Recruitment Intermotion";
 
   const description = lang === "nl"
-    ? "Wij verbinden ambitieuze bedrijven met de juiste professionals in Finance, IT en Sales. Meer dan 15 jaar ervaring. Actief in de Randstad en Noord-Brabant."
-    : "We connect ambitious companies with the right professionals in Finance, IT and Sales. Over 15 years of experience. Active in the Randstad and Noord-Brabant.";
+    ? "Recruitment Intermotion is uw gespecialiseerd recruitmentbureau voor Finance, IT en Sales in Nederland. Vaste en interim plaatsingen in de Randstad en Noord-Brabant."
+    : "Recruitment Intermotion is your specialised recruitment agency for Finance, IT and Sales in the Netherlands. Permanent and interim placements in the Randstad and Noord-Brabant.";
 
   return (
     <>
