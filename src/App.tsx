@@ -9,6 +9,7 @@ import HomePage from "@/pages/HomePage";
 const Footer = lazy(() => import("@/components/Footer"));
 const AboutPage = lazy(() => import("@/pages/AboutPage"));
 const ContactPage = lazy(() => import("@/pages/ContactPage"));
+const VacanciesPage = lazy(() => import("@/pages/VacanciesPage"));
 const ClientFeedbackPage = lazy(() => import("@/pages/ClientFeedbackPage"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
@@ -42,6 +43,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/over-ons" element={<AboutPage />} />
+            <Route path="/vacatures" element={<VacanciesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/client-feedback" element={<ClientFeedbackPage />} />
             <Route path="*" element={<NotFound />} />

@@ -3,17 +3,13 @@ import { translations, t } from "@/lib/translations";
 import PageHeroBanner from "@/components/PageHeroBanner";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-interface VacanciesPageProps {
-  onNavigate: (page: "contact") => void;
-}
-
 const disciplineColors: Record<string, string> = {
   Finance: "bg-accent-blue",
   IT: "bg-navy",
   Sales: "bg-accent-blue",
 };
 
-export default function VacanciesPage({ onNavigate }: VacanciesPageProps) {
+export default function VacanciesPage() {
   const { lang } = useLang();
   const ref = useScrollReveal();
 
