@@ -12,6 +12,7 @@ const ContactPage = lazy(() => import("@/pages/ContactPage"));
 const VacanciesPage = lazy(() => import("@/pages/VacanciesPage"));
 const FinancePage = lazy(() => import("@/pages/FinancePage"));
 const SalesPage = lazy(() => import("@/pages/SalesPage"));
+const ITPage = lazy(() => import("@/pages/ITPage"));
 const ClientFeedbackPage = lazy(() => import("@/pages/ClientFeedbackPage"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
@@ -48,6 +49,7 @@ function AppContent() {
             <Route path="/vacatures" element={<VacanciesPage />} />
             <Route path="/finance-recruitment" element={<FinancePage />} />
             <Route path="/sales-recruitment" element={<SalesPage />} />
+            <Route path="/it-recruitment" element={<ITPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/client-feedback" element={<ClientFeedbackPage />} />
             <Route path="*" element={<NotFound />} />
