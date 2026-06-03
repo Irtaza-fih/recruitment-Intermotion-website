@@ -19,6 +19,7 @@ export default function Footer() {
     { path: "/", label: t(translations.nav.home, lang) },
     { path: "/over-ons", label: t(translations.nav.about, lang) },
     { path: "/vacatures", label: t(translations.nav.vacancies, lang) },
+    { path: "/blog", label: t(translations.nav.blog, lang) },
     { path: "/contact", label: t(translations.nav.contact, lang) },
   ];
 
