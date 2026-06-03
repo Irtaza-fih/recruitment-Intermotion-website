@@ -151,4 +151,57 @@ export const blogPosts: BlogPost[] = [
 <p>Klaar om uw salesteam te versterken? <a href="/contact">Neem contact op</a> en vertel ons wat u zoekt.</p>
     `,
   },
+  {
+    slug: "interim-professional-inzetten-wanneer-hoe",
+    title: "Interim professional inzetten: wanneer is het de juiste keuze?",
+    description:
+      "Een interim professional biedt snelheid en flexibiliteit. Maar wanneer kies je voor interim en wat moet je weten voordat je begint?",
+    date: "2026-06-03",
+    author: "Recruitment Intermotion",
+    category: "Interim",
+    content: `
+<p>Soms heeft een organisatie snel iemand nodig — iemand die direct inzetbaar is, geen lange inwerkperiode nodig heeft en resultaat boekt vanaf dag één. Dat is precies waar een interim professional voor is.</p>
+
+<h2>Wat is een interim professional?</h2>
+
+<p>Een interim professional is een ervaren specialist die tijdelijk wordt ingezet voor een specifieke opdracht, project of overbruggingsperiode. Hij of zij is zelfstandig, resultaatgericht en gewend om snel te schakelen in nieuwe omgevingen.</p>
+
+<h2>Wanneer kies je voor een interim professional?</h2>
+
+<p>Een interim inzetten is de juiste keuze wanneer:</p>
+
+<ul>
+  <li>Er een urgent vacature is die niet kan wachten op een vaste werving</li>
+  <li>Een medewerker langdurig uitvalt door ziekte of zwangerschapsverlof</li>
+  <li>Er een specifiek project of verandertraject loopt waarvoor tijdelijk expertise nodig is</li>
+  <li>De organisatie in transitie is en tijdelijk versterking nodig heeft op managementniveau</li>
+  <li>U wilt testen of een profiel past voordat u een vaste aanstelling doet</li>
+</ul>
+
+<h2>Wat zijn de voordelen van interim?</h2>
+
+<ul>
+  <li><strong>Snelheid:</strong> een interim professional is vaak binnen één tot twee weken inzetbaar</li>
+  <li><strong>Flexibiliteit:</strong> u bepaalt de duur van de opdracht</li>
+  <li><strong>Expertise:</strong> interimmers hebben brede ervaring in meerdere organisaties</li>
+  <li><strong>Geen lange onboarding:</strong> ze zijn gewend snel op te starten</li>
+</ul>
+
+<h2>Interim finance, IT of sales?</h2>
+
+<p>Recruitment Intermotion levert interim professionals in drie disciplines:</p>
+
+<ul>
+  <li><strong>Finance:</strong> controllers, finance managers, CFO's, business controllers</li>
+  <li><strong>IT:</strong> IT managers, project managers, consultants, developers</li>
+  <li><strong>Sales:</strong> sales managers, accountmanagers, business developers</li>
+</ul>
+
+<h2>Hoe snel kan Recruitment Intermotion leveren?</h2>
+
+<p>In de meeste gevallen presenteren wij binnen 48 tot 72 uur de eerste gekwalificeerde kandidaten. Ons netwerk van beschikbare interim professionals stelt ons in staat snel te schakelen.</p>
+
+<p>Heeft u op korte termijn een interim professional nodig? <a href="/contact">Neem contact op</a> en we schakelen direct.</p>
+    `,
+  },
 ];
