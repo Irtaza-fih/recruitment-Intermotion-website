@@ -33,7 +33,7 @@ export default function Navbar() {
     () => [
       { path: "/", label: t(translations.nav.home, lang) },
       { path: "/over-ons", label: t(translations.nav.about, lang) },
-      { path: null, label: t(translations.nav.vacancies, lang), external: "https://careers-page.com/recruitment-intermotion" },
+      { path: "/vacatures", label: t(translations.nav.vacancies, lang) },
     ],
     [lang]
   );
