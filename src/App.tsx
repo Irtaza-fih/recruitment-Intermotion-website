@@ -47,6 +47,7 @@ function AppContent() {
             <Route path="/over-ons" element={<AboutPage />} />
             <Route path="/vacatures" element={<VacanciesPage />} />
             <Route path="/finance-recruitment" element={<FinancePage />} />
+            <Route path="/sales-recruitment" element={<SalesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/client-feedback" element={<ClientFeedbackPage />} />
             <Route path="*" element={<NotFound />} />
