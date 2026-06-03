@@ -80,60 +80,46 @@ export const translations = {
   services: {
     eyebrow: { nl: "Onze diensten", en: "Our services" },
     title: {
-      nl: "Hoe wij <em>waarde</em> toevoegen",
-      en: "How we add <em>value</em>",
+      nl: "Waar kunnen wij <em>u</em> mee helpen?",
+      en: "How can we <em>help</em> you?",
     },
     more: { nl: "Meer informatie", en: "More information" },
-    close: { nl: "Sluiten", en: "Close" },
-    contactCta: { nl: "Neem contact op", en: "Get in touch" },
     items: [
       {
-        tag: { nl: "Recruitment", en: "Recruitment" },
-        title: { nl: "Recruitment", en: "Recruitment" },
+        tag: { nl: "Finance", en: "Finance" },
+        title: { nl: "Finance Recruitment", en: "Finance Recruitment" },
         desc: {
-          nl: "Wij vinden de perfecte match voor je vaste posities. Van intake tot onboarding, wij begeleiden het volledige wervingsproces.",
-          en: "We find the perfect match for your permanent positions. From intake to onboarding, we guide the entire recruitment process.",
+          nl: "Van financial controller tot CFO — wij werven de beste finance professionals voor vaste en interim functies in Nederland.",
+          en: "From financial controller to CFO — we recruit the best finance professionals for permanent and interim roles in the Netherlands.",
         },
-        modalIntro: {
-          nl: "Ons Recruitment proces is ontworpen om de beste kandidaten te identificeren en aan te trekken voor jouw organisatie.",
-          en: "Our Recruitment process is designed to identify and attract the best candidates for your organisation.",
-        },
-        modalBody: {
-          nl: "Wij gaan diep in op jouw organisatiecultuur, functie-eisen en gewenste competenties. Via ons uitgebreide netwerk bereiken we ook passieve kandidaten: professionals die niet actief zoeken, maar wel openstaan voor de juiste kans.\n\nDaarnaast benaderen we kandidaten persoonlijk en actief via gerichte sourcing en directe outreach op LinkedIn en andere kanalen.\n\nDe nieuwste tools op het gebied van automatisering, sourcing en AI ondersteunen ons proces. Maar recruitment draait uiteindelijk om mensen. <accent>Technologie ondersteunt het proces; de menselijke connectie maakt het verschil.</accent>",
-          en: "We deeply explore your organisational culture, job requirements and desired competencies. Through our extensive network, we also reach passive candidates: professionals who are not actively looking but are open to the right opportunity.\n\nWe also approach candidates personally and actively through targeted sourcing and direct outreach on LinkedIn and other channels.\n\nThe latest tools in automation, sourcing and AI support our process. But recruitment is ultimately about people. <accent>Technology supports the process; the human connection makes the difference.</accent>",
-        },
+        path: "/finance-recruitment",
       },
       {
-        tag: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
-        title: { nl: "Inhouse Recruitment", en: "Inhouse Recruitment" },
+        tag: { nl: "Sales", en: "Sales" },
+        title: { nl: "Sales Recruitment", en: "Sales Recruitment" },
         desc: {
-          nl: "Volledig geïntegreerde recruitmentoplossingen. Wij nemen je wervingsproces over en optimaliseren het van A tot Z.",
-          en: "Fully integrated recruitment solutions. We take over your recruitment process and optimise it from A to Z.",
+          nl: "Van accountmanager tot Sales Director — wij vinden resultaatgerichte sales talenten voor bedrijven in de Randstad en Noord-Brabant.",
+          en: "From account manager to Sales Director — we find results-driven sales talent for companies in the Randstad and Noord-Brabant.",
         },
-        modalIntro: {
-          nl: "De ultieme oplossing voor organisaties die hun recruitmentproces willen professionaliseren en optimaliseren.",
-          en: "The ultimate solution for organisations that want to professionalise and optimise their recruitment process.",
+        path: "/sales-recruitment",
+      },
+      {
+        tag: { nl: "IT", en: "IT" },
+        title: { nl: "IT Recruitment", en: "IT Recruitment" },
+        desc: {
+          nl: "Van software developer tot IT Manager — wij verbinden bedrijven met de beste IT professionals voor vaste en interim functies.",
+          en: "From software developer to IT Manager — we connect companies with the best IT professionals for permanent and interim roles.",
         },
-        modalBody: {
-          nl: "Wij integreren ons in jouw organisatie en fungeren als jouw recruitmentafdeling met de expertise, tools en het netwerk van een gespecialiseerd bureau. Van branding en vacatureteksten tot sourcing, selectie en onboarding, wij nemen het volledige proces uit handen.\n\nDaarnaast bieden wij <accent>fractional recruitment</accent> aan: flexibele inzet van een recruiter vanaf <accent>8 uur per week</accent>. Ideaal voor organisaties die wervingskracht nodig hebben zonder langdurige verplichtingen.",
-          en: "We integrate into your organisation and act as your recruitment department with the expertise, tools and network of a specialised agency. From branding and job descriptions to sourcing, selection and onboarding, we take over the entire process.\n\nWe also offer <accent>fractional recruitment</accent>: flexible deployment of a recruiter from <accent>8 hours per week</accent>. Ideal for organisations that need recruitment capacity without long-term commitments.",
-        },
+        path: "/it-recruitment",
       },
       {
         tag: { nl: "Interim", en: "Interim" },
-        title: { nl: "Interim", en: "Interim" },
+        title: { nl: "Interim Professionals", en: "Interim Professionals" },
         desc: {
-          nl: "Flexibele oplossingen voor tijdelijke posities. Snel schakelen met gekwalificeerde interim professionals.",
-          en: "Flexible solutions for temporary positions. Quick deployment of qualified interim professionals.",
+          nl: "Snel een gekwalificeerde interim specialist inzetten? Wij leveren flexibele oplossingen in Finance, IT en Sales.",
+          en: "Need to quickly deploy a qualified interim specialist? We deliver flexible solutions in Finance, IT and Sales.",
         },
-        modalIntro: {
-          nl: "Soms heeft jouw organisatie snel een ervaren professional nodig voor een tijdelijke opdracht of project.",
-          en: "Sometimes your organisation quickly needs an experienced professional for a temporary assignment or project.",
-        },
-        modalBody: {
-          nl: "Ons interim netwerk bestaat uit zorgvuldig geselecteerde professionals met bewezen trackrecords in Finance, IT en Sales. Of het nu gaat om ziektevervanging, projectondersteuning of een tijdelijke capaciteitsuitbreiding — wij leveren binnen korte tijd de juiste interim professional die direct inzetbaar is en waarde toevoegt aan jouw team.",
-          en: "Our interim network consists of carefully selected professionals with proven track records in Finance, IT and Sales. Whether it concerns illness replacement, project support or temporary capacity expansion — we deliver the right interim professional within a short time who is immediately deployable and adds value to your team.",
-        },
+        path: "/interim",
       },
     ],
   },
