@@ -101,4 +101,54 @@ export const blogPosts: BlogPost[] = [
 <p>Bent u op zoek naar een finance professional? <a href="/contact">Neem contact op</a> en we bespreken uw wensen.</p>
     `,
   },
+  {
+    slug: "sales-talent-vinden-nederland",
+    title: "Hoe vind je het juiste sales talent in Nederland?",
+    description:
+      "Sales professionals zijn moeilijk te vinden én te beoordelen. Ontdek hoe je als werkgever het juiste sales talent werft voor uw organisatie.",
+    date: "2026-06-03",
+    author: "Recruitment Intermotion",
+    category: "Sales",
+    content: `
+<p>Een goede salesmedewerker vinden is een van de moeilijkste wervingsuitdagingen voor bedrijven in Nederland. Iedereen kan een vlot gesprek voeren — maar wie heeft écht de drive, het doorzettingsvermogen en de commerciële instinct om resultaten te boeken?</p>
+
+<h2>Waarom is sales recruitment zo uitdagend?</h2>
+
+<p>Sales is een vakgebied waar houding en karakter minstens zo belangrijk zijn als ervaring. Een kandidaat met een indrukwekkend CV kan tegenvallen in de praktijk. Omgekeerd kan iemand met minder ervaring maar de juiste instelling uitgroeien tot een topperformer.</p>
+
+<p>Dit maakt sales recruitment complex — en vraagt om een aanpak die verder gaat dan cv-screening.</p>
+
+<h2>Wat kenmerkt een goede sales professional?</h2>
+
+<p>Uit onze ervaring onderscheiden topverkopers zich op deze punten:</p>
+
+<ul>
+  <li>Intrinsieke motivatie en resultaatgerichtheid</li>
+  <li>Luistervaardigheid en inlevingsvermogen</li>
+  <li>Doorzettingsvermogen bij tegenslag</li>
+  <li>Commercieel inzicht en strategisch denken</li>
+  <li>Aanpassingsvermogen aan verschillende klanten en situaties</li>
+</ul>
+
+<h2>Hoe werft Recruitment Intermotion sales professionals?</h2>
+
+<p>Wij beoordelen kandidaten niet alleen op hun trackrecord. We kijken naar drijfveren, werkstijl en cultuurfit. Via ons netwerk bereiken we ook de passieve kandidaten — de sales professionals die niet actief zoeken maar wel openstaan voor de juiste uitdaging.</p>
+
+<p>Wij werven voor functies zoals:</p>
+
+<ul>
+  <li>Accountmanager</li>
+  <li>Business Development Manager</li>
+  <li>Sales Manager</li>
+  <li>Key Account Manager</li>
+  <li>Commercieel Directeur</li>
+</ul>
+
+<h2>Vaste aanstelling of interim sales?</h2>
+
+<p>Heeft u tijdelijk een ervaren sales professional nodig — voor een product launch, marktexpansie of overbruggingsperiode? Wij leveren ook interim sales specialisten die snel inzetbaar zijn en direct impact maken.</p>
+
+<p>Klaar om uw salesteam te versterken? <a href="/contact">Neem contact op</a> en vertel ons wat u zoekt.</p>
+    `,
+  },
 ];
