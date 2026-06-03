@@ -50,14 +50,14 @@ function ServiceCard({
   title,
   desc,
   moreLabel,
-  onMore,
+  onClick,
 }: {
   index: number;
   tag: string;
   title: string;
   desc: string;
   moreLabel: string;
-  onMore: () => void;
+  onClick: () => void;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [glow, setGlow] = useState({ x: 50, y: 50 });
