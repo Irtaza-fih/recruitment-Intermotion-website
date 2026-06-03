@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
@@ -11,13 +11,27 @@ export default function Navbar() {
   const navigate = useAppNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const isHome = location.pathname === "/";
 
   // Close mobile drawer on route change
   useEffect(() => {
     setMobileOpen(false);
+    setServicesOpen(false);
   }, [location.pathname]);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function onClick(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -38,17 +52,31 @@ export default function Navbar() {
     [lang]
   );
 
+  const serviceLinks = useMemo(
+    () => [
+      { path: "/finance-recruitment", label: t(translations.nav.finance, lang) },
+      { path: "/sales-recruitment", label: t(translations.nav.sales, lang) },
+      { path: "/it-recruitment", label: t(translations.nav.it, lang) },
+      { path: "/interim", label: t(translations.nav.interim, lang) },
+    ],
+    [lang]
+  );
+
   const handleNav = useCallback(
     (path: string) => {
       if (path === location.pathname) {
         setMobileOpen(false);
+        setServicesOpen(false);
         return;
       }
       setMobileOpen(false);
+      setServicesOpen(false);
       navigate(path);
     },
     [navigate, location.pathname]
   );
+
+  const isServiceActive = serviceLinks.some((l) => location.pathname === l.path);
 
   return (
     <>
@@ -84,6 +112,52 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
+
+            {/* Services dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setServicesOpen((v) => !v)}
+                className={`text-base font-semibold transition-colors relative pb-1 flex items-center gap-1 ${
+                  isServiceActive
+                    ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
+                    : solid
+                    ? "text-foreground hover:text-accent-blue"
+                    : "text-primary-foreground hover:text-accent-blue"
+                }`}
+                aria-expanded={servicesOpen}
+              >
+                {t(translations.nav.services, lang)}
+                <svg
+                  width="12"
+                  height="12"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+
+              {servicesOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-card rounded-xl shadow-xl border border-border p-2 min-w-[220px]">
+                  {serviceLinks.map((link) => (
+                    <button
+                      key={link.path}
+                      onClick={() => handleNav(link.path!)}
+                      className={`w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                        location.pathname === link.path
+                          ? "text-accent-blue bg-accent/10"
+                          : "text-foreground hover:text-accent-blue hover:bg-muted"
+                      }`}
+                    >
+                      {link.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Right side */}
@@ -160,7 +234,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 gradient-brand flex flex-col items-center justify-center gap-8">
+        <div className="fixed inset-0 z-40 gradient-brand flex flex-col items-center justify-center gap-6 overflow-y-auto py-8">
           {navLinks.map((link) => (
             <button
               key={link.path}
@@ -170,9 +244,26 @@ export default function Navbar() {
               {link.label} <span className="text-lg">→</span>
             </button>
           ))}
+
+          {/* Mobile services section */}
+          <div className="flex flex-col items-center gap-3 mt-2">
+            <span className="text-primary-foreground/60 text-sm font-semibold uppercase tracking-widest">
+              {t(translations.nav.services, lang)}
+            </span>
+            {serviceLinks.map((link) => (
+              <button
+                key={link.path}
+                onClick={() => handleNav(link.path!)}
+                className="text-primary-foreground text-xl font-semibold flex items-center gap-3 hover:translate-x-2 transition-transform"
+              >
+                {link.label} <span className="text-base">→</span>
+              </button>
+            ))}
+          </div>
+
           <button
             onClick={() => handleNav("/contact")}
-            className="bg-primary-foreground text-primary px-8 py-3 rounded-full text-lg font-bold hover:shadow-lg transition-all"
+            className="bg-primary-foreground text-primary px-8 py-3 rounded-full text-lg font-bold hover:shadow-lg transition-all mt-2"
           >
             {t(translations.nav.cta, lang)}
           </button>
