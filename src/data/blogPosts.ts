@@ -58,4 +58,47 @@ export const blogPosts: BlogPost[] = [
 <p>Benieuwd wat wij voor uw organisatie kunnen betekenen? <a href="/contact">Neem contact op</a>.</p>
     `,
   },
+  {
+    slug: "finance-professional-vinden-nederland",
+    title: "Hoe vind je een goede finance professional in Nederland?",
+    description:
+      "Finance talent is schaars in Nederland. Ontdek hoe je als werkgever de juiste financial controller, CFO of interim finance specialist vindt.",
+    date: "2026-06-03",
+    author: "Recruitment Intermotion",
+    category: "Finance",
+    content: `
+<p>Finance professionals zijn schaars in Nederland. De vraag naar gekwalificeerde controllers, CFO's en interim finance specialisten groeit — maar het aanbod houdt geen gelijke tred. Hoe zorg je er als werkgever voor dat jij de juiste kandidaat bindt?</p>
+
+<h2>Waarom is finance talent zo moeilijk te vinden?</h2>
+
+<p>De Nederlandse arbeidsmarkt voor finance is krap. Goede financials hebben keuze uit meerdere aanbiedingen en zijn vaak niet actief op zoek. Ze zijn passief beschikbaar — maar niet zichtbaar op traditionele jobboards.</p>
+
+<p>Daarnaast is finance een vakgebied waar technische kennis alleen niet voldoende is. Een goede financial controller begrijpt niet alleen de cijfers, maar ook de business. Dat maakt de selectie complex.</p>
+
+<h2>Wat zoeken finance professionals in een nieuwe rol?</h2>
+
+<p>Uit onze ervaring zoeken finance professionals naar:</p>
+
+<ul>
+  <li>Inhoudelijke uitdaging en doorgroeimogelijkheden</li>
+  <li>Een organisatie waar finance serieus wordt genomen</li>
+  <li>Goede arbeidsvoorwaarden én flexibiliteit</li>
+  <li>Een prettige cultuur en betrokken management</li>
+</ul>
+
+<h2>Hoe vind je passief talent in finance?</h2>
+
+<p>Passief talent bereik je niet via een vacature op Indeed. Je hebt een netwerk nodig — en de expertise om de juiste mensen te benaderen op het juiste moment.</p>
+
+<p>Bij Recruitment Intermotion bouwen we al meer dan 15 jaar aan een actief netwerk van finance professionals in de Randstad en Noord-Brabant. We kennen de kandidaten, we kennen de markt, en we weten welke match écht werkt.</p>
+
+<h2>Vaste aanstelling of interim?</h2>
+
+<p>Soms is de behoefte urgent — een project, een zwangerschapsverlof, een reorganisatie. In dat geval is een interim finance specialist de snelste oplossing. Wij leveren gekwalificeerde interim professionals die binnen korte tijd inzetbaar zijn.</p>
+
+<p>Voor structurele posities zoeken we de kandidaat die niet alleen de functie invult, maar ook past bij de cultuur en ambities van uw organisatie.</p>
+
+<p>Bent u op zoek naar een finance professional? <a href="/contact">Neem contact op</a> en we bespreken uw wensen.</p>
+    `,
+  },
 ];
