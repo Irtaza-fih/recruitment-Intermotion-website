@@ -75,7 +75,7 @@ function ServiceCard({
       ref={cardRef}
       onMouseMove={handleMouseMove}
       className="scroll-reveal relative bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue cursor-pointer group overflow-hidden"
-      onClick={onMore}
+      onClick={onClick}
     >
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
