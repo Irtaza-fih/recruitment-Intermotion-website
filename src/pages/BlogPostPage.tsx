@@ -49,7 +49,7 @@ export default function BlogPostPage() {
           "@type": "Article",
           headline: post.title,
           description: post.description,
-          author: { "@type": "Person", name: post.author },
+          author: { "@type": "Person", name: post.author, url: "https://www.linkedin.com/in/marijnschilder/" },
           datePublished: post.date,
           articleSection: post.category,
           mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -75,7 +75,7 @@ export default function BlogPostPage() {
             ← Terug naar blog
           </button>
 
-          <div className="flex items-center gap-3 text-sm text-muted-foreground mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 text-sm text-muted-foreground mb-8">
             <span className="inline-block gradient-brand text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
               {post.category}
             </span>
@@ -86,8 +86,17 @@ export default function BlogPostPage() {
                 year: "numeric",
               })}
             </span>
-            <span>·</span>
-            <span>{post.author}</span>
+            <span className="hidden sm:inline">·</span>
+            <span className="font-medium text-foreground">{post.author}</span>
+            <span className="text-muted-foreground">{post.authorTitle}</span>
+            <a
+              href="https://www.linkedin.com/in/marijnschilder/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent-blue hover:underline font-medium"
+            >
+              LinkedIn
+            </a>
           </div>
 
           <article
