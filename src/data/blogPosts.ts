@@ -57,6 +57,8 @@ export const blogPosts: BlogPost[] = [
 
 <p>Wij geloven niet in een one-size-fits-all aanpak. Elk bedrijf is anders, elke zoekopdracht is uniek. Met meer dan 15 jaar ervaring in Finance, IT en Sales weten wij waar de juiste professionals te vinden zijn — en hoe we ze aan u binden.</p>
 
+<p>Meer weten over onze aanpak? Bekijk onze <a href="/finance-recruitment">recruitment diensten</a>, <a href="/sales-recruitment">sales recruitment</a> of <a href="/it-recruitment">IT recruitment</a> pagina's.</p>
+
 <p>Benieuwd wat wij voor uw organisatie kunnen betekenen? <a href="/contact">Neem contact op</a>.</p>
     `,
   },
@@ -100,6 +102,8 @@ export const blogPosts: BlogPost[] = [
 <p>Soms is de behoefte urgent — een project, een zwangerschapsverlof, een reorganisatie. In dat geval is een interim finance specialist de snelste oplossing. Wij leveren gekwalificeerde interim professionals die binnen korte tijd inzetbaar zijn.</p>
 
 <p>Voor structurele posities zoeken we de kandidaat die niet alleen de functie invult, maar ook past bij de cultuur en ambities van uw organisatie.</p>
+
+<p>Meer informatie over onze aanpak in finance? Bekijk onze <a href="/finance-recruitment">finance recruitment pagina</a> of lees meer over <a href="/interim">interim finance professionals</a>.</p>
 
 <p>Bent u op zoek naar een finance professional? <a href="/contact">Neem contact op</a> en we bespreken uw wensen.</p>
     `,
@@ -151,6 +155,8 @@ export const blogPosts: BlogPost[] = [
 <h2>Vaste aanstelling of interim sales?</h2>
 
 <p>Heeft u tijdelijk een ervaren sales professional nodig — voor een product launch, marktexpansie of overbruggingsperiode? Wij leveren ook interim sales specialisten die snel inzetbaar zijn en direct impact maken.</p>
+
+<p>Benieuwd hoe wij sales professionals werven? Bekijk onze <a href="/sales-recruitment">sales recruitment pagina</a>.</p>
 
 <p>Klaar om uw salesteam te versterken? <a href="/contact">Neem contact op</a> en vertel ons wat u zoekt.</p>
     `,
@@ -205,6 +211,8 @@ export const blogPosts: BlogPost[] = [
 <h2>Hoe snel kan Recruitment Intermotion leveren?</h2>
 
 <p>In de meeste gevallen presenteren wij binnen 48 tot 72 uur de eerste gekwalificeerde kandidaten. Ons netwerk van beschikbare interim professionals stelt ons in staat snel te schakelen.</p>
+
+<p>Meer weten over interim plaatsingen in Finance, IT of Sales? Bekijk onze <a href="/interim">interim pagina</a> voor meer informatie.</p>
 
 <p>Heeft u op korte termijn een interim professional nodig? <a href="/contact">Neem contact op</a> en we schakelen direct.</p>
     `,
