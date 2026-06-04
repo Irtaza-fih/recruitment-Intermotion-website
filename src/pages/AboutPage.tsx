@@ -18,10 +18,10 @@ export default function AboutPage() {
   const navigate = useAppNavigate();
   const ref = useScrollReveal();
 
-  const title = lang === "nl" ? "Over Ons – Recruitment Intermotion" : "About Us – Recruitment Intermotion";
+  const title = lang === "nl" ? "Over Ons | Recruitment Intermotion — Finance, IT & Sales" : "About Us | Recruitment Intermotion — Finance, IT & Sales";
   const description = lang === "nl"
-    ? "Leer Marijn Schilder kennen, oprichter van Recruitment Intermotion. Passie voor mensen, scherp inzicht in organisaties, meer dan 15 jaar recruitmentervaring."
-    : "Meet Marijn Schilder, founder of Recruitment Intermotion. Passion for people, sharp insight into organisations, over 15 years of recruitment experience.";
+    ? "Leer Recruitment Intermotion kennen. Meer dan 15 jaar ervaring in recruitment voor Finance, IT en Sales in Nederland. Opgericht door Marijn Schilder."
+    : "Meet Recruitment Intermotion. Over 15 years of recruitment experience in Finance, IT and Sales in the Netherlands. Founded by Marijn Schilder.";
 
   return (
     <>
@@ -86,7 +86,7 @@ export default function AboutPage() {
           "name": "Marijn Schilder",
           "jobTitle": "Founder",
           "worksFor": { "@type": "Organization", "name": "Recruitment Intermotion" },
-          "url": "https://recruitmentintermotion.nl/over-ons",
+          "url": "https://www.linkedin.com/in/marijnschilder/",
           "email": "marijn@recruitmentintermotion.nl",
           "telephone": "+31642639962",
           "address": {
@@ -100,7 +100,7 @@ export default function AboutPage() {
         })}</script>
       </Helmet>
       <PageHeroBanner
-        title={t(translations.aboutPage.title, lang)}
+        title="Over Recruitment Intermotion"
         subtitle={t(translations.aboutPage.subtitle, lang)}
       />
 
@@ -153,6 +153,56 @@ export default function AboutPage() {
               >
                 {t(translations.about.ctaButton, lang)}
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Wie zijn wij? */}
+      <section className="py-24 bg-background">
+        <div className="max-w-4xl mx-auto px-6 scroll-reveal">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 leading-tight">
+            Wie zijn wij?
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Recruitment Intermotion is een gespecialiseerd recruitmentbureau in Nederland, opgericht door Marijn Schilder. Wij verbinden ambitieuze bedrijven met de juiste professionals in Finance, IT en Sales. Met meer dan 15 jaar ervaring werken wij voor startups, scale-ups, familiebedrijven en corporate organisaties in de Randstad en Noord-Brabant.
+          </p>
+        </div>
+      </section>
+
+      {/* Onze aanpak */}
+      <section className="py-24 bg-card">
+        <div className="max-w-4xl mx-auto px-6 scroll-reveal">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 leading-tight">
+            Onze aanpak
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Wij geloven niet in een one-size-fits-all aanpak. Elk bedrijf is uniek, elke zoekopdracht is anders. Wij nemen de tijd om uw organisatie écht te begrijpen — de cultuur, de ambities, de uitdagingen. Zo vinden we niet alleen een kandidaat die de functie invult, maar iemand die écht past.
+          </p>
+        </div>
+      </section>
+
+      {/* Onze disciplines */}
+      <section className="py-24 bg-background">
+        <div className="max-w-4xl mx-auto px-6 scroll-reveal">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 leading-tight">
+            Onze disciplines
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg mb-6">
+            Wij werven voor vaste en interim posities in:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="bg-card border border-border rounded-xl p-6">
+              <h3 className="text-accent-blue font-bold text-lg mb-2">Finance</h3>
+              <p className="text-muted-foreground text-sm">controllers, CFO&apos;s, finance managers, business controllers</p>
+            </div>
+            <div className="bg-card border border-border rounded-xl p-6">
+              <h3 className="text-accent-blue font-bold text-lg mb-2">IT</h3>
+              <p className="text-muted-foreground text-sm">developers, IT managers, consultants, DevOps engineers</p>
+            </div>
+            <div className="bg-card border border-border rounded-xl p-6">
+              <h3 className="text-accent-blue font-bold text-lg mb-2">Sales</h3>
+              <p className="text-muted-foreground text-sm">accountmanagers, sales managers, business developers, commercieel directeuren</p>
             </div>
           </div>
         </div>
