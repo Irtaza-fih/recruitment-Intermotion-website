@@ -2,6 +2,12 @@ import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function InterimPage() {
   const navigate = useAppNavigate();
