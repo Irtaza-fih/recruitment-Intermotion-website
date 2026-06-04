@@ -70,6 +70,35 @@ export default function FinancePage() {
               },
               "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
               "priceRange": "$$"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Wat doet een finance recruitment bureau?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een finance recruitment bureau zoekt en selecteert gekwalificeerde finance professionals voor bedrijven. Van financial controller tot CFO — het bureau beheert het volledige wervingsproces, van intake en search tot begeleiding bij de aanstelling."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Hoe lang duurt een finance recruitment traject?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een gemiddeld finance recruitment traject duurt vier tot acht weken. Bij urgente zoekopdrachten of interim plaatsingen kunnen wij vaak binnen 48 tot 72 uur de eerste gekwalificeerde kandidaten presenteren."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wat kost een finance recruitment bureau?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge."
+                  }
+                }
+              ]
             }
           ]
         })}</script>
