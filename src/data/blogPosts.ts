@@ -16,7 +16,8 @@ export const blogPosts: BlogPost[] = [
     description:
       "Een recruitmentbureau helpt bedrijven bij het vinden van de juiste professionals. Maar wanneer schakel je er één in, en wat mag je verwachten?",
     date: "2026-06-03",
-    author: "Recruitment Intermotion",
+    author: "Marijn Schilder",
+    authorTitle: "Founder, Recruitment Intermotion",
     category: "Werkgevers",
     content: `
 <p>Een recruitmentbureau verbindt bedrijven met gekwalificeerde professionals. Of het nu gaat om een vaste aanstelling of een interim opdracht — een gespecialiseerd bureau neemt het wervingsproces uit handen, van de eerste intake tot de definitieve plaatsing.</p>
@@ -65,7 +66,8 @@ export const blogPosts: BlogPost[] = [
     description:
       "Finance talent is schaars in Nederland. Ontdek hoe je als werkgever de juiste financial controller, CFO of interim finance specialist vindt.",
     date: "2026-06-03",
-    author: "Recruitment Intermotion",
+    author: "Marijn Schilder",
+    authorTitle: "Founder, Recruitment Intermotion",
     category: "Finance",
     content: `
 <p>Finance professionals zijn schaars in Nederland. De vraag naar gekwalificeerde controllers, CFO's en interim finance specialisten groeit — maar het aanbod houdt geen gelijke tred. Hoe zorg je er als werkgever voor dat jij de juiste kandidaat bindt?</p>
@@ -108,7 +110,8 @@ export const blogPosts: BlogPost[] = [
     description:
       "Sales professionals zijn moeilijk te vinden én te beoordelen. Ontdek hoe je als werkgever het juiste sales talent werft voor uw organisatie.",
     date: "2026-06-03",
-    author: "Recruitment Intermotion",
+    author: "Marijn Schilder",
+    authorTitle: "Founder, Recruitment Intermotion",
     category: "Sales",
     content: `
 <p>Een goede salesmedewerker vinden is een van de moeilijkste wervingsuitdagingen voor bedrijven in Nederland. Iedereen kan een vlot gesprek voeren — maar wie heeft écht de drive, het doorzettingsvermogen en de commerciële instinct om resultaten te boeken?</p>
@@ -158,7 +161,8 @@ export const blogPosts: BlogPost[] = [
     description:
       "Een interim professional biedt snelheid en flexibiliteit. Maar wanneer kies je voor interim en wat moet je weten voordat je begint?",
     date: "2026-06-03",
-    author: "Recruitment Intermotion",
+    author: "Marijn Schilder",
+    authorTitle: "Founder, Recruitment Intermotion",
     category: "Interim",
     content: `
 <p>Soms heeft een organisatie snel iemand nodig — iemand die direct inzetbaar is, geen lange inwerkperiode nodig heeft en resultaat boekt vanaf dag één. Dat is precies waar een interim professional voor is.</p>
