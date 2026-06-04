@@ -2,6 +2,12 @@ import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function ITPage() {
   const navigate = useAppNavigate();
@@ -64,6 +70,35 @@ export default function ITPage() {
               },
               "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
               "priceRange": "$$"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Wat doet een IT recruitment bureau?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een IT recruitment bureau zoekt en selecteert gekwalificeerde IT professionals voor bedrijven. Van software developer tot IT manager — het bureau beheert het volledige wervingsproces en heeft toegang tot passief IT talent dat niet actief op zoek is."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Hoe vind ik een goede IT professional in Nederland?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "IT talent is schaars in Nederland. De beste aanpak is via een gespecialiseerd IT recruitment bureau met een actief netwerk. Zij bereiken professionals die niet reageren op vacatures maar wel openstaan voor de juiste uitdaging."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Hoe snel kan ik een IT professional inzetten?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bij interim IT opdrachten kan Recruitment Intermotion vaak binnen 48 tot 72 uur de eerste kandidaten presenteren. Voor vaste posities duurt het gemiddelde traject vier tot acht weken."
+                  }
+                }
+              ]
             }
           ]
         })}</script>
@@ -118,6 +153,41 @@ export default function ITPage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-card">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+            Veelgestelde vragen
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq-1" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat doet een IT recruitment bureau?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Een IT recruitment bureau zoekt en selecteert gekwalificeerde IT professionals voor bedrijven. Van software developer tot IT manager — het bureau beheert het volledige wervingsproces en heeft toegang tot passief IT talent dat niet actief op zoek is.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-2" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Hoe vind ik een goede IT professional in Nederland?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                IT talent is schaars in Nederland. De beste aanpak is via een gespecialiseerd IT recruitment bureau met een actief netwerk. Zij bereiken professionals die niet reageren op vacatures maar wel openstaan voor de juiste uitdaging.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-3" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Hoe snel kan ik een IT professional inzetten?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Bij interim IT opdrachten kan Recruitment Intermotion vaak binnen 48 tot 72 uur de eerste kandidaten presenteren. Voor vaste posities duurt het gemiddelde traject vier tot acht weken.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

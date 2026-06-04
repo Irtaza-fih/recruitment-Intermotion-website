@@ -2,6 +2,12 @@ import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function FinancePage() {
   const navigate = useAppNavigate();
@@ -64,6 +70,35 @@ export default function FinancePage() {
               },
               "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
               "priceRange": "$$"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Wat doet een finance recruitment bureau?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een finance recruitment bureau zoekt en selecteert gekwalificeerde finance professionals voor bedrijven. Van financial controller tot CFO — het bureau beheert het volledige wervingsproces, van intake en search tot begeleiding bij de aanstelling."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Hoe lang duurt een finance recruitment traject?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een gemiddeld finance recruitment traject duurt vier tot acht weken. Bij urgente zoekopdrachten of interim plaatsingen kunnen wij vaak binnen 48 tot 72 uur de eerste gekwalificeerde kandidaten presenteren."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wat kost een finance recruitment bureau?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge."
+                  }
+                }
+              ]
             }
           ]
         })}</script>
@@ -118,6 +153,41 @@ export default function FinancePage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-card">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+            Veelgestelde vragen
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq-1" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat doet een finance recruitment bureau?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Een finance recruitment bureau zoekt en selecteert gekwalificeerde finance professionals voor bedrijven. Van financial controller tot CFO — het bureau beheert het volledige wervingsproces, van intake en search tot begeleiding bij de aanstelling.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-2" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Hoe lang duurt een finance recruitment traject?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Een gemiddeld finance recruitment traject duurt vier tot acht weken. Bij urgente zoekopdrachten of interim plaatsingen kunnen wij vaak binnen 48 tot 72 uur de eerste gekwalificeerde kandidaten presenteren.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-3" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat kost een finance recruitment bureau?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

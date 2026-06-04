@@ -2,6 +2,12 @@ import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function SalesPage() {
   const navigate = useAppNavigate();
@@ -64,6 +70,35 @@ export default function SalesPage() {
               },
               "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
               "priceRange": "$$"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Hoe vind ik een goede sales professional in Nederland?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De beste sales professionals zijn vaak passief beschikbaar — ze zoeken niet actief maar staan wel open voor de juiste kans. Een gespecialiseerd sales recruitment bureau heeft toegang tot dit passieve netwerk en benadert kandidaten gericht."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wat maakt een goede sales recruiter?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een goede sales recruiter begrijpt het verschil tussen iemand die goed kan praten en iemand die écht kan verkopen. Hij beoordeelt kandidaten op drijfveren, werkstijl en cultuurfit — niet alleen op cv en trackrecord."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Kan ik ook tijdelijk een sales professional inzetten?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. Via interim sales recruitment kunt u snel een ervaren sales professional inzetten voor een tijdelijke opdracht, product launch of overbruggingsperiode. Recruitment Intermotion levert interim sales specialisten die direct inzetbaar zijn."
+                  }
+                }
+              ]
             }
           ]
         })}</script>
@@ -118,6 +153,41 @@ export default function SalesPage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-card">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+            Veelgestelde vragen
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq-1" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Hoe vind ik een goede sales professional in Nederland?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                De beste sales professionals zijn vaak passief beschikbaar — ze zoeken niet actief maar staan wel open voor de juiste kans. Een gespecialiseerd sales recruitment bureau heeft toegang tot dit passieve netwerk en benadert kandidaten gericht.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-2" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat maakt een goede sales recruiter?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Een goede sales recruiter begrijpt het verschil tussen iemand die goed kan praten en iemand die écht kan verkopen. Hij beoordeelt kandidaten op drijfveren, werkstijl en cultuurfit — niet alleen op cv en trackrecord.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-3" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Kan ik ook tijdelijk een sales professional inzetten?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Ja. Via interim sales recruitment kunt u snel een ervaren sales professional inzetten voor een tijdelijke opdracht, product launch of overbruggingsperiode. Recruitment Intermotion levert interim sales specialisten die direct inzetbaar zijn.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
