@@ -70,6 +70,35 @@ export default function SalesPage() {
               },
               "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
               "priceRange": "$$"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Hoe vind ik een goede sales professional in Nederland?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De beste sales professionals zijn vaak passief beschikbaar — ze zoeken niet actief maar staan wel open voor de juiste kans. Een gespecialiseerd sales recruitment bureau heeft toegang tot dit passieve netwerk en benadert kandidaten gericht."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wat maakt een goede sales recruiter?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een goede sales recruiter begrijpt het verschil tussen iemand die goed kan praten en iemand die écht kan verkopen. Hij beoordeelt kandidaten op drijfveren, werkstijl en cultuurfit — niet alleen op cv en trackrecord."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Kan ik ook tijdelijk een sales professional inzetten?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. Via interim sales recruitment kunt u snel een ervaren sales professional inzetten voor een tijdelijke opdracht, product launch of overbruggingsperiode. Recruitment Intermotion levert interim sales specialisten die direct inzetbaar zijn."
+                  }
+                }
+              ]
             }
           ]
         })}</script>
