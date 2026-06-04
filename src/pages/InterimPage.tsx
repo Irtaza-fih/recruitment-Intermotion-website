@@ -70,6 +70,35 @@ export default function InterimPage() {
               },
               "areaServed": ["Randstad", "Noord-Brabant", "Nederland"],
               "priceRange": "$$"
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Wat is een interim professional?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een interim professional is een ervaren specialist die tijdelijk wordt ingezet voor een specifieke opdracht, project of overbruggingsperiode. Hij of zij is direct inzetbaar, resultaatgericht en gewend snel op te starten in nieuwe organisaties."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Hoe snel kan ik een interim professional inzetten?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recruitment Intermotion presenteert in de meeste gevallen binnen 48 tot 72 uur de eerste gekwalificeerde interim kandidaten. Dankzij ons actieve netwerk in Finance, IT en Sales kunnen we snel schakelen bij urgente opdrachten."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wat kost een interim professional?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De kosten voor een interim professional bestaan uit een dag- of uurtarief inclusief bureaumarge. Het tarief varieert per discipline, ervaringsniveau en duur van de opdracht. Recruitment Intermotion werkt altijd transparant en bespreekt tarieven vooraf."
+                  }
+                }
+              ]
             }
           ]
         })}</script>
@@ -124,6 +153,41 @@ export default function InterimPage() {
               </button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-card">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+            Veelgestelde vragen
+          </h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq-1" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat is een interim professional?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Een interim professional is een ervaren specialist die tijdelijk wordt ingezet voor een specifieke opdracht, project of overbruggingsperiode. Hij of zij is direct inzetbaar, resultaatgericht en gewend snel op te starten in nieuwe organisaties.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-2" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Hoe snel kan ik een interim professional inzetten?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Recruitment Intermotion presenteert in de meeste gevallen binnen 48 tot 72 uur de eerste gekwalificeerde interim kandidaten. Dankzij ons actieve netwerk in Finance, IT en Sales kunnen we snel schakelen bij urgente opdrachten.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-3" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat kost een interim professional?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                De kosten voor een interim professional bestaan uit een dag- of uurtarief inclusief bureaumarge. Het tarief varieert per discipline, ervaringsniveau en duur van de opdracht. Recruitment Intermotion werkt altijd transparant en bespreekt tarieven vooraf.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
