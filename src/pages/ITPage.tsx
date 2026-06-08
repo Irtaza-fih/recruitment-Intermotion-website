@@ -1,7 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { useLang } from "@/lib/LanguageContext";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import { successStories } from "@/data/successStories";
+import SuccessStoryCard from "@/components/SuccessStoryCard";
 import {
   Accordion,
   AccordionItem,
@@ -12,6 +15,8 @@ import {
 export default function ITPage() {
   const navigate = useAppNavigate();
   const ref = useScrollReveal();
+  const { lang } = useLang();
+  const brightlyn = successStories.find((s) => s.slug === "brightlyn");
 
   const title = "IT Recruitment Bureau Nederland | Recruitment Intermotion";
   const description = "Op zoek naar een IT professional? Recruitment Intermotion is gespecialiseerd in IT recruitment in Nederland. Vaste en interim plaatsingen.";
