@@ -199,26 +199,20 @@ export default function FinancePage() {
       </section>
 
       {/* Success story teaser */}
-      {uns && (
+      {(uns || remondis || americold) && (
         <section className="py-20 bg-card border-t border-border">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="max-w-7xl mx-auto px-6 text-center">
             <p className="text-xs font-bold uppercase tracking-widest text-accent-blue mb-3">
-              {lang === "nl" ? "SUCCESVERHAAL" : "SUCCESS STORY"}
+              {lang === "nl" ? "SUCCESVERHALEN" : "SUCCESS STORIES"}
             </p>
             <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
-              {lang === "nl" ? "Zo werkten wij voor UNStudio" : "How we worked for UNStudio"}
+              {lang === "nl" ? "Onze succesverhalen in Finance" : "Our Finance success stories"}
             </h2>
-            <SuccessStoryCard story={uns} className="mx-auto max-w-[500px]" />
-            {remondis && (
-              <div className="mt-8">
-                <SuccessStoryCard story={remondis} className="mx-auto max-w-[500px]" />
-              </div>
-            )}
-            {americold && (
-              <div className="mt-8">
-                <SuccessStoryCard story={americold} className="mx-auto max-w-[500px]" />
-              </div>
-            )}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+              {uns && <SuccessStoryCard story={uns} />}
+              {remondis && <SuccessStoryCard story={remondis} />}
+              {americold && <SuccessStoryCard story={americold} />}
+            </div>
           </div>
         </section>
       )}

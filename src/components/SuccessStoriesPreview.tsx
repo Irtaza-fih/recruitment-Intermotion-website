@@ -6,8 +6,11 @@ import SuccessStoryCard from "@/components/SuccessStoryCard";
 export default function SuccessStoriesPreview() {
   const { lang } = useLang();
   const navigate = useAppNavigate();
-  const featured = successStories.find((s) => s.slug === "uns");
-  if (!featured) return null;
+  const uns = successStories.find((s) => s.slug === "uns");
+  const americold = successStories.find((s) => s.slug === "americold");
+  const brightlyn = successStories.find((s) => s.slug === "brightlyn");
+  const stories = [uns, americold, brightlyn].filter(Boolean);
+  if (stories.length === 0) return null;
 
   return (
     <section className="py-24 bg-bg-tint">
@@ -24,8 +27,10 @@ export default function SuccessStoriesPreview() {
             : "From ambitious search profile to perfect match. These are the stories behind our placements."}
         </p>
 
-        <div className="mx-auto max-w-[500px] mb-10">
-          <SuccessStoryCard story={featured} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-10">
+          {stories.map((story) => (
+            <SuccessStoryCard key={story!.slug} story={story!} />
+          ))}
         </div>
 
         <button
