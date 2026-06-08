@@ -3,7 +3,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import { useLang } from "@/lib/LanguageContext";
 import PageHeroBanner from "@/components/PageHeroBanner";
-import { successStories, sectorBadgeClass } from "@/data/successStories";
+import { successStories } from "@/data/successStories";
+import SuccessStoryCard from "@/components/SuccessStoryCard";
 import {
   Accordion,
   AccordionItem,
@@ -205,26 +206,7 @@ export default function FinancePage() {
             <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
               {lang === "nl" ? "Zo werkten wij voor UNStudio" : "How we worked for UNStudio"}
             </h2>
-            <button
-              onClick={() => navigate(`/success-stories/${uns.slug}`)}
-              className="w-full text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
-            >
-              <span
-                className={`inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 ${sectorBadgeClass[uns.sector]}`}
-              >
-                {uns.sector}
-              </span>
-              <h3 className="text-lg font-bold text-foreground mb-1">{uns.company}</h3>
-              <p className="text-sm text-muted-foreground mb-3">{uns.role[lang]}</p>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                {lang === "nl"
-                  ? "Hunt assignment voor een van de meest toonaangevende architectenbureaus ter wereld, resulterende in de plaatsing van een Financial Controller die verder kijkt dan de cijfers."
-                  : "Hunt assignment for one of the world's most renowned architecture studios, resulting in the placement of a Financial Controller who looks beyond the numbers."}
-              </p>
-              <span className="text-accent-blue text-sm font-semibold group-hover:underline">
-                {lang === "nl" ? "Lees het verhaal →" : "Read the story →"}
-              </span>
-            </button>
+            <SuccessStoryCard story={uns} className="mx-auto max-w-[500px]" />
           </div>
         </section>
       )}
