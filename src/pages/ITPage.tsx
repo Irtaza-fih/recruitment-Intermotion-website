@@ -1,7 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { useLang } from "@/lib/LanguageContext";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import { successStories } from "@/data/successStories";
+import SuccessStoryCard from "@/components/SuccessStoryCard";
 import {
   Accordion,
   AccordionItem,
@@ -12,6 +15,8 @@ import {
 export default function ITPage() {
   const navigate = useAppNavigate();
   const ref = useScrollReveal();
+  const { lang } = useLang();
+  const brightlyn = successStories.find((s) => s.slug === "brightlyn");
 
   const title = "IT Recruitment Bureau Nederland | Recruitment Intermotion";
   const description = "Op zoek naar een IT professional? Recruitment Intermotion is gespecialiseerd in IT recruitment in Nederland. Vaste en interim plaatsingen.";
@@ -190,6 +195,21 @@ export default function ITPage() {
           </Accordion>
         </div>
       </section>
+
+      {/* Success story teaser */}
+      {brightlyn && (
+        <section className="py-20 bg-card border-t border-border">
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent-blue mb-3">
+              {lang === "nl" ? "SUCCESVERHAAL" : "SUCCESS STORY"}
+            </p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+              {lang === "nl" ? "Zo werkten wij voor Brightlyn" : "How we worked for Brightlyn"}
+            </h2>
+            <SuccessStoryCard story={brightlyn} className="mx-auto max-w-[500px]" />
+          </div>
+        </section>
+      )}
 
       {/* Related services */}
       <section className="py-20 bg-bg-tint">
