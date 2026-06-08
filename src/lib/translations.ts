@@ -7,6 +7,7 @@ export const translations = {
     vacancies: { nl: "Vacatures", en: "Vacancies" },
     contact: { nl: "Contact", en: "Contact" },
     blog: { nl: "Blog", en: "Blog" },
+    successStories: { nl: "Succesverhalen", en: "Success Stories" },
     services: { nl: "Diensten", en: "Services" },
     finance: { nl: "Finance Recruitment", en: "Finance Recruitment" },
     sales: { nl: "Sales Recruitment", en: "Sales Recruitment" },
