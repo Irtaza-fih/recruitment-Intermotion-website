@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { useLang } from "@/lib/LanguageContext";
 import PageHeroBanner from "@/components/PageHeroBanner";
+import { successStories, sectorBadgeClass } from "@/data/successStories";
 import {
   Accordion,
   AccordionItem,
