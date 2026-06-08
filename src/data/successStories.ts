@@ -1,4 +1,5 @@
 import unsLogo from "@/assets/uns-logo.jpg.asset.json";
+import brightlynLogo from "@/assets/brightlyn-logo.jpg.asset.json";
 
 export type StorySector = "Finance" | "IT" | "Sales" | "Interim";
 
@@ -21,6 +22,17 @@ export const successStories: SuccessStory[] = [
     summary: {
       nl: "Van hunt assignment tot succesvolle plaatsing bij een van de meest toonaangevende architectenbureaus ter wereld.",
       en: "From hunt assignment to successful placement at one of the world's most renowned architecture studios.",
+    },
+  },
+  {
+    slug: "brightlyn",
+    sector: "IT",
+    company: "Brightlyn",
+    logoUrl: brightlynLogo.url,
+    role: { nl: "(Senior) Manager IT Audit", en: "(Senior) Manager IT Audit" },
+    summary: {
+      nl: "Van een intensieve zoektocht naar schaars talent tot een gerichte plaatsing bij een van de meest veelbelovende cybersecurity boutiques van Nederland.",
+      en: "From an intensive search for rare talent to a targeted placement at one of the Netherlands' most promising cybersecurity boutiques.",
     },
   },
 ];
