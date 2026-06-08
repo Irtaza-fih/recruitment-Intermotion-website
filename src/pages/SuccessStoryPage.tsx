@@ -3,15 +3,256 @@ import { useParams } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import { successStories, sectorBadgeClass } from "@/data/successStories";
-import unsLogo from "@/assets/uns-logo.jpg.asset.json";
+
+interface StoryContent {
+  seo: {
+    title: { nl: string; en: string };
+    description: { nl: string; en: string };
+    canonical: string;
+    jsonLd: object;
+  };
+  h1: { nl: string; en: string };
+  meta: Array<{ label: { nl: string; en: string }; value: { nl: string; en: string } }>;
+  website: { label: string; url: string };
+  sections: Array<{
+    heading: { nl: string; en: string };
+    paragraphs: Array<{ nl: string; en: string }>;
+  }>;
+  cta: {
+    heading: { nl: string; en: string };
+    sub: { nl: string; en: string };
+    secondary: { label: { nl: string; en: string }; href: string };
+  };
+}
+
+const CONTENT: Record<string, StoryContent> = {
+  uns: {
+    seo: {
+      title: {
+        nl: "Financial Controller geplaatst bij UNStudio Amsterdam | Recruitment Intermotion",
+        en: "Financial Controller placed at UNStudio Amsterdam | Recruitment Intermotion",
+      },
+      description: {
+        nl: "Hoe Recruitment Intermotion voor UNStudio — een toonaangevend internationaal architecten- en designbureau — een Financial Controller vond die finance en business écht verbindt. Lees het verhaal.",
+        en: "How Recruitment Intermotion found a Financial Controller for UNStudio — a leading international architecture and design studio — who truly connects finance and business. Read the story.",
+      },
+      canonical: "https://recruitmentintermotion.nl/success-stories/uns",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Financial Controller geplaatst bij UNStudio Amsterdam",
+        description:
+          "Hoe Recruitment Intermotion voor UNStudio een Financial Controller vond die finance en business écht verbindt.",
+        author: {
+          "@type": "Organization",
+          name: "Recruitment Intermotion",
+          url: "https://recruitmentintermotion.nl",
+        },
+        about: {
+          "@type": "Organization",
+          name: "UNStudio",
+          url: "https://www.unstudio.com",
+          location: "Amsterdam, Nederland",
+        },
+        keywords:
+          "financial controller recruitment, finance recruitment Amsterdam, architectenbureau, Recruitment Intermotion, UNStudio",
+      },
+    },
+    h1: {
+      nl: "UNStudio: Financial Controller gevonden voor een wereldwijd architectenbureau in groei",
+      en: "UNStudio: Financial Controller placed for a globally growing architecture studio",
+    },
+    meta: [
+      {
+        label: { nl: "Bedrijf", en: "Company" },
+        value: { nl: "UNStudio", en: "UNStudio" },
+      },
+      {
+        label: { nl: "Sector", en: "Sector" },
+        value: { nl: "Architectuur & Design", en: "Architecture & Design" },
+      },
+      {
+        label: { nl: "Kantoren", en: "Offices" },
+        value: {
+          nl: "Amsterdam, Shanghai, Hong Kong, Frankfurt, Dubai, Melbourne, Austin",
+          en: "Amsterdam, Shanghai, Hong Kong, Frankfurt, Dubai, Melbourne, Austin",
+        },
+      },
+      {
+        label: { nl: "Medewerkers", en: "Employees" },
+        value: { nl: "400+", en: "400+" },
+      },
+    ],
+    website: { label: "unstudio.com", url: "https://www.unstudio.com" },
+    sections: [
+      {
+        heading: { nl: "De uitdaging", en: "The challenge" },
+        paragraphs: [
+          {
+            nl: "UNStudio is geen gewoon architectenbureau. Met meer dan 400 medewerkers verspreid over zeven kantoren wereldwijd ontwerpt UNStudio ambitieuze projecten die grenzen verleggen. Juist in een organisatie van die omvang en complexiteit stelt de financiële functie hoge eisen aan de mensen die haar vervullen.",
+            en: "UNStudio is no ordinary architecture firm. With over 400 employees across seven global offices, UNStudio designs ambitious projects that push boundaries. In an organisation of that scale and complexity, the finance function demands exceptional people.",
+          },
+          {
+            nl: "Tegen de achtergrond van sterke groei, een structurele scheiding tussen finance en business, en een duidelijke koers richting verdere professionalisering, was UNStudio op zoek naar een ambitieuze Financial Controller. Niet zomaar iemand die de boeken bijhoudt. Wij zochten een professional die verder kijkt dan de cijfers en data vertaalt naar heldere, bruikbare inzichten waarmee stakeholders weloverwogen beslissingen kunnen nemen.",
+            en: "Against a backdrop of strong growth, a structural separation between finance and business, and a drive towards further professionalisation, UNStudio was searching for an ambitious Financial Controller. Not just someone to manage the books. We were looking for a professional who looks beyond the numbers and translates data into clear, actionable insights that help stakeholders make informed decisions.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Onze aanpak", en: "Our approach" },
+        paragraphs: [
+          {
+            nl: "Een diepgaand en oprecht gesprek met de managing director en CFO van UNStudio bleek cruciaal. Niet om een profiel af te vinken, maar om echt te begrijpen welk type Financial Controller zij nodig hadden en wie de juiste persoon zou zijn voor deze specifieke organisatie, cultuur en fase van groei.",
+            en: "Meaningful and constructive conversations with UNStudio's managing director and CFO proved essential. Not to tick off a checklist, but to genuinely understand what kind of Financial Controller they truly needed and who would be the right fit for this specific organisation, culture and stage of growth.",
+          },
+          {
+            nl: "Dit was een echte hunt assignment: geen vacaturebank, geen standaard werving. Wij gingen actief op zoek naar de kandidaat die niet alleen op papier past, maar die ook de ambitie en het karakter heeft om te groeien met UNStudio.",
+            en: "This was a true hunt assignment: no job boards, no standard recruitment. We actively searched for the candidate who not only fits on paper, but who also has the ambition and character to grow with UNStudio.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Het resultaat", en: "The result" },
+        paragraphs: [
+          {
+            nl: "De opdracht resulteerde in de succesvolle plaatsing van een Financial Controller bij UNStudio Amsterdam. Een match die verder gaat dan competenties en ervaring. Een verbinding op basis van persoonlijkheid, ambitie en organisatiefit.",
+            en: "The assignment culminated in the successful placement of a Financial Controller at UNStudio Amsterdam. A match that goes beyond competencies and experience. A connection built on personality, ambition and organisational fit.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: {
+        nl: "Ook op zoek naar de juiste Finance professional?",
+        en: "Also looking for the right Finance professional?",
+      },
+      sub: {
+        nl: "Wij voeren het gesprek dat verder gaat dan het profiel.",
+        en: "We have the conversation that goes beyond the profile.",
+      },
+      secondary: {
+        label: { nl: "Bekijk Finance Recruitment", en: "View Finance Recruitment" },
+        href: "/finance-recruitment",
+      },
+    },
+  },
+  brightlyn: {
+    seo: {
+      title: {
+        nl: "(Senior) Manager IT Audit geplaatst bij Brightlyn | Recruitment Intermotion",
+        en: "(Senior) Manager IT Audit placed at Brightlyn | Recruitment Intermotion",
+      },
+      description: {
+        nl: "Hoe Recruitment Intermotion voor Brightlyn, een jonge boutique consultancy in cybersecurity en IT audit, de juiste (Senior) Manager IT Audit vond via een intensief en persoonlijk wervingstraject.",
+        en: "How Recruitment Intermotion found the right (Senior) Manager IT Audit for Brightlyn, a young boutique consultancy in cybersecurity and IT audit, through an intensive and highly personal search.",
+      },
+      canonical: "https://recruitmentintermotion.nl/success-stories/brightlyn",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "(Senior) Manager IT Audit geplaatst bij Brightlyn",
+        description:
+          "Hoe Recruitment Intermotion voor Brightlyn de juiste (Senior) Manager IT Audit vond via een intensief en persoonlijk wervingstraject.",
+        author: {
+          "@type": "Organization",
+          name: "Recruitment Intermotion",
+          url: "https://recruitmentintermotion.nl",
+        },
+        about: {
+          "@type": "Organization",
+          name: "Brightlyn",
+          url: "https://www.brightlyn.nl",
+          location: "Nederland",
+        },
+        keywords:
+          "IT audit recruitment, cybersecurity recruitment Nederland, manager IT audit, ISO 27001, NIS2, DORA, Recruitment Intermotion",
+      },
+    },
+    h1: {
+      nl: "Brightlyn: (Senior) Manager IT Audit gevonden voor een groeiende cybersecurity boutique",
+      en: "Brightlyn: (Senior) Manager IT Audit placed for a growing cybersecurity boutique",
+    },
+    meta: [
+      {
+        label: { nl: "Bedrijf", en: "Company" },
+        value: { nl: "Brightlyn", en: "Brightlyn" },
+      },
+      {
+        label: { nl: "Sector", en: "Sector" },
+        value: { nl: "Cybersecurity en IT Audit", en: "Cybersecurity and IT Audit" },
+      },
+      {
+        label: { nl: "Specialisaties", en: "Specialisations" },
+        value: { nl: "ISO 27001, NIS2, DORA", en: "ISO 27001, NIS2, DORA" },
+      },
+      {
+        label: { nl: "Type", en: "Type" },
+        value: { nl: "Boutique consultancy", en: "Boutique consultancy" },
+      },
+    ],
+    website: { label: "brightlyn.nl", url: "https://www.brightlyn.nl" },
+    sections: [
+      {
+        heading: { nl: "De uitdaging", en: "The challenge" },
+        paragraphs: [
+          {
+            nl: "Brightlyn is een jonge, gespecialiseerde boutique consultancy op het gebied van cybersecurity en IT audit. Het bureau is opgericht door twee ervaren IT Auditors met een achtergrond bij de Big 4 en brengt een frisse visie op hoe organisaties begeleid kunnen worden bij vraagstukken rondom ISO 27001, NIS2 en DORA.",
+            en: "Brightlyn is a young, specialised boutique consultancy in cybersecurity and IT audit. Founded by two experienced IT Auditors from the Big 4, the firm brings a fresh perspective on how to support and advise organisations on current regulations including ISO 27001, NIS2 and DORA.",
+          },
+          {
+            nl: "Met die ambitie en groeifase in het achterhoofd zochten zij naar een (Senior) Manager IT Audit. Niet zomaar een audit professional, maar iemand die bereid is zijn of haar expertise in te zetten in een bredere en meer impactvolle adviesrol. Iemand die niet alleen uren schrijft, maar een ondernemende instelling heeft die past bij een startuporganisatie.",
+            en: "With that ambition and growth phase in mind, they were searching for a (Senior) Manager IT Audit. Not just any audit professional, but someone willing to apply their expertise in a broader and more impactful advisory context. Someone who does not just bill hours, but brings an entrepreneurial mindset that fits a start-up organisation.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Onze aanpak", en: "Our approach" },
+        paragraphs: [
+          {
+            nl: "Dit was een oprecht veeleisende zoektocht. Wij spraken met veel kandidaten die technisch sterk waren, maar niet de juiste competenties bezaten om aan te sluiten bij de cultuur en missie van Brightlyn.",
+            en: "This was a genuinely demanding search. We spoke with many candidates who were a strong technical fit, yet did not possess the right competencies to match Brightlyn's culture and mission.",
+          },
+          {
+            nl: "Via een intensieve en zeer persoonlijke benadering van kandidaten konden wij toch een sterke shortlist samenstellen. Niet door breed te zoeken, maar door gericht de juiste mensen te benaderen en het gesprek aan te gaan op een manier die verder gaat dan het cv.",
+            en: "Through an intensive and highly personal approach to candidate outreach, we were able to compile a strong shortlist. Not by casting a wide net, but by reaching out to the right people in a targeted way and having conversations that go well beyond the CV.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Het resultaat", en: "The result" },
+        paragraphs: [
+          {
+            nl: "Het traject resulteerde in de plaatsing van een (Senior) Manager IT Audit die niet alleen technisch uitstekend onderlegd is, maar ook de ondernemende instelling heeft die Brightlyn zocht. Een match waarbij vakinhoud en persoonlijkheid volledig op elkaar aansluiten.",
+            en: "The process resulted in the placement of a (Senior) Manager IT Audit who is not only technically excellent, but also brings the entrepreneurial mindset Brightlyn was looking for. A match where expertise and personality align completely.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: {
+        nl: "Ook op zoek naar IT Audit of cybersecurity talent?",
+        en: "Also looking for IT Audit or cybersecurity talent?",
+      },
+      sub: {
+        nl: "Wij vinden de professional die past bij uw organisatie en ambitie.",
+        en: "We find the professional who fits your organisation and ambition.",
+      },
+      secondary: {
+        label: { nl: "Bekijk IT Recruitment", en: "View IT Recruitment" },
+        href: "/it-recruitment",
+      },
+    },
+  },
+};
 
 export default function SuccessStoryPage() {
   const { slug } = useParams<{ slug: string }>();
   const { lang } = useLang();
   const navigate = useAppNavigate();
   const story = successStories.find((s) => s.slug === slug);
+  const content = slug ? CONTENT[slug] : undefined;
 
-  if (!story || story.slug !== "uns") {
+  if (!story || !content) {
     return (
       <>
         <Helmet>
@@ -39,67 +280,17 @@ export default function SuccessStoryPage() {
     );
   }
 
-  // UNStudio story content
-  const title =
-    lang === "nl"
-      ? "Financial Controller geplaatst bij UNStudio Amsterdam | Recruitment Intermotion"
-      : "Financial Controller placed at UNStudio Amsterdam | Recruitment Intermotion";
-  const description =
-    lang === "nl"
-      ? "Hoe Recruitment Intermotion voor UNStudio — een toonaangevend internationaal architecten- en designbureau — een Financial Controller vond die finance en business écht verbindt. Lees het verhaal."
-      : "How Recruitment Intermotion found a Financial Controller for UNStudio — a leading international architecture and design studio — who truly connects finance and business. Read the story.";
-
-  const h1 =
-    lang === "nl"
-      ? "UNStudio: Financial Controller gevonden voor een wereldwijd architectenbureau in groei"
-      : "UNStudio: Financial Controller placed for a globally growing architecture studio";
-
-  const meta = [
-    { label: lang === "nl" ? "Bedrijf" : "Company", value: "UNStudio" },
-    {
-      label: "Sector",
-      value: lang === "nl" ? "Architectuur & Design" : "Architecture & Design",
-    },
-    {
-      label: lang === "nl" ? "Kantoren" : "Offices",
-      value: "Amsterdam, Shanghai, Hong Kong, Frankfurt, Dubai, Melbourne, Austin",
-    },
-    {
-      label: lang === "nl" ? "Medewerkers" : "Employees",
-      value: "400+",
-    },
-  ];
-
   return (
     <>
       <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href="https://recruitmentintermotion.nl/success-stories/uns" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <title>{content.seo.title[lang]}</title>
+        <meta name="description" content={content.seo.description[lang]} />
+        <link rel="canonical" href={content.seo.canonical} />
+        <meta property="og:title" content={content.seo.title[lang]} />
+        <meta property="og:description" content={content.seo.description[lang]} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://recruitmentintermotion.nl/success-stories/uns" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: "Financial Controller geplaatst bij UNStudio Amsterdam",
-          description:
-            "Hoe Recruitment Intermotion voor UNStudio een Financial Controller vond die finance en business écht verbindt.",
-          author: {
-            "@type": "Organization",
-            name: "Recruitment Intermotion",
-            url: "https://recruitmentintermotion.nl",
-          },
-          about: {
-            "@type": "Organization",
-            name: "UNStudio",
-            url: "https://www.unstudio.com",
-            location: "Amsterdam, Nederland",
-          },
-          keywords:
-            "financial controller recruitment, finance recruitment Amsterdam, architectenbureau, Recruitment Intermotion, UNStudio",
-        })}</script>
+        <meta property="og:url" content={content.seo.canonical} />
+        <script type="application/ld+json">{JSON.stringify(content.seo.jsonLd)}</script>
       </Helmet>
 
       <section className="pt-32 pb-12 bg-card">
@@ -117,7 +308,7 @@ export default function SuccessStoryPage() {
               {lang === "nl" ? "Succesverhalen" : "Success Stories"}
             </button>
             <span className="mx-2">→</span>
-            <span className="text-foreground">UNStudio</span>
+            <span className="text-foreground">{story.company}</span>
           </nav>
 
           {/* Sector badge */}
@@ -130,24 +321,26 @@ export default function SuccessStoryPage() {
           {/* H1 with logo */}
           <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-8">
             <h1 className="flex-1 text-3xl md:text-4xl font-extrabold text-foreground leading-tight order-2 sm:order-1">
-              {h1}
+              {content.h1[lang]}
             </h1>
-            <img
-              src={unsLogo.url}
-              alt="UNStudio logo"
-              className="order-1 sm:order-2 flex-shrink-0 self-center sm:self-auto w-12 h-12 sm:w-16 sm:h-16 rounded-lg"
-              style={{ objectFit: "contain", border: "1px solid #e5e7eb" }}
-            />
+            {story.logoUrl && (
+              <img
+                src={story.logoUrl}
+                alt={`${story.company} logo`}
+                className="order-1 sm:order-2 flex-shrink-0 self-center sm:self-auto w-12 h-12 sm:w-16 sm:h-16 rounded-lg"
+                style={{ objectFit: "contain", border: "1px solid #e5e7eb" }}
+              />
+            )}
           </div>
 
           {/* Client info bar */}
           <div className="bg-bg-tint border border-border rounded-2xl p-6 mb-12 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-            {meta.map((m) => (
-              <div key={m.label}>
+            {content.meta.map((m) => (
+              <div key={m.label[lang]}>
                 <div className="text-muted-foreground text-xs uppercase tracking-wider font-semibold mb-1">
-                  {m.label}
+                  {m.label[lang]}
                 </div>
-                <div className="text-foreground font-medium">{m.value}</div>
+                <div className="text-foreground font-medium">{m.value[lang]}</div>
               </div>
             ))}
             <div>
@@ -155,102 +348,35 @@ export default function SuccessStoryPage() {
                 Website
               </div>
               <a
-                href="https://www.unstudio.com"
+                href={content.website.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-accent-blue font-medium hover:underline"
               >
-                unstudio.com
+                {content.website.label}
               </a>
             </div>
           </div>
 
           {/* Story sections */}
           <div className="prose prose-lg max-w-none text-foreground leading-relaxed">
-            <h2 className="text-2xl font-extrabold text-foreground mt-10 mb-4">
-              {lang === "nl" ? "De uitdaging" : "The challenge"}
-            </h2>
-            {lang === "nl" ? (
-              <>
-                <p className="text-muted-foreground mb-4">
-                  UNStudio is geen gewoon architectenbureau. Met meer dan 400 medewerkers verspreid
-                  over zeven kantoren wereldwijd ontwerpt UNStudio ambitieuze projecten die grenzen
-                  verleggen. Juist in een organisatie van die omvang en complexiteit stelt de
-                  financiële functie hoge eisen aan de mensen die haar vervullen.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  Tegen de achtergrond van sterke groei, een structurele scheiding tussen finance en
-                  business, en een duidelijke koers richting verdere professionalisering, was
-                  UNStudio op zoek naar een ambitieuze Financial Controller. Niet zomaar iemand die
-                  de boeken bijhoudt. Wij zochten een professional die verder kijkt dan de cijfers
-                  en data vertaalt naar heldere, bruikbare inzichten waarmee stakeholders
-                  weloverwogen beslissingen kunnen nemen.
-                </p>
-              </>
-            ) : (
-              <>
-                <p className="text-muted-foreground mb-4">
-                  UNStudio is no ordinary architecture firm. With over 400 employees across seven
-                  global offices, UNStudio designs ambitious projects that push boundaries. In an
-                  organisation of that scale and complexity, the finance function demands
-                  exceptional people.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  Against a backdrop of strong growth, a structural separation between finance and
-                  business, and a drive towards further professionalisation, UNStudio was searching
-                  for an ambitious Financial Controller. Not just someone to manage the books. We
-                  were looking for a professional who looks beyond the numbers and translates data
-                  into clear, actionable insights that help stakeholders make informed decisions.
-                </p>
-              </>
-            )}
-
-            <h2 className="text-2xl font-extrabold text-foreground mt-10 mb-4">
-              {lang === "nl" ? "Onze aanpak" : "Our approach"}
-            </h2>
-            {lang === "nl" ? (
-              <>
-                <p className="text-muted-foreground mb-4">
-                  Een diepgaand en oprecht gesprek met de managing director en CFO van UNStudio
-                  bleek cruciaal. Niet om een profiel af te vinken, maar om echt te begrijpen welk
-                  type Financial Controller zij nodig hadden en wie de juiste persoon zou zijn
-                  voor deze specifieke organisatie, cultuur en fase van groei.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  Dit was een echte hunt assignment: geen vacaturebank, geen standaard werving. Wij
-                  gingen actief op zoek naar de kandidaat die niet alleen op papier past, maar die
-                  ook de ambitie en het karakter heeft om te groeien met UNStudio.
-                </p>
-              </>
-            ) : (
-              <>
-                <p className="text-muted-foreground mb-4">
-                  Meaningful and constructive conversations with UNStudio's managing director and
-                  CFO proved essential. Not to tick off a checklist, but to genuinely understand
-                  what kind of Financial Controller they truly needed and who would be the right
-                  fit for this specific organisation, culture and stage of growth.
-                </p>
-                <p className="text-muted-foreground mb-4">
-                  This was a true hunt assignment: no job boards, no standard recruitment. We
-                  actively searched for the candidate who not only fits on paper, but who also has
-                  the ambition and character to grow with UNStudio.
-                </p>
-              </>
-            )}
-
-            <h2 className="text-2xl font-extrabold text-foreground mt-10 mb-4">
-              {lang === "nl" ? "Het resultaat" : "The result"}
-            </h2>
-            <p className="text-muted-foreground mb-4">
-              {lang === "nl"
-                ? "De opdracht resulteerde in de succesvolle plaatsing van een Financial Controller bij UNStudio Amsterdam. Een match die verder gaat dan competenties en ervaring. Een verbinding op basis van persoonlijkheid, ambitie en organisatiefit."
-                : "The assignment culminated in the successful placement of a Financial Controller at UNStudio Amsterdam. A match that goes beyond competencies and experience. A connection built on personality, ambition and organisational fit."}
-            </p>
+            {content.sections.map((sec) => (
+              <div key={sec.heading.en}>
+                <h2 className="text-2xl font-extrabold text-foreground mt-10 mb-4">
+                  {sec.heading[lang]}
+                </h2>
+                {sec.paragraphs.map((p, i) => (
+                  <p key={i} className="text-muted-foreground mb-4">
+                    {p[lang]}
+                  </p>
+                ))}
+              </div>
+            ))}
 
             {/* QUOTE BLOCK — uncomment and fill in when client provides quote
             <blockquote className="border-l-4 border-accent-blue bg-bg-tint px-6 py-4 my-8 rounded-r-lg">
               <p className="text-foreground italic mb-2">"[quote text here]"</p>
-              <footer className="text-sm text-muted-foreground">— [Naam], [Functie], UNStudio</footer>
+              <footer className="text-sm text-muted-foreground">— [Naam], [Functie], {story.company}</footer>
             </blockquote>
             */}
           </div>
@@ -261,14 +387,10 @@ export default function SuccessStoryPage() {
       <section className="py-20" style={{ background: "#1F217D" }}>
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-4" style={{ color: "white" }}>
-            {lang === "nl"
-              ? "Ook op zoek naar de juiste Finance professional?"
-              : "Also looking for the right Finance professional?"}
+            {content.cta.heading[lang]}
           </h2>
           <p className="mb-8" style={{ color: "rgba(255,255,255,0.75)" }}>
-            {lang === "nl"
-              ? "Wij voeren het gesprek dat verder gaat dan het profiel."
-              : "We have the conversation that goes beyond the profile."}
+            {content.cta.sub[lang]}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
@@ -278,11 +400,11 @@ export default function SuccessStoryPage() {
               {lang === "nl" ? "Neem contact op" : "Get in touch"}
             </button>
             <button
-              onClick={() => navigate("/finance-recruitment")}
+              onClick={() => navigate(content.cta.secondary.href)}
               className="px-6 py-3 rounded-full font-semibold border-2 transition-all hover:-translate-y-0.5"
               style={{ borderColor: "white", color: "white" }}
             >
-              {lang === "nl" ? "Bekijk Finance Recruitment" : "View Finance Recruitment"}
+              {content.cta.secondary.label[lang]}
             </button>
           </div>
         </div>
