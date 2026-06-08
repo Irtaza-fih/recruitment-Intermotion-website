@@ -7,6 +7,7 @@ const StatsStrip = lazy(() => import("@/components/StatsStrip"));
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
 const PartnersMarquee = lazy(() => import("@/components/PartnersMarquee"));
+const SuccessStoriesPreview = lazy(() => import("@/components/SuccessStoriesPreview"));
 const TestimonialsCarousel = lazy(() => import("@/components/TestimonialsCarousel"));
 const VacancyCTA = lazy(() => import("@/components/VacancyCTA"));
 
