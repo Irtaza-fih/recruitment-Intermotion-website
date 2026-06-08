@@ -17,6 +17,8 @@ const InterimPage = lazy(() => import("@/pages/InterimPage"));
 const ClientFeedbackPage = lazy(() => import("@/pages/ClientFeedbackPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
 const BlogPostPage = lazy(() => import("@/pages/BlogPostPage"));
+const SuccessStoriesPage = lazy(() => import("@/pages/SuccessStoriesPage"));
+const SuccessStoryPage = lazy(() => import("@/pages/SuccessStoryPage"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
 
 function PageTransitionOverlay() {
@@ -56,6 +58,10 @@ function AppContent() {
             <Route path="/interim" element={<InterimPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/success-stories" element={<SuccessStoriesPage />} />
+            <Route path="/succesverhalen" element={<SuccessStoriesPage />} />
+            <Route path="/success-stories/:slug" element={<SuccessStoryPage />} />
+            <Route path="/succesverhalen/:slug" element={<SuccessStoryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/client-feedback" element={<ClientFeedbackPage />} />
             <Route path="*" element={<NotFound />} />
