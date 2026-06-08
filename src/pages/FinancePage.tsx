@@ -14,6 +14,8 @@ import {
 export default function FinancePage() {
   const navigate = useAppNavigate();
   const ref = useScrollReveal();
+  const { lang } = useLang();
+  const uns = successStories.find((s) => s.slug === "uns");
 
   const title = "Finance Recruitment Bureau Nederland | Recruitment Intermotion";
   const description = "Op zoek naar een finance professional? Recruitment Intermotion is gespecialiseerd in finance recruitment in Nederland. Vaste en interim plaatsingen.";
