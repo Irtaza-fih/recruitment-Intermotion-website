@@ -162,6 +162,10 @@
   transform: translateY(0);
 }
 
+.scroll-reveal:first-child {
+  transition-delay: 0s !important;
+}
+
 /* Scroll indicator pulse */
 @keyframes scroll-pulse {
   0%, 100% { opacity: 0.4; transform: scaleY(1); }
