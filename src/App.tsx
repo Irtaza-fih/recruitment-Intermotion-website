@@ -58,6 +58,10 @@ function AppContent() {
             <Route path="/interim" element={<InterimPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/success-stories" element={<SuccessStoriesPage />} />
+            <Route path="/succesverhalen" element={<SuccessStoriesPage />} />
+            <Route path="/success-stories/:slug" element={<SuccessStoryPage />} />
+            <Route path="/succesverhalen/:slug" element={<SuccessStoryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/client-feedback" element={<ClientFeedbackPage />} />
             <Route path="*" element={<NotFound />} />
