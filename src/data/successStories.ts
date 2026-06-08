@@ -1,6 +1,7 @@
 import unsLogo from "@/assets/uns-logo.jpg.asset.json";
 import brightlynLogo from "@/assets/brightlyn-logo.jpg.asset.json";
 import remondisLogo from "@/assets/remondis-logo.jpg.asset.json";
+import americoldLogo from "@/assets/americold-logo.jpg.asset.json";
 
 export type StorySector = "Finance" | "IT" | "Sales" | "Interim";
 
@@ -45,6 +46,17 @@ export const successStories: SuccessStory[] = [
     summary: {
       nl: "Van een complexe zoektocht naar een brug tussen finance en operatie tot een gerichte plaatsing bij een van de grootste recycling en waterbeheer organisaties van Nederland.",
       en: "From a complex search for the bridge between finance and operations to a targeted placement at one of the Netherlands' leading recycling and water management organisations.",
+    },
+  },
+  {
+    slug: "americold",
+    sector: "Finance",
+    company: "Americold",
+    logoUrl: americoldLogo.url,
+    role: { nl: "Senior Financial Controller", en: "Senior Financial Controller" },
+    summary: {
+      nl: "Via ons warme netwerk plaatsten wij een Senior Financial Controller bij een wereldwijde marktleider in temperatuurgecontroleerde logistiek, midden in een grootschalige Oracle Cloud implementatie.",
+      en: "Through our warm network we placed a Senior Financial Controller at a global leader in temperature-controlled logistics, in the middle of a large-scale Oracle Cloud implementation.",
     },
   },
 ];
