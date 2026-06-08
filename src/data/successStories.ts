@@ -1,5 +1,6 @@
 import unsLogo from "@/assets/uns-logo.jpg.asset.json";
 import brightlynLogo from "@/assets/brightlyn-logo.jpg.asset.json";
+import remondisLogo from "@/assets/remondis-logo.jpg.asset.json";
 
 export type StorySector = "Finance" | "IT" | "Sales" | "Interim";
 
@@ -33,6 +34,17 @@ export const successStories: SuccessStory[] = [
     summary: {
       nl: "Van een intensieve zoektocht naar schaars talent tot een gerichte plaatsing bij een van de meest veelbelovende cybersecurity boutiques van Nederland.",
       en: "From an intensive search for rare talent to a targeted placement at one of the Netherlands' most promising cybersecurity boutiques.",
+    },
+  },
+  {
+    slug: "remondis",
+    sector: "Finance",
+    company: "REMONDIS",
+    logoUrl: remondisLogo.url,
+    role: { nl: "Business Controller", en: "Business Controller" },
+    summary: {
+      nl: "Van een complexe zoektocht naar een brug tussen finance en operatie tot een gerichte plaatsing bij een van de grootste recycling en waterbeheer organisaties van Nederland.",
+      en: "From a complex search for the bridge between finance and operations to a targeted placement at one of the Netherlands' leading recycling and water management organisations.",
     },
   },
 ];

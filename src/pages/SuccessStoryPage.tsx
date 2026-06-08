@@ -243,6 +243,122 @@ const CONTENT: Record<string, StoryContent> = {
       },
     },
   },
+  remondis: {
+    seo: {
+      title: {
+        nl: "Business Controller geplaatst bij REMONDIS Nederland | Recruitment Intermotion",
+        en: "Business Controller placed at REMONDIS Netherlands | Recruitment Intermotion",
+      },
+      description: {
+        nl: "Hoe Recruitment Intermotion voor REMONDIS Nederland een Business Controller vond die de brug vormt tussen finance en de operationele business in de Noord-Hollandse vestigingen.",
+        en: "How Recruitment Intermotion found a Business Controller for REMONDIS Netherlands who bridges finance and operational business across the North Holland branches.",
+      },
+      canonical: "https://recruitmentintermotion.nl/success-stories/remondis",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Business Controller geplaatst bij REMONDIS Nederland",
+        description:
+          "Hoe Recruitment Intermotion voor REMONDIS Nederland een Business Controller vond die de brug vormt tussen finance en de operationele business.",
+        author: {
+          "@type": "Organization",
+          name: "Recruitment Intermotion",
+          url: "https://recruitmentintermotion.nl",
+        },
+        about: {
+          "@type": "Organization",
+          name: "REMONDIS Nederland",
+          url: "https://www.remondis.nl",
+          location: "Nederland",
+        },
+        keywords:
+          "business controller recruitment, finance recruitment Nederland, REMONDIS, recycling sector, Recruitment Intermotion",
+      },
+    },
+    h1: {
+      nl: "REMONDIS: Business Controller gevonden voor een organisatie waar finance en operatie elkaar raken",
+      en: "REMONDIS: Business Controller placed for an organisation where finance and operations meet",
+    },
+    meta: [
+      {
+        label: { nl: "Bedrijf", en: "Company" },
+        value: { nl: "REMONDIS Nederland", en: "REMONDIS Netherlands" },
+      },
+      {
+        label: { nl: "Sector", en: "Sector" },
+        value: {
+          nl: "Afvalbeheer, Recycling en Waterbeheer",
+          en: "Waste Management, Recycling and Water Management",
+        },
+      },
+      {
+        label: { nl: "Vestigingen", en: "Locations" },
+        value: {
+          nl: "Meer dan 40 locaties in Nederland",
+          en: "Over 40 locations across the Netherlands",
+        },
+      },
+      {
+        label: { nl: "Onderdeel van", en: "Part of" },
+        value: {
+          nl: "REMONDIS Group (internationaal)",
+          en: "REMONDIS Group (international)",
+        },
+      },
+    ],
+    website: { label: "remondis.nl", url: "https://www.remondis.nl" },
+    sections: [
+      {
+        heading: { nl: "De uitdaging", en: "The challenge" },
+        paragraphs: [
+          {
+            nl: "REMONDIS Nederland is een van de grootste spelers op het gebied van afvalbeheer, recycling en waterbeheer in Nederland, met meer dan veertig vestigingen door het hele land. Door aanhoudende groei was de organisatie op zoek naar een Business Controller voor de Noord-Hollandse vestigingen.",
+            en: "REMONDIS Netherlands is one of the largest players in waste management, recycling and water management in the Netherlands, with over forty locations across the country. Due to continued growth, the organisation was looking for a Business Controller for the North Holland branches.",
+          },
+          {
+            nl: "In deze rol draagt de kandidaat actief bij aan de strategie van de organisatie en adviseert hij of zij stakeholders over operationele, commerciële en financiële vraagstukken. De ideale kandidaat is de brug tussen finance en de business. Iemand met sterk analytisch vermogen die financiële data weet te vertalen naar strategisch advies. Proactief, analytisch en even thuis in de financiële wereld als in de dagelijkse operatie.",
+            en: "In this role, the candidate actively contributes to the organisation's strategy and advises stakeholders on operational, commercial and financial challenges. The ideal candidate is the bridge between finance and the business. Someone with strong analytical skills who can translate financial data into strategic advice. Proactive, analytical, and equally at home in the financial world and in day-to-day operations.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Onze aanpak", en: "Our approach" },
+        paragraphs: [
+          {
+            nl: "Wat deze opdracht bijzonder uitdagend maakte, was de specifieke combinatie van procesgerichte instelling, motivatie en ambitie die de hiring manager zocht. Die kwaliteiten zijn niet af te lezen van een cv. Ze komen alleen naar boven in een oprecht persoonlijk gesprek, waarbij de juiste vragen, scherp en op maat gesteld, kandidaten uitnodigen om buiten hun comfortzone te treden.",
+            en: "What made this search particularly challenging was the specific combination of process-oriented thinking, motivation and ambition the hiring manager was looking for. These qualities cannot be read from a CV alone. They reveal themselves only through genuine one-on-one conversations, where the right questions, sharp and personal, encourage candidates to step outside their comfort zone.",
+          },
+          {
+            nl: "Wij voerden die gesprekken. Niet als een screeningsprocedure, maar als een echte ontmoeting waarbij we wilden begrijpen wie iemand is en wat hem of haar drijft.",
+            en: "We had those conversations. Not as a screening procedure, but as a real meeting where we wanted to understand who someone is and what drives them.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Het resultaat", en: "The result" },
+        paragraphs: [
+          {
+            nl: "Een mooie opdracht, afgerond met groot succes. Wij zijn trots op de plaatsing van een ambitieuze en gedreven Business Controller bij REMONDIS Nederland. Iemand die de verbinding legt tussen de cijfers en de business en daarmee direct bijdraagt aan de strategie van de organisatie.",
+            en: "A wonderful assignment, completed with great success. We are proud to have placed an ambitious and driven Business Controller at REMONDIS Netherlands. Someone who builds the connection between the numbers and the business and directly contributes to the organisation's strategy.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: {
+        nl: "Ook op zoek naar een Finance professional die verder kijkt dan de cijfers?",
+        en: "Also looking for a Finance professional who looks beyond the numbers?",
+      },
+      sub: {
+        nl: "Wij voeren het gesprek dat een cv niet kan voeren.",
+        en: "We have the conversation a CV cannot have.",
+      },
+      secondary: {
+        label: { nl: "Bekijk Finance Recruitment", en: "View Finance Recruitment" },
+        href: "/finance-recruitment",
+      },
+    },
+  },
 };
 
 export default function SuccessStoryPage() {

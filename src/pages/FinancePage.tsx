@@ -17,6 +17,7 @@ export default function FinancePage() {
   const ref = useScrollReveal();
   const { lang } = useLang();
   const uns = successStories.find((s) => s.slug === "uns");
+  const remondis = successStories.find((s) => s.slug === "remondis");
 
   const title = "Finance Recruitment Bureau Nederland | Recruitment Intermotion";
   const description = "Op zoek naar een finance professional? Recruitment Intermotion is gespecialiseerd in finance recruitment in Nederland. Vaste en interim plaatsingen.";
@@ -207,6 +208,11 @@ export default function FinancePage() {
               {lang === "nl" ? "Zo werkten wij voor UNStudio" : "How we worked for UNStudio"}
             </h2>
             <SuccessStoryCard story={uns} className="mx-auto max-w-[500px]" />
+            {remondis && (
+              <div className="mt-8">
+                <SuccessStoryCard story={remondis} className="mx-auto max-w-[500px]" />
+              </div>
+            )}
           </div>
         </section>
       )}
