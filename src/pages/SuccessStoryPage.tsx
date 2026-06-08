@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import { successStories, sectorBadgeClass } from "@/data/successStories";
+import unsLogo from "@/assets/uns-logo.jpg.asset.json";
 
 export default function SuccessStoryPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -50,8 +51,8 @@ export default function SuccessStoryPage() {
 
   const h1 =
     lang === "nl"
-      ? "UNStudio — Financial Controller gevonden voor een wereldwijd architectenbureau in groei"
-      : "UNStudio — Financial Controller placed for a globally growing architecture studio";
+      ? "UNStudio: Financial Controller gevonden voor een wereldwijd architectenbureau in groei"
+      : "UNStudio: Financial Controller placed for a globally growing architecture studio";
 
   const meta = [
     { label: lang === "nl" ? "Bedrijf" : "Company", value: "UNStudio" },
@@ -126,10 +127,18 @@ export default function SuccessStoryPage() {
             {story.sector}
           </span>
 
-          {/* H1 */}
-          <h1 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-8">
-            {h1}
-          </h1>
+          {/* H1 with logo */}
+          <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-8">
+            <h1 className="flex-1 text-3xl md:text-4xl font-extrabold text-foreground leading-tight order-2 sm:order-1">
+              {h1}
+            </h1>
+            <img
+              src={unsLogo.url}
+              alt="UNStudio logo"
+              className="order-1 sm:order-2 flex-shrink-0 self-center sm:self-auto w-12 h-12 sm:w-16 sm:h-16 rounded-lg"
+              style={{ objectFit: "contain", border: "1px solid #e5e7eb" }}
+            />
+          </div>
 
           {/* Client info bar */}
           <div className="bg-bg-tint border border-border rounded-2xl p-6 mb-12 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
@@ -173,8 +182,8 @@ export default function SuccessStoryPage() {
                   Tegen de achtergrond van sterke groei, een structurele scheiding tussen finance en
                   business, en een duidelijke koers richting verdere professionalisering, was
                   UNStudio op zoek naar een ambitieuze Financial Controller. Niet zomaar iemand die
-                  de boeken bijhoudt — maar een professional die verder kijkt dan de cijfers: iemand
-                  die data vertaalt naar heldere, bruikbare inzichten waarmee stakeholders
+                  de boeken bijhoudt. Wij zochten een professional die verder kijkt dan de cijfers
+                  en data vertaalt naar heldere, bruikbare inzichten waarmee stakeholders
                   weloverwogen beslissingen kunnen nemen.
                 </p>
               </>
@@ -189,9 +198,9 @@ export default function SuccessStoryPage() {
                 <p className="text-muted-foreground mb-4">
                   Against a backdrop of strong growth, a structural separation between finance and
                   business, and a drive towards further professionalisation, UNStudio was searching
-                  for an ambitious Financial Controller. Not just someone to manage the books — but
-                  a professional who looks beyond the numbers: someone who translates data into
-                  clear, actionable insights that help stakeholders make informed decisions.
+                  for an ambitious Financial Controller. Not just someone to manage the books. We
+                  were looking for a professional who looks beyond the numbers and translates data
+                  into clear, actionable insights that help stakeholders make informed decisions.
                 </p>
               </>
             )}
@@ -204,7 +213,7 @@ export default function SuccessStoryPage() {
                 <p className="text-muted-foreground mb-4">
                   Een diepgaand en oprecht gesprek met de managing director en CFO van UNStudio
                   bleek cruciaal. Niet om een profiel af te vinken, maar om echt te begrijpen welk
-                  type Financial Controller zij nodig hadden — en wie de juiste persoon zou zijn
+                  type Financial Controller zij nodig hadden en wie de juiste persoon zou zijn
                   voor deze specifieke organisatie, cultuur en fase van groei.
                 </p>
                 <p className="text-muted-foreground mb-4">
@@ -217,9 +226,9 @@ export default function SuccessStoryPage() {
               <>
                 <p className="text-muted-foreground mb-4">
                   Meaningful and constructive conversations with UNStudio's managing director and
-                  CFO proved essential — not to tick off a checklist, but to genuinely understand
-                  what kind of Financial Controller they truly needed, and above all, who would be
-                  the right fit for this specific organisation, culture, and stage of growth.
+                  CFO proved essential. Not to tick off a checklist, but to genuinely understand
+                  what kind of Financial Controller they truly needed and who would be the right
+                  fit for this specific organisation, culture and stage of growth.
                 </p>
                 <p className="text-muted-foreground mb-4">
                   This was a true hunt assignment: no job boards, no standard recruitment. We
@@ -234,8 +243,8 @@ export default function SuccessStoryPage() {
             </h2>
             <p className="text-muted-foreground mb-4">
               {lang === "nl"
-                ? "De opdracht resulteerde in de succesvolle plaatsing van Jos Oudenaarden als Financial Controller bij UNStudio Amsterdam. Een match die verder gaat dan competenties en ervaring — een verbinding op basis van persoonlijkheid, ambitie en organisatiefit."
-                : "The assignment culminated in the successful placement of Jos Oudenaarden as Financial Controller at UNStudio Amsterdam. A match that goes beyond competencies and experience — a connection built on personality, ambition, and organisational fit."}
+                ? "De opdracht resulteerde in de succesvolle plaatsing van een Financial Controller bij UNStudio Amsterdam. Een match die verder gaat dan competenties en ervaring. Een verbinding op basis van persoonlijkheid, ambitie en organisatiefit."
+                : "The assignment culminated in the successful placement of a Financial Controller at UNStudio Amsterdam. A match that goes beyond competencies and experience. A connection built on personality, ambition and organisational fit."}
             </p>
 
             {/* QUOTE BLOCK — uncomment and fill in when client provides quote

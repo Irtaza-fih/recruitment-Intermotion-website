@@ -3,7 +3,8 @@ import { useState } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import PageHeroBanner from "@/components/PageHeroBanner";
-import { successStories, sectorBadgeClass, type StorySector } from "@/data/successStories";
+import { successStories, type StorySector } from "@/data/successStories";
+import SuccessStoryCard from "@/components/SuccessStoryCard";
 
 type Filter = "All" | StorySector;
 const filters: Filter[] = ["All", "Finance", "IT", "Sales", "Interim"];
@@ -78,27 +79,9 @@ export default function SuccessStoriesPage() {
               {lang === "nl" ? "Geen verhalen gevonden." : "No stories found."}
             </p>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
               {visible.map((s) => (
-                <button
-                  key={s.slug}
-                  onClick={() => navigate(`/success-stories/${s.slug}`)}
-                  className="text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
-                >
-                  <span
-                    className={`inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 ${sectorBadgeClass[s.sector]}`}
-                  >
-                    {s.sector}
-                  </span>
-                  <h3 className="text-lg font-bold text-foreground mb-1">{s.company}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{s.role[lang]}</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
-                    {s.summary[lang]}
-                  </p>
-                  <span className="text-accent-blue text-sm font-semibold group-hover:underline">
-                    {lang === "nl" ? "Lees het verhaal →" : "Read the story →"}
-                  </span>
-                </button>
+                <SuccessStoryCard key={s.slug} story={s} />
               ))}
             </div>
           )}

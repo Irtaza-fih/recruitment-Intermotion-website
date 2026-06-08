@@ -1,6 +1,7 @@
 import { useLang } from "@/lib/LanguageContext";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
-import { successStories, sectorBadgeClass } from "@/data/successStories";
+import { successStories } from "@/data/successStories";
+import SuccessStoryCard from "@/components/SuccessStoryCard";
 
 export default function SuccessStoriesPreview() {
   const { lang } = useLang();
@@ -19,29 +20,12 @@ export default function SuccessStoriesPreview() {
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
           {lang === "nl"
-            ? "Van ambitieus zoekprofiel tot de perfecte match — dit zijn de verhalen achter onze plaatsingen."
-            : "From ambitious search profile to the perfect match — these are the stories behind our placements."}
+            ? "Van ambitieus zoekprofiel tot de perfecte match. Dit zijn de verhalen achter onze plaatsingen."
+            : "From ambitious search profile to perfect match. These are the stories behind our placements."}
         </p>
 
         <div className="mx-auto max-w-[500px] mb-10">
-          <button
-            onClick={() => navigate(`/success-stories/${featured.slug}`)}
-            className="w-full text-left bg-card rounded-2xl border border-border p-8 transition-all duration-300 hover:-translate-y-[7px] hover:shadow-xl hover:border-accent-blue group"
-          >
-            <span
-              className={`inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 ${sectorBadgeClass[featured.sector]}`}
-            >
-              {featured.sector}
-            </span>
-            <h3 className="text-lg font-bold text-foreground mb-1">{featured.company}</h3>
-            <p className="text-sm text-muted-foreground mb-3">{featured.role[lang]}</p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              {featured.summary[lang]}
-            </p>
-            <span className="text-accent-blue text-sm font-semibold group-hover:underline">
-              {lang === "nl" ? "Lees het verhaal →" : "Read the story →"}
-            </span>
-          </button>
+          <SuccessStoryCard story={featured} />
         </div>
 
         <button
