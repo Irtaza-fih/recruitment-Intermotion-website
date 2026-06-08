@@ -160,7 +160,7 @@ export default function AboutPage() {
 
       {/* Wie zijn wij? */}
       <section className="py-16 bg-background">
-        <div className="max-w-4xl mx-auto px-6 scroll-reveal">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6 leading-tight">
             Wie zijn wij?
           </h2>
