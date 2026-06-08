@@ -47,7 +47,11 @@ function AppContent() {
       {!isStandalone && <Navbar />}
       <PageTransitionOverlay />
       <main>
-        <Suspense fallback={null}>
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center bg-background">
+            <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+          </div>
+        }>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/over-ons" element={<AboutPage />} />
@@ -69,7 +73,11 @@ function AppContent() {
         </Suspense>
       </main>
       {!isStandalone && (
-        <Suspense fallback={null}>
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center bg-background">
+            <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" />
+          </div>
+        }>
           <Footer />
         </Suspense>
       )}
