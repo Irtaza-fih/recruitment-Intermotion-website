@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
 import { successStories, sectorBadgeClass } from "@/data/successStories";
+import unsLogo from "@/assets/uns-logo.jpg.asset.json";
 
 export default function SuccessStoryPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -50,8 +51,8 @@ export default function SuccessStoryPage() {
 
   const h1 =
     lang === "nl"
-      ? "UNStudio — Financial Controller gevonden voor een wereldwijd architectenbureau in groei"
-      : "UNStudio — Financial Controller placed for a globally growing architecture studio";
+      ? "UNStudio: Financial Controller gevonden voor een wereldwijd architectenbureau in groei"
+      : "UNStudio: Financial Controller placed for a globally growing architecture studio";
 
   const meta = [
     { label: lang === "nl" ? "Bedrijf" : "Company", value: "UNStudio" },
