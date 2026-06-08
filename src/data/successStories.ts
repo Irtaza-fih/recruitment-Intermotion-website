@@ -1,9 +1,12 @@
+import unsLogo from "@/assets/uns-logo.jpg.asset.json";
+
 export type StorySector = "Finance" | "IT" | "Sales" | "Interim";
 
 export interface SuccessStory {
   slug: string;
   sector: StorySector;
   company: string;
+  logoUrl?: string;
   role: { nl: string; en: string };
   summary: { nl: string; en: string };
 }
@@ -13,6 +16,7 @@ export const successStories: SuccessStory[] = [
     slug: "uns",
     sector: "Finance",
     company: "UNStudio",
+    logoUrl: unsLogo.url,
     role: { nl: "Financial Controller", en: "Financial Controller" },
     summary: {
       nl: "Van hunt assignment tot succesvolle plaatsing bij een van de meest toonaangevende architectenbureaus ter wereld.",
