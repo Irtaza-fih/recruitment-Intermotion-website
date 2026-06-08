@@ -49,6 +49,7 @@ export default function Navbar() {
       { path: "/over-ons", label: t(translations.nav.about, lang) },
       { path: "/vacatures", label: t(translations.nav.vacancies, lang) },
       { path: "/blog", label: t(translations.nav.blog, lang) },
+      { path: "/success-stories", label: t(translations.nav.successStories, lang) },
     ],
     [lang]
   );
