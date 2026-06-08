@@ -196,6 +196,21 @@ export default function ITPage() {
         </div>
       </section>
 
+      {/* Success story teaser */}
+      {brightlyn && (
+        <section className="py-20 bg-card border-t border-border">
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent-blue mb-3">
+              {lang === "nl" ? "SUCCESVERHAAL" : "SUCCESS STORY"}
+            </p>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
+              {lang === "nl" ? "Zo werkten wij voor Brightlyn" : "How we worked for Brightlyn"}
+            </h2>
+            <SuccessStoryCard story={brightlyn} className="mx-auto max-w-[500px]" />
+          </div>
+        </section>
+      )}
+
       {/* Related services */}
       <section className="py-20 bg-bg-tint">
         <div className="max-w-7xl mx-auto px-6">
