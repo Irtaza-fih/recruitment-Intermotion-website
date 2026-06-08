@@ -97,6 +97,7 @@ export default function HomePage() {
         <AboutSection />
         <ServicesSection />
         <PartnersMarquee />
+        <SuccessStoriesPreview />
         <TestimonialsCarousel />
         <VacancyCTA />
       </Suspense>
