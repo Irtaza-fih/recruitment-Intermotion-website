@@ -20,15 +20,25 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>() {
     );
 
     // Observe all children with scroll-reveal class, or the element itself
-    const children = el.querySelectorAll(".scroll-reveal");
+    const children = el.querySelectorAll<HTMLElement>(".scroll-reveal");
     if (children.length > 0) {
       children.forEach((child, i) => {
-        (child as HTMLElement).style.transitionDelay = `${i * 0.1}s`;
-        observer.observe(child);
+        child.style.transitionDelay = `${i * 0.1}s`;
+        const rect = child.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          child.classList.add("revealed");
+        } else {
+          observer.observe(child);
+        }
       });
     } else {
       el.classList.add("scroll-reveal");
-      observer.observe(el);
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add("revealed");
+      } else {
+        observer.observe(el);
+      }
     }
 
     return () => observer.disconnect();
