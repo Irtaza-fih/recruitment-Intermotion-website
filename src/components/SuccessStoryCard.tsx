@@ -48,11 +48,11 @@ export default function SuccessStoryCard({ story, className = "" }: Props) {
       className={`group block text-left w-full bg-card rounded-2xl border border-border p-6 cursor-pointer transition-[box-shadow,border-color] duration-300 ease-out hover:shadow-xl hover:border-accent-blue ${className}`}
       aria-label={`${story.company} success story`}
     >
-      <div className="flex items-center mb-4" style={{ gap: 12 }}>
-        <CompanyLogo story={story} size={48} />
-        <span className="text-[18px] font-bold text-foreground">
+      <div className="flex flex-row items-center justify-between mb-4" style={{ gap: 12 }}>
+        <span className="flex-1 text-[18px] font-bold text-foreground">
           {story.company}
         </span>
+        <CompanyLogo story={story} size={48} />
       </div>
 
       <span
