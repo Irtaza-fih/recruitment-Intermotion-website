@@ -359,6 +359,126 @@ const CONTENT: Record<string, StoryContent> = {
       },
     },
   },
+  americold: {
+    seo: {
+      title: {
+        nl: "Senior Financial Controller geplaatst bij Americold Europa | Recruitment Intermotion",
+        en: "Senior Financial Controller placed at Americold Europe | Recruitment Intermotion",
+      },
+      description: {
+        nl: "Hoe Recruitment Intermotion via een warm netwerk voor Americold een Senior Financial Controller plaatste tijdens een grootschalige Oracle Cloud implementatie in Europa.",
+        en: "How Recruitment Intermotion, through a warm network, placed a Senior Financial Controller at Americold during a large-scale Oracle Cloud implementation across Europe.",
+      },
+      canonical: "https://recruitmentintermotion.nl/success-stories/americold",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Senior Financial Controller geplaatst bij Americold Europa",
+        description:
+          "Hoe Recruitment Intermotion via een warm netwerk voor Americold een Senior Financial Controller plaatste tijdens een grootschalige Oracle Cloud implementatie in Europa.",
+        author: {
+          "@type": "Organization",
+          name: "Recruitment Intermotion",
+          url: "https://recruitmentintermotion.nl",
+        },
+        about: {
+          "@type": "Organization",
+          name: "Americold",
+          url: "https://www.americold.com",
+          location: "Europa",
+        },
+        keywords:
+          "senior financial controller recruitment, Oracle Cloud implementatie, finance recruitment Nederland, Americold Europa, Recruitment Intermotion",
+      },
+    },
+    h1: {
+      nl: "Americold: Senior Financial Controller geplaatst tijdens een Europese Oracle Cloud implementatie",
+      en: "Americold: Senior Financial Controller placed during a European Oracle Cloud implementation",
+    },
+    meta: [
+      {
+        label: { nl: "Bedrijf", en: "Company" },
+        value: { nl: "Americold", en: "Americold" },
+      },
+      {
+        label: { nl: "Sector", en: "Sector" },
+        value: {
+          nl: "Temperatuurgecontroleerde Logistiek",
+          en: "Temperature-Controlled Logistics",
+        },
+      },
+      {
+        label: { nl: "Hoofdkantoor", en: "Headquarters" },
+        value: {
+          nl: "Atlanta, Georgia, Verenigde Staten",
+          en: "Atlanta, Georgia, United States",
+        },
+      },
+      {
+        label: { nl: "Aanwezig in Europa", en: "European presence" },
+        value: {
+          nl: "Nederland, Oostenrijk, Groot-Brittannië en meer",
+          en: "Netherlands, Austria, Great Britain and more",
+        },
+      },
+      {
+        label: { nl: "Medewerkers", en: "Employees" },
+        value: { nl: "16.000+ wereldwijd", en: "16,000+ worldwide" },
+      },
+    ],
+    website: { label: "americold.com", url: "https://www.americold.com" },
+    sections: [
+      {
+        heading: { nl: "De uitdaging", en: "The challenge" },
+        paragraphs: [
+          {
+            nl: "Americold is een wereldwijde aanbieder van temperatuurgecontroleerde infrastructuur en logistiek. Met vestigingen op meerdere continenten en meer dan zestienduizend medewerkers wereldwijd, is de organisatie actief in een sector waar snelheid, nauwkeurigheid en betrouwbaarheid geen bijzaken zijn.",
+            en: "Americold is a global provider of temperature-controlled infrastructure and logistics. With locations across multiple continents and over sixteen thousand employees worldwide, the organisation operates in a sector where speed, precision and reliability are non-negotiable.",
+          },
+          {
+            nl: "Via ons warme netwerk benaderde Americold ons met een specifieke vraag: de plaatsing van een Senior Financial Controller. Een professional die direct inzetbaar was tijdens de uitrol van Oracle Cloud in alle Europese landen waarin zij actief zijn. Zoals gebruikelijk bij Amerikaanse bedrijven waren snelheid en kwaliteit allebei essentieel.",
+            en: "Through our warm network, Americold approached us with a specific request: the placement of a Senior Financial Controller. A professional who could hit the ground running during the roll-out of Oracle Cloud across all European countries in which they operate. As is customary with American companies, speed and quality were both essential.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Onze aanpak", en: "Our approach" },
+        paragraphs: [
+          {
+            nl: "Gegeven de complexiteit van de financiële rol en de directe inzetbaarheid die vereist was, zochten wij specifiek naar een professional die zelfstandig kan werken en minimale inwerktijd nodig heeft. Recruitment Intermotion beschikt over een uitgebreid en warm netwerk van finance professionals, waarmee wij snel kunnen schakelen wanneer de opdracht dat vraagt.",
+            en: "Given the complexity of the financial role and the immediate deployability required, we specifically searched for a professional who can work independently and requires minimal on-the-job training. Recruitment Intermotion has an extensive and warm network of finance professionals, allowing us to move quickly when the assignment demands it.",
+          },
+          {
+            nl: "Via dat netwerk vonden wij een echte plug and play professional: iemand met de kennis, de discipline en de zelfstandigheid om direct waarde toe te voegen aan een complexe, internationale implementatie.",
+            en: "Through that network, we found a true plug and play professional: someone with the knowledge, the discipline and the independence to add immediate value to a complex, international implementation.",
+          },
+        ],
+      },
+      {
+        heading: { nl: "Het resultaat", en: "The result" },
+        paragraphs: [
+          {
+            nl: "De geplaatste Senior Financial Controller voldoet volledig aan de verwachtingen van de hiring manager. Naast de dagelijkse verantwoordelijkheden levert hij of zij een wezenlijke bijdrage aan de Oracle Cloud implementatie in Europa. Een plaatsing waarbij snelheid, vakmanschap en netwerk samenkwamen.",
+            en: "The placed Senior Financial Controller fully meets the expectations of the hiring manager. Alongside day-to-day responsibilities, a significant contribution is being made to the Oracle Cloud implementation across Europe. A placement where speed, expertise and network came together.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: {
+        nl: "Op zoek naar een Finance professional die direct inzetbaar is?",
+        en: "Looking for a Finance professional who can hit the ground running?",
+      },
+      sub: {
+        nl: "Ons netwerk staat voor u klaar.",
+        en: "Our network is ready for you.",
+      },
+      secondary: {
+        label: { nl: "Bekijk Finance Recruitment", en: "View Finance Recruitment" },
+        href: "/finance-recruitment",
+      },
+    },
+  },
 };
 
 export default function SuccessStoryPage() {
