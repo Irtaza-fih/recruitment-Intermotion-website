@@ -102,6 +102,22 @@ export default function ITPage() {
                     "@type": "Answer",
                     "text": "Bij interim IT opdrachten kan Recruitment Intermotion vaak binnen 48 tot 72 uur de eerste kandidaten presenteren. Voor vaste posities duurt het gemiddelde traject vier tot acht weken."
                   }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Wat verdient een IT-recruiter in Nederland?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Een IT-recruiter in Nederland verdient gemiddeld tussen €3.000 en €5.500 per maand, afhankelijk van ervaring en specialisatie. Senior IT-recruiters of zelfstandigen met een sterk netwerk kunnen aanzienlijk meer verdienen via bonussen of uurtarieven."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is er verschil tussen ICT en IT?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ICT (Informatie- en Communicatietechnologie) is de bredere term die ook communicatietechnologie omvat, zoals netwerken en telecommunicatie. IT (Informatie Technologie) richt zich specifiek op computersystemen en software. In recruitment worden beide termen vaak door elkaar gebruikt."
+                  }
                 }
               ]
             }
