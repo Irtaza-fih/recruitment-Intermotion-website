@@ -68,6 +68,7 @@ function AppContent() {
             <Route path="/success-stories/:slug" element={<SuccessStoryPage />} />
             <Route path="/succesverhalen/:slug" element={<SuccessStoryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/veelgestelde-vragen" element={<FAQPage />} />
             <Route path="/client-feedback" element={<ClientFeedbackPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
