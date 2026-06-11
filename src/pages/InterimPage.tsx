@@ -211,6 +211,30 @@ export default function InterimPage() {
                 De kosten voor een interim professional bestaan uit een dag- of uurtarief inclusief bureaumarge. Het tarief varieert per discipline, ervaringsniveau en duur van de opdracht. Recruitment Intermotion werkt altijd transparant en bespreekt tarieven vooraf.
               </AccordionContent>
             </AccordionItem>
+            <AccordionItem value="faq-4" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat kost een interim manager per uur?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                De kosten van een interim manager variëren tussen €75 en €175 per uur, afhankelijk van het ervaringsniveau, de discipline en de duur van de opdracht. Recruitment Intermotion bespreekt de tarieven altijd transparant en vooraf, zonder verborgen kosten.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-5" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat zijn de nadelen van een interimcontract?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Een interim professional is duurder per uur dan een vaste medewerker en heeft minder binding met de organisatie op de lange termijn. Voor kortlopende opdrachten en urgente situaties wegen de voordelen — snelheid, flexibiliteit en directe inzetbaarheid — echter vrijwel altijd zwaarder.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq-6" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
+              <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
+                Wat zijn ad interim functies?
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                Ad interim functies zijn tijdelijke managementposities waarbij een ervaren professional een rol vervult totdat een vaste kandidaat is gevonden of een specifiek project is afgerond. Voorbeelden zijn interim CFO, interim IT-manager of interim sales director.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </section>
