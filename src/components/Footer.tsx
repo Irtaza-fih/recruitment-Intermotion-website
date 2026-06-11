@@ -21,6 +21,7 @@ export default function Footer() {
     { path: "/vacatures", label: t(translations.nav.vacancies, lang) },
     { path: "/blog", label: t(translations.nav.blog, lang) },
     { path: "/contact", label: t(translations.nav.contact, lang) },
+    { path: "/veelgestelde-vragen", label: lang === "nl" ? "Veelgestelde vragen" : "FAQ" },
   ];
 
   return (
