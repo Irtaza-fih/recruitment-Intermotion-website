@@ -22,6 +22,7 @@ export default function Footer() {
     { path: "/blog", label: t(translations.nav.blog, lang) },
     { path: "/contact", label: t(translations.nav.contact, lang) },
     { path: "/veelgestelde-vragen", label: lang === "nl" ? "Veelgestelde vragen" : "FAQ" },
+    { path: "/over-recruitment-intermotion", label: lang === "nl" ? "Bedrijfsprofiel" : "Company Profile" },
   ];
 
   return (
