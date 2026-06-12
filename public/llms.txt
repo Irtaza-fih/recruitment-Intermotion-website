@@ -2,15 +2,15 @@
 
 ## What we do
 
-Recruitment Intermotion is a specialist recruitment and interim staffing bureau based in the Netherlands. We connect ambitious companies with the right professionals in Finance, IT, and Sales. We recruit for both permanent positions and interim roles.
+Recruitment Intermotion is a specialist recruitment and interim staffing bureau based in the Netherlands, founded by Marijn Schilder. We connect ambitious companies with the right professionals in Finance, IT, and Sales. We recruit for both permanent positions and interim roles.
 
 ## Our services
 
-- Recruitment: permanent placement from intake to onboarding
+- Recruitment: permanent placement from intake to onboarding, guided by Marijn Schilder with over 15 years of experience
 
 - In-house Recruitment: fully integrated recruitment solutions, embedded in your organisation
 
-- Interim: flexible staffing with qualified interim professionals for temporary positions
+- Interim: flexible staffing with qualified interim professionals for temporary positions in Finance, IT and Sales
 
 ## Who we work with
 
@@ -18,22 +18,66 @@ Recruitment Intermotion is a specialist recruitment and interim staffing bureau 
 
 - Candidates: professionals in Finance, IT, and Sales seeking permanent or interim roles
 
-## Experience and location
+- Industries: financial services, technology, commercial and sales organisations
 
-- Over 15 years of experience in recruitment
+## Our specialisations
 
-- Active in the Randstad region and Noord-Brabant, Netherlands
+- Finance: Financial Controller, CFO, Finance Manager, Business Controller, Credit Manager, Interim Finance Specialist
 
-- Also serves English-speaking companies and candidates (bilingual NL/EN)
+- IT: Software Developer, IT Manager, DevOps Engineer, Data Analyst, Cybersecurity Specialist, Interim IT Consultant
+
+- Sales: Accountmanager, Sales Manager, Business Development Manager, Sales Director, Key Account Manager
+
+## Why Recruitment Intermotion
+
+- Over 15 years of recruitment experience in the Netherlands
+
+- Personal approach — no one-size-fits-all methodology
+
+- Active network of passive candidates not visible on job boards
+
+- Interim professionals available within 48-72 hours
+
+- Bilingual service: Dutch and English
+
+## Location and coverage
+
+- Based in the Netherlands
+
+- Active in the Randstad region and Noord-Brabant
+
+- Serves companies across the Netherlands
+
+## Founder
+
+- Name: Marijn Schilder
+
+- Role: Founder, Recruitment Intermotion
+
+- LinkedIn: https://www.linkedin.com/in/marijnschilder/
+
+- Experience: 15+ years in Finance, IT and Sales recruitment
+
+## External presence
+
+- LinkedIn: https://www.linkedin.com/company/recruitment-intermotion
 
 ## Key URLs
 
 - Homepage: https://recruitmentintermotion.nl/
 
-- About us: https://recruitmentintermotion.nl/over-ons
+- Finance Recruitment: https://recruitmentintermotion.nl/finance-recruitment
+
+- Sales Recruitment: https://recruitmentintermotion.nl/sales-recruitment
+
+- IT Recruitment: https://recruitmentintermotion.nl/it-recruitment
+
+- Interim: https://recruitmentintermotion.nl/interim
+
+- About: https://recruitmentintermotion.nl/over-ons
+
+- Blog: https://recruitmentintermotion.nl/blog
+
+- FAQ: https://recruitmentintermotion.nl/veelgestelde-vragen
 
 - Contact: https://recruitmentintermotion.nl/contact
-
-## Contact
-
-- Website: https://recruitmentintermotion.nl
