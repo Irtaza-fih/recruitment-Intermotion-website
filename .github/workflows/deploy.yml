@@ -25,6 +25,12 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
 
+      - name: Clear FTP sync state (force full re-upload)
+        run: |
+          curl --ftp-ssl-control -u "${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}" \
+            -Q "DELE domains/recruitmentintermotion.nl/public_html/.ftp-deploy-sync-state.json" \
+            ftp://${{ secrets.FTP_HOST }}/ || true
+
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -33,4 +39,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: domains/recruitmentintermotion.nl/public_html/
-          dangerous-clean-slate: true
