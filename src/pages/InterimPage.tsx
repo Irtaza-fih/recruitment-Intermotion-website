@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { useLang } from "@/lib/LanguageContext";
 import PageHeroBanner from "@/components/PageHeroBanner";
 import {
   Accordion,
@@ -12,6 +13,7 @@ import {
 export default function InterimPage() {
   const navigate = useAppNavigate();
   const ref = useScrollReveal();
+  const { lang } = useLang();
 
   const title = "Interim Professionals Nederland | Recruitment Intermotion";
   const description = "Snel een interim professional nodig? Recruitment Intermotion levert gekwalificeerde interim specialisten in Finance, IT en Sales in Nederland.";
@@ -151,7 +153,9 @@ export default function InterimPage() {
                 Voor welke functies?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wij leveren interim professionals voor functies in Finance, Sales &amp; IT.
+                {lang === "nl"
+                  ? "Wij leveren interim professionals voor functies in Finance, Sales & IT."
+                  : "We supply interim professionals for roles in Finance, Sales & IT."}
               </p>
             </div>
           </div>

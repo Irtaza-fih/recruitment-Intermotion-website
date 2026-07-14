@@ -14,6 +14,7 @@ import jimmyJoy from "@/assets/partners/jimmy-joy.webp";
 import subseaConnect from "@/assets/partners/subsea-connect.webp";
 import uns from "@/assets/partners/uns.webp";
 import brightlyn from "@/assets/partners/brightlyn.webp";
+import stater from "@/assets/partners/stater.webp";
 
 const partners = [
   { name: "Americold", logo: americold },
@@ -29,6 +30,7 @@ const partners = [
   { name: "Subsea Connect", logo: subseaConnect },
   { name: "UNS", logo: uns },
   { name: "Brightlyn", logo: brightlyn },
+  { name: "Stater", logo: stater },
 ];
 
 function renderTitle(html: string) {

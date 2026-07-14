@@ -125,7 +125,11 @@ export default function FinancePage() {
                 Wat wij doen in Finance
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wij werven voor functies van medior tot C-level, zoals: <strong>Accountant</strong>, <strong>Analist</strong>, <strong>(Financial-, Corporate- of Business) Controller</strong>, <strong>FP&amp;A</strong>, <strong>Treasury Specialist</strong>, <strong>Auditor</strong>, <strong>Risk Manager</strong>, <strong>Finance Manager</strong>, <strong>Finance Director</strong>, <strong>CFO</strong> en <strong>Interim Finance Specialist</strong>.
+                {lang === "nl" ? (
+                  <>Wij werven voor functies van medior tot C-level, zoals: <strong>Accountant</strong>, <strong>Analist</strong>, <strong>(Financial-, Corporate- of Business) Controller</strong>, <strong>FP&amp;A</strong>, <strong>Treasury Specialist</strong>, <strong>Auditor</strong>, <strong>Risk Manager</strong>, <strong>Finance Manager</strong>, <strong>Finance Director</strong>, <strong>CFO</strong> en <strong>Interim Finance Specialist</strong>.</>
+                ) : (
+                  <>We recruit for roles from mid-level to C-suite, including: <strong>Accountant</strong>, <strong>Analyst</strong>, <strong>(Financial, Corporate or Business) Controller</strong>, <strong>FP&amp;A</strong>, <strong>Treasury Specialist</strong>, <strong>Auditor</strong>, <strong>Risk Manager</strong>, <strong>Finance Manager</strong>, <strong>Finance Director</strong>, <strong>CFO</strong> and <strong>Interim Finance Specialist</strong>.</>
+                )}
               </p>
             </div>
 

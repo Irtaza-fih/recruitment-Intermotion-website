@@ -1,7 +1,7 @@
-import unsLogo from "@/assets/uns-logo.jpg.asset.json";
-import brightlynLogo from "@/assets/brightlyn-logo.jpg.asset.json";
-import remondisLogo from "@/assets/remondis-logo.jpg.asset.json";
-import americoldLogo from "@/assets/americold-logo.jpg.asset.json";
+import unsLogo from "@/assets/partners/uns.webp";
+import brightlynLogo from "@/assets/partners/brightlyn.webp";
+import remondisLogo from "@/assets/partners/remondis.webp";
+import americoldLogo from "@/assets/partners/americold.webp";
 
 export type StorySector = "Finance" | "IT" | "Sales" | "Interim";
 
@@ -19,7 +19,7 @@ export const successStories: SuccessStory[] = [
     slug: "uns",
     sector: "Finance",
     company: "UNStudio",
-    logoUrl: unsLogo.url,
+    logoUrl: unsLogo,
     role: { nl: "Financial Controller", en: "Financial Controller" },
     summary: {
       nl: "Van hunt assignment tot succesvolle plaatsing bij een van de meest toonaangevende architectenbureaus ter wereld.",
@@ -30,7 +30,7 @@ export const successStories: SuccessStory[] = [
     slug: "brightlyn",
     sector: "IT",
     company: "Brightlyn",
-    logoUrl: brightlynLogo.url,
+    logoUrl: brightlynLogo,
     role: { nl: "(Senior) Manager IT Audit", en: "(Senior) Manager IT Audit" },
     summary: {
       nl: "Van een intensieve zoektocht naar schaars talent tot een gerichte plaatsing bij een van de meest veelbelovende cybersecurity boutiques van Nederland.",
@@ -41,7 +41,7 @@ export const successStories: SuccessStory[] = [
     slug: "remondis",
     sector: "Finance",
     company: "REMONDIS",
-    logoUrl: remondisLogo.url,
+    logoUrl: remondisLogo,
     role: { nl: "Business Controller", en: "Business Controller" },
     summary: {
       nl: "Van een complexe zoektocht naar een brug tussen finance en operatie tot een gerichte plaatsing bij een van de grootste recycling en waterbeheer organisaties van Nederland.",
@@ -52,7 +52,7 @@ export const successStories: SuccessStory[] = [
     slug: "americold",
     sector: "Finance",
     company: "Americold",
-    logoUrl: americoldLogo.url,
+    logoUrl: americoldLogo,
     role: { nl: "Senior Financial Controller", en: "Senior Financial Controller" },
     summary: {
       nl: "Via ons warme netwerk plaatsten wij een Senior Financial Controller bij een wereldwijde marktleider in temperatuurgecontroleerde logistiek, midden in een grootschalige Oracle Cloud implementatie.",

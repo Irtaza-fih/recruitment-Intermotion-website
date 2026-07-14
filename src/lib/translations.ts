@@ -16,6 +16,7 @@ export const translations = {
     cta: { nl: "Neem contact op", en: "Get in touch" },
   },
   hero: {
+    heading: { nl: "Recruitment voor Finance, IT en Sales in Nederland", en: "Recruitment for Finance, IT and Sales in the Netherlands" },
     tagline: { nl: "When a job turns into an adventure", en: "When a job turns into an adventure" },
     ctaPrimary: { nl: "Neem contact op", en: "Get in touch" },
     ctaSecondary: { nl: "Bekijk vacatures", en: "View vacancies" },
