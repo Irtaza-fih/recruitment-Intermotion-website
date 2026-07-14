@@ -10,7 +10,7 @@ import {
 const faqs = [
   {
     q: "Wat zijn de kosten van een recruitmentbureau?",
-    a: "De meeste recruitmentbureaus werken op basis van een percentage van het jaarsalaris van de geplaatste kandidaat — meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge. Recruitment Intermotion werkt altijd transparant en bespreekt tarieven vooraf.",
+    a: "De meeste recruitmentbureaus werken op basis van een percentage van het jaarsalaris van de geplaatste kandidaat — meestal tussen de 20% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge. Recruitment Intermotion werkt altijd transparant en bespreekt tarieven vooraf.",
   },
   {
     q: "Wat zijn de beste recruiters in Nederland?",
