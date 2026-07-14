@@ -151,7 +151,7 @@ export default function InterimPage() {
                 Voor welke functies?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wij leveren interim professionals voor functies zoals: <strong>Interim Finance Manager</strong>, <strong>Interim Controller</strong>, <strong>Interim IT Consultant</strong>, <strong>Interim Sales Manager</strong>, en <strong>Interim CFO</strong>.
+                Wij leveren interim professionals voor functies in Finance, Sales &amp; IT.
               </p>
             </div>
           </div>

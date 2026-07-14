@@ -82,7 +82,7 @@ export const translations = {
   services: {
     eyebrow: { nl: "Onze diensten", en: "Our services" },
     title: {
-      nl: "Waar kunnen wij <em>u</em> mee helpen?",
+      nl: "Waar kunnen wij <em>jou</em> mee helpen?",
       en: "How can we <em>help</em> you?",
     },
     more: { nl: "Meer informatie", en: "More information" },

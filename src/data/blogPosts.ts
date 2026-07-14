@@ -51,13 +51,13 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Wat kost een recruitmentbureau?</h2>
 
-<p>De meeste bureaus werken op basis van een percentage van het jaarsalaris — meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een uurtarief of een dag tarief inclusief marge. Recruitment Intermotion werkt altijd transparant en bespreekt de tarieven vooraf.</p>
+<p>De meeste bureaus werken op basis van een percentage van het jaarsalaris — meestal tussen de 20% en 25%. Bij interim plaatsingen wordt gewerkt met een uurtarief of een dag tarief inclusief marge. Recruitment Intermotion werkt altijd transparant en bespreekt de tarieven vooraf.</p>
 
 <h2>Wat maakt Recruitment Intermotion anders?</h2>
 
 <p>Wij geloven niet in een one-size-fits-all aanpak. Elk bedrijf is anders, elke zoekopdracht is uniek. Met meer dan 15 jaar ervaring in Finance, IT en Sales weten wij waar de juiste professionals te vinden zijn — en hoe we ze aan u binden.</p>
 
-<p>Meer weten over onze aanpak? Bekijk onze <a href="/finance-recruitment">recruitment diensten</a>, <a href="/sales-recruitment">sales recruitment</a> of <a href="/it-recruitment">IT recruitment</a> pagina's.</p>
+<p>Meer weten over onze aanpak? Bekijk onze <a href="/finance-recruitment">finance recruitment</a>, <a href="/sales-recruitment">sales recruitment</a> of <a href="/it-recruitment">IT recruitment</a> pagina's.</p>
 
 <p>Benieuwd wat wij voor uw organisatie kunnen betekenen? <a href="/contact">Neem contact op</a>.</p>
     `,

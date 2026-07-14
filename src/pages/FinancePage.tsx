@@ -102,7 +102,7 @@ export default function FinancePage() {
                   "name": "Wat kost een finance recruitment bureau?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge."
+                    "text": "De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 20% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge."
                   }
                 }
               ]
@@ -125,7 +125,7 @@ export default function FinancePage() {
                 Wat wij doen in Finance
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wij recruteren voor functies zoals: <strong>Financial Controller</strong>, <strong>CFO</strong>, <strong>Finance Manager</strong>, <strong>Business Controller</strong>, <strong>Credit Manager</strong>, en <strong>Interim Finance Specialist</strong>.
+                Wij werven voor functies van medior tot C-level, zoals: <strong>Accountant</strong>, <strong>Analist</strong>, <strong>(Financial-, Corporate- of Business) Controller</strong>, <strong>FP&amp;A</strong>, <strong>Treasury Specialist</strong>, <strong>Auditor</strong>, <strong>Risk Manager</strong>, <strong>Finance Manager</strong>, <strong>Finance Director</strong>, <strong>CFO</strong> en <strong>Interim Finance Specialist</strong>.
               </p>
             </div>
 
@@ -191,7 +191,7 @@ export default function FinancePage() {
                 Wat kost een finance recruitment bureau?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 15% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge.
+                De meeste finance recruitment bureaus werken op basis van een percentage van het jaarsalaris, meestal tussen de 20% en 25%. Bij interim plaatsingen wordt gewerkt met een dag- of uurtarief inclusief bureaumarge.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
