@@ -126,8 +126,10 @@ export default function ITPage() {
       </Helmet>
 
       <PageHeroBanner
-        title="IT Recruitment Bureau Nederland"
-        subtitle="Wij verbinden ambitieuze bedrijven met de beste IT professionals in Nederland. Van software developer tot IT Manager — wij werven zowel vaste als interim IT specialisten voor organisaties in de Randstad en Noord-Brabant."
+        title={lang === "nl" ? "IT Recruitment Bureau Nederland" : "IT Recruitment Agency Netherlands"}
+        subtitle={lang === "nl"
+          ? "Wij verbinden ambitieuze bedrijven met de beste IT professionals in Nederland. Van software developer tot IT Manager — wij werven zowel vaste als interim IT specialisten voor organisaties in de Randstad en Noord-Brabant."
+          : "We connect ambitious companies with the best IT professionals in the Netherlands. From software developer to IT Manager — we recruit both permanent and interim IT specialists for organisations across the Randstad and Noord-Brabant."}
       />
 
       <section className="py-24 bg-card">
@@ -136,19 +138,25 @@ export default function ITPage() {
           <div className="space-y-16">
             <div className="scroll-reveal">
               <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-6 leading-tight">
-                Wat wij doen in IT
+                {lang === "nl" ? "Wat wij doen in IT" : "What we do in IT"}
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wij recruteren voor functies zoals: <strong>Software Developer</strong>, <strong>IT Manager</strong>, <strong>DevOps Engineer</strong>, <strong>Data Analyst</strong>, <strong>Cybersecurity Specialist</strong>, en <strong>Interim IT Consultant</strong>.
+                {lang === "nl" ? (
+                  <>Wij recruteren voor functies zoals: <strong>Software Developer</strong>, <strong>IT Manager</strong>, <strong>DevOps Engineer</strong>, <strong>Data Analyst</strong>, <strong>Cybersecurity Specialist</strong>, en <strong>Interim IT Consultant</strong>.</>
+                ) : (
+                  <>We recruit for roles such as: <strong>Software Developer</strong>, <strong>IT Manager</strong>, <strong>DevOps Engineer</strong>, <strong>Data Analyst</strong>, <strong>Cybersecurity Specialist</strong>, and <strong>Interim IT Consultant</strong>.</>
+                )}
               </p>
             </div>
 
             <div className="scroll-reveal">
               <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-6 leading-tight">
-                Voor wie werven wij?
+                {lang === "nl" ? "Voor wie werven wij?" : "Who do we recruit for?"}
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wij werken met startups, scale-ups, familiebedrijven en corporate organisaties die op zoek zijn naar IT talent op alle niveaus.
+                {lang === "nl"
+                  ? "Wij werken met startups, scale-ups, familiebedrijven en corporate organisaties die op zoek zijn naar IT talent op alle niveaus."
+                  : "We work with startups, scale-ups, family businesses and corporate organisations looking for IT talent at all levels."}
               </p>
             </div>
           </div>
@@ -157,20 +165,24 @@ export default function ITPage() {
           <div className="space-y-8">
             <div className="scroll-reveal">
               <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-6 leading-tight">
-                Waarom Recruitment Intermotion?
+                {lang === "nl" ? "Waarom Recruitment Intermotion?" : "Why Recruitment Intermotion?"}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Meer dan 15 jaar ervaring in recruitment. Wij begrijpen de technische wereld en spreken de taal van zowel de hiring manager als de IT professional. Persoonlijk, snel en resultaatgericht.
+                {lang === "nl"
+                  ? "Meer dan 15 jaar ervaring in recruitment. Wij begrijpen de technische wereld en spreken de taal van zowel de hiring manager als de IT professional. Persoonlijk, snel en resultaatgericht."
+                  : "More than 15 years of experience in recruitment. We understand the technical world and speak the language of both the hiring manager and the IT professional. Personal, fast and results-driven."}
               </p>
             </div>
 
             <div className="scroll-reveal liquid-gradient rounded-2xl p-8 text-primary-foreground">
-              <h3 className="text-xl font-bold mb-4">Klaar om IT talent aan te trekken?</h3>
+              <h3 className="text-xl font-bold mb-4">
+                {lang === "nl" ? "Klaar om IT talent aan te trekken?" : "Ready to attract IT talent?"}
+              </h3>
               <button
                 onClick={() => navigate("/contact")}
                 className="bg-primary-foreground text-primary px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
-                Neem contact op →
+                {lang === "nl" ? "Neem contact op →" : "Get in touch →"}
               </button>
             </div>
           </div>
@@ -181,47 +193,57 @@ export default function ITPage() {
       <section className="py-20 bg-card">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
-            Veelgestelde vragen
+            {lang === "nl" ? "Veelgestelde vragen" : "Frequently asked questions"}
           </h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="faq-1" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Wat doet een IT recruitment bureau?
+                {lang === "nl" ? "Wat doet een IT recruitment bureau?" : "What does an IT recruitment agency do?"}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Een IT recruitment bureau zoekt en selecteert gekwalificeerde IT professionals voor bedrijven. Van software developer tot IT manager — het bureau beheert het volledige wervingsproces en heeft toegang tot passief IT talent dat niet actief op zoek is.
+                {lang === "nl"
+                  ? "Een IT recruitment bureau zoekt en selecteert gekwalificeerde IT professionals voor bedrijven. Van software developer tot IT manager — het bureau beheert het volledige wervingsproces en heeft toegang tot passief IT talent dat niet actief op zoek is."
+                  : "An IT recruitment agency searches for and selects qualified IT professionals for companies. From software developer to IT manager — the agency manages the entire recruitment process and has access to passive IT talent that is not actively looking."}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq-2" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Hoe vind ik een goede IT professional in Nederland?
+                {lang === "nl" ? "Hoe vind ik een goede IT professional in Nederland?" : "How do I find a good IT professional in the Netherlands?"}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                IT talent is schaars in Nederland. De beste aanpak is via een gespecialiseerd IT recruitment bureau met een actief netwerk. Zij bereiken professionals die niet reageren op vacatures maar wel openstaan voor de juiste uitdaging.
+                {lang === "nl"
+                  ? "IT talent is schaars in Nederland. De beste aanpak is via een gespecialiseerd IT recruitment bureau met een actief netwerk. Zij bereiken professionals die niet reageren op vacatures maar wel openstaan voor de juiste uitdaging."
+                  : "IT talent is scarce in the Netherlands. The best approach is through a specialised IT recruitment agency with an active network. They reach professionals who do not respond to job postings but are open to the right challenge."}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq-3" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Hoe snel kan ik een IT professional inzetten?
+                {lang === "nl" ? "Hoe snel kan ik een IT professional inzetten?" : "How quickly can I deploy an IT professional?"}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Bij interim IT opdrachten kan Recruitment Intermotion vaak binnen 48 tot 72 uur de eerste kandidaten presenteren. Voor vaste posities duurt het gemiddelde traject vier tot acht weken.
+                {lang === "nl"
+                  ? "Bij interim IT opdrachten kan Recruitment Intermotion vaak binnen 48 tot 72 uur de eerste kandidaten presenteren. Voor vaste posities duurt het gemiddelde traject vier tot acht weken."
+                  : "For interim IT assignments, Recruitment Intermotion can often present the first candidates within 48 to 72 hours. For permanent positions, the average process takes four to eight weeks."}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq-4" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Wat verdient een IT-recruiter in Nederland?
+                {lang === "nl" ? "Wat verdient een IT-recruiter in Nederland?" : "What does an IT recruiter earn in the Netherlands?"}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Een IT-recruiter in Nederland verdient gemiddeld tussen €3.000 en €5.500 per maand, afhankelijk van ervaring en specialisatie. Senior IT-recruiters of zelfstandigen met een sterk netwerk kunnen aanzienlijk meer verdienen via bonussen of uurtarieven.
+                {lang === "nl"
+                  ? "Een IT-recruiter in Nederland verdient gemiddeld tussen €3.000 en €5.500 per maand, afhankelijk van ervaring en specialisatie. Senior IT-recruiters of zelfstandigen met een sterk netwerk kunnen aanzienlijk meer verdienen via bonussen of uurtarieven."
+                  : "An IT recruiter in the Netherlands earns on average between €3,000 and €5,500 per month, depending on experience and specialisation. Senior IT recruiters or freelancers with a strong network can earn considerably more through bonuses or hourly rates."}
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq-5" className="border border-border rounded-xl px-6 mb-4 bg-bg-tint">
               <AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">
-                Is er verschil tussen ICT en IT?
+                {lang === "nl" ? "Is er verschil tussen ICT en IT?" : "What is the difference between ICT and IT?"}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                ICT (Informatie- en Communicatietechnologie) is de bredere term die ook communicatietechnologie omvat, zoals netwerken en telecommunicatie. IT (Informatie Technologie) richt zich specifiek op computersystemen en software. In recruitment worden beide termen vaak door elkaar gebruikt.
+                {lang === "nl"
+                  ? "ICT (Informatie- en Communicatietechnologie) is de bredere term die ook communicatietechnologie omvat, zoals netwerken en telecommunicatie. IT (Informatie Technologie) richt zich specifiek op computersystemen en software. In recruitment worden beide termen vaak door elkaar gebruikt."
+                  : "ICT (Information and Communication Technology) is the broader term that also covers communication technology such as networks and telecommunications. IT (Information Technology) focuses specifically on computer systems and software. In recruitment, both terms are often used interchangeably."}
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -247,7 +269,7 @@ export default function ITPage() {
       <section className="py-20 bg-bg-tint">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-extrabold text-foreground mb-10">
-            Ook interessant
+            {lang === "nl" ? "Ook interessant" : "Also interesting"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <button
@@ -259,10 +281,12 @@ export default function ITPage() {
               </span>
               <h3 className="text-xl font-bold text-foreground mb-3">Finance Recruitment</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                Van financial controller tot CFO — wij werven de beste finance professionals voor vaste en interim functies.
+                {lang === "nl"
+                  ? "Van financial controller tot CFO — wij werven de beste finance professionals voor vaste en interim functies."
+                  : "From financial controller to CFO — we recruit the best finance professionals for permanent and interim roles."}
               </p>
               <span className="text-accent-blue text-sm font-semibold group-hover:underline">
-                Bekijk Finance →
+                {lang === "nl" ? "Bekijk Finance →" : "View Finance →"}
               </span>
             </button>
             <button
@@ -274,10 +298,12 @@ export default function ITPage() {
               </span>
               <h3 className="text-xl font-bold text-foreground mb-3">Interim Professionals</h3>
               <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                Snel een gekwalificeerde interim specialist inzetten? Wij leveren flexibele oplossingen in Finance, IT en Sales.
+                {lang === "nl"
+                  ? "Snel een gekwalificeerde interim specialist inzetten? Wij leveren flexibele oplossingen in Finance, IT en Sales."
+                  : "Need a qualified interim specialist quickly? We provide flexible solutions in Finance, IT and Sales."}
               </p>
               <span className="text-accent-blue text-sm font-semibold group-hover:underline">
-                Bekijk Interim →
+                {lang === "nl" ? "Bekijk Interim →" : "View Interim →"}
               </span>
             </button>
           </div>
