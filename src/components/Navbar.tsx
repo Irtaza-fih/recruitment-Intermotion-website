@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { VACANCIES_URL } from "@/lib/links";
 import logo from "@/assets/logo.svg";
 
 export default function Navbar() {
@@ -47,7 +48,7 @@ export default function Navbar() {
     () => [
       { path: "/", label: t(translations.nav.home, lang) },
       { path: "/over-ons", label: t(translations.nav.about, lang) },
-      { path: "/vacatures", label: t(translations.nav.vacancies, lang) },
+      { href: VACANCIES_URL, label: t(translations.nav.vacancies, lang) },
       { path: "/blog", label: t(translations.nav.blog, lang) },
       { path: "/success-stories", label: t(translations.nav.successStories, lang) },
     ],
@@ -99,21 +100,24 @@ export default function Navbar() {
 
           {/* Desktop nav links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.path}
-                onClick={() => handleNav(link.path!)}
-                className={`text-base font-semibold transition-colors relative pb-1 ${
-                  location.pathname === link.path
-                    ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
-                    : solid
-                    ? "text-foreground hover:text-accent-blue"
-                    : "text-primary-foreground hover:text-accent-blue"
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const className = `text-base font-semibold transition-colors relative pb-1 ${
+                location.pathname === link.path
+                  ? "text-accent-blue after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent-blue"
+                  : solid
+                  ? "text-foreground hover:text-accent-blue"
+                  : "text-primary-foreground hover:text-accent-blue"
+              }`;
+              return link.href ? (
+                <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={className}>
+                  {link.label}
+                </a>
+              ) : (
+                <button key={link.path} onClick={() => handleNav(link.path)} className={className}>
+                  {link.label}
+                </button>
+              );
+            })}
 
             {/* Services dropdown */}
             <div className="relative" ref={dropdownRef}>
@@ -237,15 +241,18 @@ export default function Navbar() {
       {/* Mobile drawer */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 gradient-brand flex flex-col items-center justify-center gap-6 overflow-y-auto py-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.path}
-              onClick={() => handleNav(link.path!)}
-              className="text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform"
-            >
-              {link.label} <span className="text-lg">→</span>
-            </button>
-          ))}
+          {navLinks.map((link) => {
+            const className = "text-primary-foreground text-2xl font-bold flex items-center gap-3 hover:translate-x-2 transition-transform";
+            return link.href ? (
+              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className={className}>
+                {link.label} <span className="text-lg">→</span>
+              </a>
+            ) : (
+              <button key={link.path} onClick={() => handleNav(link.path)} className={className}>
+                {link.label} <span className="text-lg">→</span>
+              </button>
+            );
+          })}
 
           {/* Mobile services section */}
           <div className="flex flex-col items-center gap-3 mt-2">

@@ -2,6 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { VACANCIES_URL } from "@/lib/links";
 
 const heroLogo = "/logo-lcp.webp";
 
@@ -90,7 +91,7 @@ export default function Hero() {
             {t(translations.hero.ctaPrimary, lang)}
           </button>
           <a
-            href="https://careers-page.com/recruitment-intermotion"
+            href={VACANCIES_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-primary-foreground text-primary-foreground px-8 py-3.5 rounded-full font-semibold hover:bg-primary-foreground/10 hover:-translate-y-1 transition-all"

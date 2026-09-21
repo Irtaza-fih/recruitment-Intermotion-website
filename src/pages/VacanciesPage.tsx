@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const VACANCIES_URL = "https://app.rec-motion.eu/board/recruitment-intermotion";
+import { VACANCIES_URL } from "@/lib/links";
 
 export default function VacanciesPage() {
   useEffect(() => {

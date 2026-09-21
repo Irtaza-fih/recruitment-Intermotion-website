@@ -1,6 +1,7 @@
 import { useLang } from "@/lib/LanguageContext";
 import { translations, t } from "@/lib/translations";
 import { useAppNavigate } from "@/hooks/useAppNavigate";
+import { VACANCIES_URL } from "@/lib/links";
 import logo from "@/assets/logo.svg";
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
   const pageLinks = [
     { path: "/", label: t(translations.nav.home, lang) },
     { path: "/over-ons", label: t(translations.nav.about, lang) },
-    { path: "/vacatures", label: t(translations.nav.vacancies, lang) },
+    { href: VACANCIES_URL, label: t(translations.nav.vacancies, lang) },
     { path: "/blog", label: t(translations.nav.blog, lang) },
     { path: "/contact", label: t(translations.nav.contact, lang) },
     { path: "/veelgestelde-vragen", label: lang === "nl" ? "Veelgestelde vragen" : "FAQ" },
@@ -65,14 +66,26 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2">
             {pageLinks.map((link) => (
-              <li key={link.path}>
-                <button
-                  onClick={() => navigate(link.path)}
-                  className="text-sm transition-colors hover:text-accent-blue"
-                  style={{ color: "#444444" }}
-                >
-                  {link.label}
-                </button>
+              <li key={link.href ?? link.path}>
+                {link.href ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm transition-colors hover:text-accent-blue"
+                    style={{ color: "#444444" }}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => navigate(link.path)}
+                    className="text-sm transition-colors hover:text-accent-blue"
+                    style={{ color: "#444444" }}
+                  >
+                    {link.label}
+                  </button>
+                )}
               </li>
             ))}
           </ul>
